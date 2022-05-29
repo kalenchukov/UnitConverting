@@ -144,6 +144,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 		return true;
 	}
 
+	@NotNull
 	@Override
 	public String toString()
 	{
