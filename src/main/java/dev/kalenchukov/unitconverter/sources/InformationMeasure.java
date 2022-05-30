@@ -451,7 +451,7 @@ public enum InformationMeasure implements Measurable
 	 * Возвращает наименьшую меру измерения по стандарту.
 	 *
 	 * @param standard Стандарт меры измерения.
-	 * @return Наименьшая мера измерения.
+	 * @return Наименьшая мера измерения, или {@code null} если меры измерения нет.
 	 */
 	@Nullable
 	public static InformationMeasure getMin(@NotNull final Standard standard)
@@ -481,7 +481,7 @@ public enum InformationMeasure implements Measurable
 	 * Возвращает наибольшую меру измерения по стандарту.
 	 *
 	 * @param standard Стандарт меры измерения.
-	 * @return Наибольшая мера измерения.
+	 * @return Наибольшая мера измерения, или {@code null} если меры измерения нет.
 	 */
 	@Nullable
 	public static InformationMeasure getMax(@NotNull final Standard standard)

@@ -301,7 +301,7 @@ public enum MassMeasure implements Measurable
 	 * Возвращает наименьшую меру измерения по стандарту.
 	 *
 	 * @param standard Стандарт меры измерения.
-	 * @return Наименьшая мера измерения.
+	 * @return Наименьшая мера измерения, или {@code null} если меры измерения нет.
 	 */
 	@Nullable
 	public static MassMeasure getMin(@NotNull final Standard standard)
@@ -331,7 +331,7 @@ public enum MassMeasure implements Measurable
 	 * Возвращает наибольшую меру измерения по стандарту.
 	 *
 	 * @param standard Стандарт меры измерения.
-	 * @return Наибольшая мера измерения.
+	 * @return Наибольшая мера измерения, или {@code null} если меры измерения нет.
 	 */
 	@Nullable
 	public static MassMeasure getMax(@NotNull final Standard standard)
