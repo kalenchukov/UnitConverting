@@ -26,7 +26,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 */
 	public InformationQuantity(@NotNull final Byte quantity, @NotNull final InformationMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -34,7 +34,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 */
 	public InformationQuantity(@NotNull final Short quantity, @NotNull final InformationMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -42,7 +42,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 */
 	public InformationQuantity(@NotNull final Integer quantity, @NotNull final InformationMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -50,7 +50,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 */
 	public InformationQuantity(@NotNull final Long quantity, @NotNull final InformationMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -58,7 +58,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 */
 	public InformationQuantity(@NotNull final Float quantity, @NotNull final InformationMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -66,7 +66,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 */
 	public InformationQuantity(@NotNull final Double quantity, @NotNull final InformationMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -74,7 +74,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 */
 	public InformationQuantity(@NotNull final BigInteger quantity, @NotNull final InformationMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -82,7 +82,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 */
 	public InformationQuantity(@NotNull final BigDecimal quantity, @NotNull final InformationMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**

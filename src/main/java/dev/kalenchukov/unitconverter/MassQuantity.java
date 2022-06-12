@@ -26,7 +26,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 */
 	public MassQuantity(@NotNull final Byte quantity, @NotNull final MassMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -34,7 +34,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 */
 	public MassQuantity(@NotNull final Short quantity, @NotNull final MassMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -42,7 +42,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 */
 	public MassQuantity(@NotNull final Integer quantity, @NotNull final MassMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -50,7 +50,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 */
 	public MassQuantity(@NotNull final Long quantity, @NotNull final MassMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -58,7 +58,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 */
 	public MassQuantity(@NotNull final Float quantity, @NotNull final MassMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -66,7 +66,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 */
 	public MassQuantity(@NotNull final Double quantity, @NotNull final MassMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -74,7 +74,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 */
 	public MassQuantity(@NotNull final BigInteger quantity, @NotNull final MassMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -82,7 +82,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 */
 	public MassQuantity(@NotNull final BigDecimal quantity, @NotNull final MassMeasure measure)
 	{
-		super(quantity, measure);
+		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
