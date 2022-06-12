@@ -214,7 +214,7 @@ public enum MassMeasure implements Measurable
 	 * Список стандартов меры измерения.
 	 */
 	@NotNull
-	private final List<Standard> standard;
+	private final List<@NotNull Standard> standard;
 
 	/**
 	 * Количество минимальных единиц меры.
@@ -228,7 +228,7 @@ public enum MassMeasure implements Measurable
 	 * @param standard Список стандартов меры измерения.
 	 * @param countMinUnit Количество минимальных единиц меры.
 	 */
-	MassMeasure(@NotNull final List<Standard> standard, @NotNull final BigDecimal countMinUnit)
+	MassMeasure(@NotNull final List<@NotNull Standard> standard, @NotNull final BigDecimal countMinUnit)
 	{
 		Objects.requireNonNull(standard);
 		Objects.requireNonNull(countMinUnit);
@@ -242,7 +242,7 @@ public enum MassMeasure implements Measurable
 	 */
 	@NotNull
 	@Override
-	public List<Standard> getStandard()
+	public List<@NotNull Standard> getStandard()
 	{
 		return this.standard;
 	}
