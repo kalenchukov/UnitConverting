@@ -4,9 +4,9 @@
  * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  */
 
-package dev.kalenchukov.unitconverter;
+package dev.kalenchukov.unit.converting;
 
-import dev.kalenchukov.unitconverter.sources.Measurable;
+import dev.kalenchukov.unit.converting.sources.Measurable;
 import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;

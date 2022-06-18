@@ -4,7 +4,7 @@
  * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  */
 
-package dev.kalenchukov.unitconverter.sources;
+package dev.kalenchukov.unit.converting.sources;
 
 /**
  * перечисление стандартов мер измерения.

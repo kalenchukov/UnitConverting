@@ -4,10 +4,10 @@
  * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  */
 
-package dev.kalenchukov.unitconverter;
+package dev.kalenchukov.unit.converting;
 
-import dev.kalenchukov.unitconverter.sources.InformationMeasure;
-import dev.kalenchukov.unitconverter.sources.Standard;
+import dev.kalenchukov.unit.converting.sources.InformationMeasure;
+import dev.kalenchukov.unit.converting.sources.Standard;
 import org.junit.Test;
 
 import java.math.BigDecimal;

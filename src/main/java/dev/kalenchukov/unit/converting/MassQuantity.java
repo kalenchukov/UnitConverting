@@ -4,27 +4,27 @@
  * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  */
 
-package dev.kalenchukov.unitconverter;
+package dev.kalenchukov.unit.converting;
 
-import dev.kalenchukov.unitconverter.sources.InformationMeasure;
-import dev.kalenchukov.unitconverter.sources.Measurable;
+import dev.kalenchukov.unit.converting.sources.Measurable;
+import dev.kalenchukov.unit.converting.sources.MassMeasure;
 import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.Objects;
+import java.util.*;
 
 /**
- * Класс величины информации.
+ * Класс величины массы.
  *
  * @see AbstractQuantity
  */
-public final class InformationQuantity extends AbstractQuantity<InformationQuantity, InformationMeasure>
+public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasure>
 {
 	/**
 	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
 	 */
-	public InformationQuantity(@NotNull final Byte quantity, @NotNull final InformationMeasure measure)
+	public MassQuantity(@NotNull final Byte quantity, @NotNull final MassMeasure measure)
 	{
 		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
@@ -32,7 +32,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	/**
 	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
 	 */
-	public InformationQuantity(@NotNull final Short quantity, @NotNull final InformationMeasure measure)
+	public MassQuantity(@NotNull final Short quantity, @NotNull final MassMeasure measure)
 	{
 		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
@@ -40,7 +40,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	/**
 	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
 	 */
-	public InformationQuantity(@NotNull final Integer quantity, @NotNull final InformationMeasure measure)
+	public MassQuantity(@NotNull final Integer quantity, @NotNull final MassMeasure measure)
 	{
 		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
@@ -48,7 +48,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	/**
 	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
 	 */
-	public InformationQuantity(@NotNull final Long quantity, @NotNull final InformationMeasure measure)
+	public MassQuantity(@NotNull final Long quantity, @NotNull final MassMeasure measure)
 	{
 		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
@@ -56,7 +56,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	/**
 	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
 	 */
-	public InformationQuantity(@NotNull final Float quantity, @NotNull final InformationMeasure measure)
+	public MassQuantity(@NotNull final Float quantity, @NotNull final MassMeasure measure)
 	{
 		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
@@ -64,7 +64,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	/**
 	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
 	 */
-	public InformationQuantity(@NotNull final Double quantity, @NotNull final InformationMeasure measure)
+	public MassQuantity(@NotNull final Double quantity, @NotNull final MassMeasure measure)
 	{
 		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
@@ -72,7 +72,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	/**
 	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
 	 */
-	public InformationQuantity(@NotNull final BigInteger quantity, @NotNull final InformationMeasure measure)
+	public MassQuantity(@NotNull final BigInteger quantity, @NotNull final MassMeasure measure)
 	{
 		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
@@ -80,13 +80,13 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	/**
 	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
 	 */
-	public InformationQuantity(@NotNull final BigDecimal quantity, @NotNull final InformationMeasure measure)
+	public MassQuantity(@NotNull final BigDecimal quantity, @NotNull final MassMeasure measure)
 	{
 		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
 	}
 
 	/**
-	 * Сравнивает два объекта {@code Information}.
+	 * Сравнивает два объекта {@code Mass}.
 	 *
 	 * @param quantityX Первый объект для сравнения.
 	 * @param quantityY Второй объект для сравнения.
@@ -97,7 +97,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *     <li><b>1</b> если объект {@code quantityX} больше {@code quantityY}.</li>
 	 * </ul>
 	 */
-	public static int compare(@NotNull final InformationQuantity quantityX, @NotNull final InformationQuantity quantityY)
+	public static int compare(@NotNull final MassQuantity quantityX, @NotNull final MassQuantity quantityY)
 	{
 		Objects.requireNonNull(quantityX);
 		Objects.requireNonNull(quantityY);
@@ -131,13 +131,13 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 			return false;
 		}
 
-		InformationQuantity informationQuantity = (InformationQuantity) obj;
+		MassQuantity massQuantity = (MassQuantity) obj;
 
-		if (!Objects.equals(this.getQuantity(), informationQuantity.getQuantity())) {
+		if (!Objects.equals(this.getQuantity(), massQuantity.getQuantity())) {
 			return false;
 		}
 
-		if (!Objects.equals(this.getMeasure(), informationQuantity.getMeasure())) {
+		if (!Objects.equals(this.getMeasure(), massQuantity.getMeasure())) {
 			return false;
 		}
 
@@ -148,6 +148,6 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	@Override
 	public String toString()
 	{
-		return "InformationQuantity{" + "quantity=" + quantity + ", measure=" + measure + '}';
+		return "MassQuantity{" + "quantity=" + quantity + ", measure=" + measure + '}';
 	}
 }
