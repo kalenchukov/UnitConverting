@@ -6,8 +6,8 @@
 
 package dev.kalenchukov.unit.converting;
 
-import dev.kalenchukov.unit.converting.sources.MassMeasure;
-import dev.kalenchukov.unit.converting.sources.Standard;
+import dev.kalenchukov.unit.converting.resources.MassMeasure;
+import dev.kalenchukov.unit.converting.resources.Standard;
 import org.junit.Test;
 
 import java.math.BigDecimal;

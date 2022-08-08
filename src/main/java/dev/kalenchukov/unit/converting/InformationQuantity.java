@@ -6,8 +6,8 @@
 
 package dev.kalenchukov.unit.converting;
 
-import dev.kalenchukov.unit.converting.sources.Measurable;
-import dev.kalenchukov.unit.converting.sources.InformationMeasure;
+import dev.kalenchukov.unit.converting.resources.Measurable;
+import dev.kalenchukov.unit.converting.resources.InformationMeasure;
 import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;
