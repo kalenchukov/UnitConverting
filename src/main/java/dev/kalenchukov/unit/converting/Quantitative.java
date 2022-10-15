@@ -51,22 +51,6 @@ public interface Quantitative<M extends Measurable>
 	 */
 	@NotNull M getMeasure();
 
-//	/**
-//	 * Конвертирует величину в предельно возможную меру до целого.
-//	 *
-//	 * @return Величина.
-//	 */
-//	@NotNull
-//	BigDecimal convert();
-
-//	/**
-//	 * Конвертирует величину в предельно возможную меру до целого по стандарту.
-//	 *
-//	 * @return Величина.
-//	 */
-//	@NotNull
-//	BigDecimal convert(@NotNull final Standard standard);
-
 	/**
 	 * Конвертирует величину в указанную меру измерения.
 	 *
@@ -74,5 +58,5 @@ public interface Quantitative<M extends Measurable>
 	 * @return Величина.
 	 */
 	@NotNull
-	BigDecimal convert(@NotNull final M measure);
+	BigDecimal convert(@NotNull M measure);
 }
