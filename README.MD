@@ -161,14 +161,6 @@ MassMeasure.getMax(Standard.SI);
 // Результат выполнения: YOTTAGRAM
 ```
 
-## Установка
-
-Для установки этого проекта, введите в терминале:
-
-```bash
-git clone https://github.com/kalenchukov/UnitConverting.git
-```
-
 ## Версии
 
 Доступные [версии](https://github.com/kalenchukov/UnitConverting/releases).
