@@ -160,11 +160,3 @@ MassMeasure.getMax();
 MassMeasure.getMax(Standard.SI);
 // Результат выполнения: YOTTAGRAM
 ```
-
-## Версии
-
-Доступные [версии](https://github.com/kalenchukov/UnitConverting/releases).
-
-## Лицензия
-
-[MIT](https://opensource.org/licenses/MIT)
