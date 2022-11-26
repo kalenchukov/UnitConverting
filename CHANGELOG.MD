@@ -3,10 +3,12 @@
 ## vX.X.X - XX.XX.XXXX
 
 ### Добавлено
-*
+* Добавлен AUTHOR.MD.
+* Добавлен INSTALL.MD.
+* Добавлен CHANGELOG.MD.
 
 ### Изменено
-*
+* Обновлён README.MD.
 
 ### Исправлено
 *
