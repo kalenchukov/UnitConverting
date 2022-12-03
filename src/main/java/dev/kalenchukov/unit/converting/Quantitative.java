@@ -39,7 +39,7 @@ public interface Quantitative<M extends Measurable>
 	/**
 	 * Возвращает величину.
 	 *
-	 * @return Величину.
+	 * @return величину.
 	 */
 	@NotNull
 	BigDecimal getQuantity();
@@ -47,15 +47,15 @@ public interface Quantitative<M extends Measurable>
 	/**
 	 * Возвращает меру измерения величины.
 	 *
-	 * @return Мера измерения величины.
+	 * @return мера измерения величины.
 	 */
 	@NotNull M getMeasure();
 
 	/**
 	 * Конвертирует величину в указанную меру измерения.
 	 *
-	 * @param measure Мера измерения величины.
-	 * @return Величина.
+	 * @param measure мера измерения величины.
+	 * @return величина.
 	 */
 	@NotNull
 	BigDecimal convert(@NotNull M measure);

@@ -393,8 +393,8 @@ public enum InformationMeasure implements Measurable
 	/**
 	 * Конструктор для {@code InformationMeasure}.
 	 *
-	 * @param standard Список стандартов меры измерения.
-	 * @param countMinUnit Количество минимальных единиц меры.
+	 * @param standard список стандартов меры измерения.
+	 * @param countMinUnit количество минимальных единиц меры.
 	 */
 	InformationMeasure(@NotNull final List<@NotNull Standard> standard, @NotNull final BigDecimal countMinUnit)
 	{
@@ -428,7 +428,7 @@ public enum InformationMeasure implements Measurable
 	/**
 	 * Возвращает наименьшую меру измерения.
 	 *
-	 * @return Наименьшая мера измерения.
+	 * @return наименьшая мера измерения.
 	 */
 	@NotNull
 	public static InformationMeasure getMin()
@@ -448,7 +448,7 @@ public enum InformationMeasure implements Measurable
 	/**
 	 * Возвращает наибольшую меру измерения.
 	 *
-	 * @return Наибольшая мера измерения.
+	 * @return наибольшая мера измерения.
 	 */
 	@NotNull
 	public static InformationMeasure getMax()
@@ -468,8 +468,8 @@ public enum InformationMeasure implements Measurable
 	/**
 	 * Возвращает наименьшую меру измерения по стандарту.
 	 *
-	 * @param standard Стандарт меры измерения.
-	 * @return Наименьшая мера измерения, или {@code null} если меры измерения нет.
+	 * @param standard стандарт меры измерения.
+	 * @return наименьшая мера измерения, или {@code null} если меры измерения нет.
 	 */
 	@Nullable
 	public static InformationMeasure getMin(@NotNull final Standard standard)
@@ -498,8 +498,8 @@ public enum InformationMeasure implements Measurable
 	/**
 	 * Возвращает наибольшую меру измерения по стандарту.
 	 *
-	 * @param standard Стандарт меры измерения.
-	 * @return Наибольшая мера измерения, или {@code null} если меры измерения нет.
+	 * @param standard стандарт меры измерения.
+	 * @return наибольшая мера измерения, или {@code null} если меры измерения нет.
 	 */
 	@Nullable
 	public static InformationMeasure getMax(@NotNull final Standard standard)

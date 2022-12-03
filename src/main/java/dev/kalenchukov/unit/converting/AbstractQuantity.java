@@ -54,7 +54,11 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	protected final M measure;
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code AbstractQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public AbstractQuantity(@NotNull final Byte quantity, @NotNull final M measure)
 	{
@@ -62,7 +66,11 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code AbstractQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public AbstractQuantity(@NotNull final Short quantity, @NotNull final M measure)
 	{
@@ -70,7 +78,11 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code AbstractQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public AbstractQuantity(@NotNull final Integer quantity, @NotNull final M measure)
 	{
@@ -78,7 +90,11 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code AbstractQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public AbstractQuantity(@NotNull final Long quantity, @NotNull final M measure)
 	{
@@ -86,7 +102,11 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code AbstractQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public AbstractQuantity(@NotNull final Float quantity, @NotNull final M measure)
 	{
@@ -94,7 +114,11 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code AbstractQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public AbstractQuantity(@NotNull final Double quantity, @NotNull final M measure)
 	{
@@ -102,7 +126,11 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code AbstractQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public AbstractQuantity(@NotNull final BigInteger quantity, @NotNull final M measure)
 	{
@@ -112,9 +140,9 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	/**
 	 * Конструктор для {@code AbstractQuantity}.
 	 *
-	 * @param quantity Величина.
-	 * @param measure Мера измерения величины.
-	 * @throws IllegalArgumentException Если величина аргумента {@code quantity} меньше 0.
+	 * @param quantity величина.
+	 * @param measure мера измерения величины.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public AbstractQuantity(@NotNull final BigDecimal quantity, @NotNull final M measure)
 	{
@@ -166,7 +194,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	/**
 	 * Сравнивает данный объект с другим объектом {@code AbstractQuantity}.
 	 *
-	 * @param anotherQuantity Другой объект для сравнения.
+	 * @param anotherQuantity другой объект для сравнения.
 	 * @return
 	 * <ul>
 	 *     <li><b>-1</b> - если данный объект меньше {@code anotherQuantity}.</li>

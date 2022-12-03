@@ -37,7 +37,7 @@ public interface Measurable
 	/**
 	 * Возвращает стандарт.
 	 *
-	 * @return Коллекцию стандартов.
+	 * @return коллекцию стандартов.
 	 */
 	@NotNull
 	List<@NotNull Standard> getStandard();
@@ -45,7 +45,7 @@ public interface Measurable
 	/**
 	 * Возвращает количество минимальных единиц меры.
 	 *
-	 * @return Количество минимальных единиц меры.
+	 * @return количество минимальных единиц меры.
 	 */
 	@NotNull
 	BigDecimal getCountMinUnit();

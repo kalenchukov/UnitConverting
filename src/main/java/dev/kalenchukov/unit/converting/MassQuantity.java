@@ -24,7 +24,6 @@
 
 package dev.kalenchukov.unit.converting;
 
-import dev.kalenchukov.unit.converting.resources.Measurable;
 import dev.kalenchukov.unit.converting.resources.MassMeasure;
 import org.jetbrains.annotations.NotNull;
 
@@ -40,7 +39,11 @@ import java.util.*;
 public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasure>
 {
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code MassQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины массы.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public MassQuantity(@NotNull final Byte quantity, @NotNull final MassMeasure measure)
 	{
@@ -48,7 +51,11 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code MassQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины массы.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public MassQuantity(@NotNull final Short quantity, @NotNull final MassMeasure measure)
 	{
@@ -56,7 +63,11 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code MassQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины массы.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public MassQuantity(@NotNull final Integer quantity, @NotNull final MassMeasure measure)
 	{
@@ -64,7 +75,11 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code MassQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины массы.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public MassQuantity(@NotNull final Long quantity, @NotNull final MassMeasure measure)
 	{
@@ -72,7 +87,11 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code MassQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины массы.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public MassQuantity(@NotNull final Float quantity, @NotNull final MassMeasure measure)
 	{
@@ -80,7 +99,11 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code MassQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины массы.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public MassQuantity(@NotNull final Double quantity, @NotNull final MassMeasure measure)
 	{
@@ -88,7 +111,11 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code MassQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины массы.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public MassQuantity(@NotNull final BigInteger quantity, @NotNull final MassMeasure measure)
 	{
@@ -96,7 +123,11 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code MassQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины массы.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public MassQuantity(@NotNull final BigDecimal quantity, @NotNull final MassMeasure measure)
 	{
@@ -106,8 +137,8 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	/**
 	 * Сравнивает два объекта {@code Mass}.
 	 *
-	 * @param quantityX Первый объект для сравнения.
-	 * @param quantityY Второй объект для сравнения.
+	 * @param quantityX первый объект для сравнения.
+	 * @param quantityY второй объект для сравнения.
 	 * @return
 	 * <ul>
 	 *     <li><b>-1</b> - если объект {@code quantityX} меньше {@code quantityY}.</li>

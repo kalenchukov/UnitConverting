@@ -24,7 +24,6 @@
 
 package dev.kalenchukov.unit.converting;
 
-import dev.kalenchukov.unit.converting.resources.Measurable;
 import dev.kalenchukov.unit.converting.resources.InformationMeasure;
 import org.jetbrains.annotations.NotNull;
 
@@ -40,7 +39,11 @@ import java.util.Objects;
 public final class InformationQuantity extends AbstractQuantity<InformationQuantity, InformationMeasure>
 {
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code InformationQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины информации.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(@NotNull final Byte quantity, @NotNull final InformationMeasure measure)
 	{
@@ -48,7 +51,11 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code InformationQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины информации.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(@NotNull final Short quantity, @NotNull final InformationMeasure measure)
 	{
@@ -56,7 +63,11 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code InformationQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины информации.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(@NotNull final Integer quantity, @NotNull final InformationMeasure measure)
 	{
@@ -64,7 +75,11 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code InformationQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины информации.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(@NotNull final Long quantity, @NotNull final InformationMeasure measure)
 	{
@@ -72,7 +87,11 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code InformationQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины информации.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(@NotNull final Float quantity, @NotNull final InformationMeasure measure)
 	{
@@ -80,7 +99,11 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code InformationQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины информации.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(@NotNull final Double quantity, @NotNull final InformationMeasure measure)
 	{
@@ -88,7 +111,11 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code InformationQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины информации.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(@NotNull final BigInteger quantity, @NotNull final InformationMeasure measure)
 	{
@@ -96,7 +123,11 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	}
 
 	/**
-	 * @see AbstractQuantity#AbstractQuantity(BigDecimal, Measurable)
+	 * Конструктор для {@code InformationQuantity}.
+	 *
+	 * @param quantity величина.
+	 * @param measure мера измерения величины информации.
+	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(@NotNull final BigDecimal quantity, @NotNull final InformationMeasure measure)
 	{
@@ -106,8 +137,8 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	/**
 	 * Сравнивает два объекта {@code Information}.
 	 *
-	 * @param quantityX Первый объект для сравнения.
-	 * @param quantityY Второй объект для сравнения.
+	 * @param quantityX первый объект для сравнения.
+	 * @param quantityY второй объект для сравнения.
 	 * @return
 	 * <ul>
 	 *     <li><b>-1</b> - если объект {@code quantityX} меньше {@code quantityY}.</li>
