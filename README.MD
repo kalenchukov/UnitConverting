@@ -1,18 +1,13 @@
 # UnitConverting
-
 Конвертер величин.
 
 ## Поддерживаемые меры измерения
-
 * Информации
 * Массы
 
 ## Использование
-
 ### Мера измерения информации
-
 #### Создание величины информации
-
 ```java
 InformationQuantity information = new InformationQuantity(1, InformationMeasure.BYTE);
 ```
@@ -56,7 +51,6 @@ InformationQuantity.compare(
 ```
 
 #### Меры информации
-
 Получение наименьшей меры информации:
 
 ```java
@@ -86,9 +80,7 @@ InformationMeasure.getMax(Standard.SI);
 ```
 
 ### Мера измерение массы
-
 #### Создание величины массы
-
 ```java
 MassQuantity mass = new MassQuantity(1, MassMeasure.KILOGRAM);
 ```
@@ -132,7 +124,6 @@ MassQuantity.compare(
 ```
 
 #### Меры массы
-
 Получение наименьшей меры массы:
 
 ```java
