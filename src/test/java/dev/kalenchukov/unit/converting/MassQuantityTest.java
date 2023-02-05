@@ -26,21 +26,23 @@ package dev.kalenchukov.unit.converting;
 
 import dev.kalenchukov.unit.converting.resources.MassMeasure;
 import dev.kalenchukov.unit.converting.resources.Standard;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MassQuantityTest
 {
 	/**
 	 * Проверка отрицательной величины.
 	 */
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void testNegativeQuality()
 	{
-		new MassQuantity(-1, MassMeasure.GRAM);
+		assertThrows(IllegalArgumentException.class, () -> {
+			new MassQuantity(-1, MassMeasure.GRAM);
+		});
 	}
 
 	/**

@@ -26,21 +26,23 @@ package dev.kalenchukov.unit.converting;
 
 import dev.kalenchukov.unit.converting.resources.InformationMeasure;
 import dev.kalenchukov.unit.converting.resources.Standard;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class InformationQuantityTest
 {
 	/**
 	 * Проверка отрицательной величины.
 	 */
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void testNegativeQuality()
 	{
-		new InformationQuantity(-1, InformationMeasure.BYTE);
+		assertThrows(IllegalArgumentException.class, () -> {
+			new InformationQuantity(-1, InformationMeasure.BYTE);
+		});
 	}
 
 	/**
