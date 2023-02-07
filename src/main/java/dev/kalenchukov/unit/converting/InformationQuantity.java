@@ -143,7 +143,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 * <ul>
 	 *     <li><b>-1</b> - если объект {@code quantityX} меньше {@code quantityY}.</li>
 	 *     <li><b>0</b> - если объект {@code quantityX} равен {@code quantityY}.</li>
-	 *     <li><b>1</b> если объект {@code quantityX} больше {@code quantityY}.</li>
+	 *     <li><b>1</b> - если объект {@code quantityX} больше {@code quantityY}.</li>
 	 * </ul>
 	 */
 	public static int compare(@NotNull final InformationQuantity quantityX, @NotNull final InformationQuantity quantityY)

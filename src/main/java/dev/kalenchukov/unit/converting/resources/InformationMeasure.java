@@ -195,7 +195,7 @@ public enum InformationMeasure implements Measurable
 	 * Байт.
 	 * <p>2<sup>0</sup> байт = 1.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	BYTE(
 		List.of(Standard.IEC, Standard.SI),
@@ -206,7 +206,7 @@ public enum InformationMeasure implements Measurable
 	 * Кибибайт.
 	 * <p>2<sup>10</sup> байт = 1 024.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	KIBIBYTE(
 		List.of(Standard.IEC),
@@ -217,7 +217,7 @@ public enum InformationMeasure implements Measurable
 	 * Мебибайт.
 	 * <p>2<sup>20</sup> байт = 1 048 576.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	MEBIBYTE(
 		List.of(Standard.IEC),
@@ -228,7 +228,7 @@ public enum InformationMeasure implements Measurable
 	 * Гибибайт.
 	 * <p>2<sup>30</sup> байт = 1 073 741 824.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	GIBIBYTE(
 		List.of(Standard.IEC),
@@ -239,7 +239,7 @@ public enum InformationMeasure implements Measurable
 	 * Тебибайт.
 	 * <p>2<sup>40</sup> байт = 1 099 511 627 776.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	TEBIBYTE(
 		List.of(Standard.IEC),
@@ -250,7 +250,7 @@ public enum InformationMeasure implements Measurable
 	 * Пебибайт.
 	 * <p>2<sup>50</sup> байт = 1 125 899 906 842 624.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	PEBIBYTE(
 		List.of(Standard.IEC),
@@ -261,7 +261,7 @@ public enum InformationMeasure implements Measurable
 	 * Эксбибайт.
 	 * <p>2<sup>60</sup> байт = 1 152 921 504 606 846 976.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	EXBIBYTE(
 		List.of(Standard.IEC),
@@ -272,7 +272,7 @@ public enum InformationMeasure implements Measurable
 	 * Зебибайт.
 	 * <p>2<sup>70</sup> байт = 1 180 591 620 717 411 303 424.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	ZEBIBYTE(
 		List.of(Standard.IEC),
@@ -283,7 +283,7 @@ public enum InformationMeasure implements Measurable
 	 * Йобибайт.
 	 * <p>2<sup>80</sup> байт = 1 208 925 819 614 629 174 706 176.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	YOBIBYTE(
 		List.of(Standard.IEC),
@@ -294,7 +294,7 @@ public enum InformationMeasure implements Measurable
 	 * Килобайт.
 	 * <p>10<sup>3</sup> байт = 1 000.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	KILOBYTE(
 		List.of(Standard.SI),
@@ -305,7 +305,7 @@ public enum InformationMeasure implements Measurable
 	 * Мегабайт.
 	 * <p>10<sup>6</sup> байт = 1 000 000.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	MEGABYTE(
 		List.of(Standard.SI),
@@ -316,7 +316,7 @@ public enum InformationMeasure implements Measurable
 	 * Гигабайт.
 	 * <p>10<sup>9</sup> байт = 1 000 000 000.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	GIGABYTE(
 		List.of(Standard.SI),
@@ -327,7 +327,7 @@ public enum InformationMeasure implements Measurable
 	 * Терабайт.
 	 * <p>10<sup>12</sup> байт = 1 000 000 000 000.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	TERABYTE(
 		List.of(Standard.SI),
@@ -338,7 +338,7 @@ public enum InformationMeasure implements Measurable
 	 * Петабайт.
 	 * <p>10<sup>15</sup> байт = 1 000 000 000 000 000.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	PETABYTE(
 		List.of(Standard.SI),
@@ -349,7 +349,7 @@ public enum InformationMeasure implements Measurable
 	 * Эксабайт.
 	 * <p>10<sup>18</sup> байт = 1 000 000 000 000 000 000.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	EXABYTE(
 		List.of(Standard.SI),
@@ -360,7 +360,7 @@ public enum InformationMeasure implements Measurable
 	 * Зеттабайт.
 	 * <p>10<sup>21</sup> байт = 1 000 000 000 000 000 000 000.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	ZETTABYTE(
 		List.of(Standard.SI),
@@ -371,7 +371,7 @@ public enum InformationMeasure implements Measurable
 	 * Йоттабайт.
 	 * <p>10<sup>24</sup> байт = 1 000 000 000 000 000 000 000 000.</p>
 	 *
-	 * Данное значение умножается на 8 для конвертирования в наименьшую величину - {@link InformationMeasure#BIT}.
+	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	YOTTABYTE(
 		List.of(Standard.SI),

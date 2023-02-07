@@ -199,7 +199,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 * <ul>
 	 *     <li><b>-1</b> - если данный объект меньше {@code anotherQuantity}.</li>
 	 *     <li><b>0</b> - если данный объект равен {@code anotherQuantity}.</li>
-	 *     <li><b>1</b> если данный объект больше {@code anotherQuantity}.</li>
+	 *     <li><b>1</b> - если данный объект больше {@code anotherQuantity}.</li>
 	 * </ul>
 	 */
 	@Override
