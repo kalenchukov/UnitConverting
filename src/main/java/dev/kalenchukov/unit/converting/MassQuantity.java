@@ -165,6 +165,9 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 		return result;
 	}
 
+	/**
+	 * @see Object#equals(Object)
+	 */
 	@Override
 	public boolean equals(final Object obj)
 	{
