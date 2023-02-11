@@ -154,6 +154,9 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 		return quantityX.compareTo(quantityY);
 	}
 
+	/**
+	 * @see Object#hashCode()
+	 */
 	@Override
 	public int hashCode()
 	{
