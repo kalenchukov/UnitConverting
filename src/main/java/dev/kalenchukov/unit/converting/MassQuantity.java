@@ -154,6 +154,9 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 		return quantityX.compareTo(quantityY);
 	}
 
+	/**
+	 * @see Object#hashCode()
+	 */
 	@Override
 	public int hashCode()
 	{
