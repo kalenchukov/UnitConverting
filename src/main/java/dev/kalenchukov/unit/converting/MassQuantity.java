@@ -193,6 +193,9 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 		return true;
 	}
 
+	/**
+	 * @see Object#toString()
+	 */
 	@NotNull
 	@Override
 	public String toString()
