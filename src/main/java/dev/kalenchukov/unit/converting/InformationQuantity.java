@@ -199,6 +199,9 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 		return true;
 	}
 
+	/**
+	 * @see Object#toString()
+	 */
 	@NotNull
 	@Override
 	public String toString()
