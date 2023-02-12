@@ -32,14 +32,14 @@ import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AbstractQuantityTest
+public class AbstractQuantityTest
 {
 
 	/**
 	 * Проверка метода {@link AbstractQuantity#getQuantity()}.
 	 */
 	@Test
-	void getQuantity()
+	public void getQuantity()
 	{
 		assertEquals(
 			new BigDecimal(1),
@@ -51,7 +51,7 @@ class AbstractQuantityTest
 	 * Проверка метода {@link AbstractQuantity#getMeasure()}.
 	 */
 	@Test
-	void getMeasure()
+	public void getMeasure()
 	{
 		assertEquals(
 			MassMeasure.GRAM,

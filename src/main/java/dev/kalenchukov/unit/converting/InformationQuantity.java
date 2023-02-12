@@ -26,6 +26,7 @@ package dev.kalenchukov.unit.converting;
 
 import dev.kalenchukov.unit.converting.resources.InformationMeasure;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -169,7 +170,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	}
 
 	/**
-	 * @see Object#equals(Object)
+	 * @see Quantitative#equals(Object)
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)

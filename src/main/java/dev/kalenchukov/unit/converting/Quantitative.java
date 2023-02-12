@@ -26,6 +26,7 @@ package dev.kalenchukov.unit.converting;
 
 import dev.kalenchukov.unit.converting.resources.Measurable;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.math.BigDecimal;
 
@@ -59,4 +60,9 @@ public interface Quantitative<M extends Measurable>
 	 */
 	@NotNull
 	BigDecimal convert(@NotNull M measure);
+
+	/**
+	 * @see Object#equals(Object)
+	 */
+	boolean equals(@Nullable Object obj);
 }

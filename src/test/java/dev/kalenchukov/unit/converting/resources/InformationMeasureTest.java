@@ -35,13 +35,13 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Класс проверки констант и методов перечисления {@link InformationMeasure}.
  */
-class InformationMeasureTest
+public class InformationMeasureTest
 {
 	/**
 	 * Проверка метода {@link InformationMeasure#getStandard()}.
 	 */
 	@Test
-	void getStandard()
+	public void getStandard()
 	{
 		assertArrayEquals(
 			List.of(Standard.IEC, Standard.SI).toArray(),
@@ -53,7 +53,7 @@ class InformationMeasureTest
 	 * Проверка метода {@link InformationMeasure#getCountMinUnit()}.
 	 */
 	@Test
-	void getCountMinUnit()
+	public void getCountMinUnit()
 	{
 		assertEquals(BigDecimal.valueOf(8), InformationMeasure.BYTE.getCountMinUnit());
 	}

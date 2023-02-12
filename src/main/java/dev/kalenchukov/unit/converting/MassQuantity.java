@@ -26,6 +26,7 @@ package dev.kalenchukov.unit.converting;
 
 import dev.kalenchukov.unit.converting.resources.MassMeasure;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -169,7 +170,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	}
 
 	/**
-	 * @see Object#equals(Object)
+	 * @see Quantitative#equals(Object)
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)

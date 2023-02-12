@@ -34,13 +34,13 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Класс проверки констант и методов перечисления {@link MassMeasure}.
  */
-class MassMeasureTest
+public class MassMeasureTest
 {
 	/**
 	 * Проверка метода {@link MassMeasure#getStandard()}.
 	 */
 	@Test
-	void getStandard()
+	public void getStandard()
 	{
 		assertArrayEquals(
 			List.of(Standard.SI).toArray(),
@@ -52,7 +52,7 @@ class MassMeasureTest
 	 * Проверка метода {@link MassMeasure#getCountMinUnit()}.
 	 */
 	@Test
-	void getCountMinUnit()
+	public void getCountMinUnit()
 	{
 		assertEquals(BigDecimal.valueOf(1000), MassMeasure.KILOGRAM.getCountMinUnit());
 	}
@@ -92,5 +92,4 @@ class MassMeasureTest
 	{
 		assertEquals(MassMeasure.YOTTAGRAM, MassMeasure.getMax(Standard.SI));
 	}
-
 }
