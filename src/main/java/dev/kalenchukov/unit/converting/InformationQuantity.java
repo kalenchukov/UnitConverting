@@ -201,7 +201,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	}
 
 	/**
-	 * @see Object#toString()
+	 * @see Quantitative#toString()
 	 */
 	@NotNull
 	@Override

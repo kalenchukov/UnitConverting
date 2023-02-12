@@ -3,6 +3,7 @@
 ### Добавлено
 * Добавлен метод Quantitative.equals(Object).
 * Добавлен метод Quantitative.hashCode().
+* Добавлен метод Quantitative.toString().
 * Добавлен AUTHOR.MD.
 * Добавлен INSTALL.MD.
 * Добавлен CHANGELOG.MD.

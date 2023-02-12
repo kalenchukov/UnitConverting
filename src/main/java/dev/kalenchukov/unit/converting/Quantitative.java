@@ -70,4 +70,10 @@ public interface Quantitative<M extends Measurable>
 	 * @see Object#hashCode()
 	 */
 	int hashCode();
+
+	/**
+	 * @see Object#toString()
+	 */
+	@NotNull
+	String toString();
 }
