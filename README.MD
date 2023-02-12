@@ -8,13 +8,9 @@
 
 ## Использование
 ### Мера измерения информации
-#### Создание величины информации
+#### Получение величины информации
 ```java
 InformationQuantity information = new InformationQuantity(1, InformationMeasure.BYTE);
-```
-
-Получение величины информации:
-```java
 information.getQuantity();
 ```
 
@@ -23,8 +19,9 @@ information.getQuantity();
 1
 ```
 
-Получение меры информации:
+#### Получение меры информации
 ```java
+InformationQuantity information = new InformationQuantity(1, InformationMeasure.BYTE);
 information.getMeasure();
 ```
 
@@ -33,8 +30,9 @@ information.getMeasure();
 BYTE
 ```
 
-Сравнение величины информации:
+#### Сравнение величины информации
 ```java
+InformationQuantity information = new InformationQuantity(1, InformationMeasure.BYTE);
 information.compareTo(new InformationQuantity(1, InformationMeasure.BIT))
 ```
 
@@ -43,8 +41,9 @@ information.compareTo(new InformationQuantity(1, InformationMeasure.BIT))
 1
 ```
 
-Конвертирование величины информации:
+#### Конвертирование величины информации
 ```java
+InformationQuantity information = new InformationQuantity(1, InformationMeasure.BYTE);
 information.convert(InformationMeasure.BIT);
 ```
 
@@ -53,7 +52,7 @@ information.convert(InformationMeasure.BIT);
 8
 ```
 
-Сравнение двух величин информации:
+#### Сравнение двух величин информации
 ```java
 InformationQuantity.compare(
     new InformationQuantity(1, InformationMeasure.BYTE),
@@ -67,7 +66,7 @@ InformationQuantity.compare(
 ```
 
 #### Меры информации
-Получение наименьшей меры информации:
+#### Получение наименьшей меры информации
 ```java
 InformationMeasure.getMin();
 ```
@@ -77,7 +76,7 @@ InformationMeasure.getMin();
 BIT
 ```
 
-Получение наименьшей меры информации по стандарту:
+#### Получение наименьшей меры информации по стандарту
 ```java
 InformationMeasure.getMin(Standard.IEC);
 ```
@@ -87,7 +86,7 @@ InformationMeasure.getMin(Standard.IEC);
 BIT
 ```
 
-Получение наибольшей меры информации:
+#### Получение наибольшей меры информации
 ```java
 InformationMeasure.getMax();
 ```
@@ -97,7 +96,7 @@ InformationMeasure.getMax();
 YOBIBYTE
 ```
 
-Получение наибольшей меры информации по стандарту:
+#### Получение наибольшей меры информации по стандарту
 ```java
 InformationMeasure.getMax(Standard.SI);
 ```
@@ -108,13 +107,9 @@ YOTTABYTE
 ```
 
 ### Мера измерение массы
-#### Создание величины массы
+#### Получение величины массы
 ```java
 MassQuantity mass = new MassQuantity(1, MassMeasure.KILOGRAM);
-```
-
-Получение величины массы:
-```java
 mass.getQuantity();
 ```
 
@@ -123,8 +118,9 @@ mass.getQuantity();
 1
 ```
 
-Получение меры массы:
+#### Получение меры массы
 ```java
+MassQuantity mass = new MassQuantity(1, MassMeasure.KILOGRAM);
 mass.getMeasure();
 ```
 
@@ -133,8 +129,9 @@ mass.getMeasure();
 KILOGRAM
 ```
 
-Сравнение величины массы:
+#### Сравнение величины массы
 ```java
+MassQuantity mass = new MassQuantity(1, MassMeasure.KILOGRAM);
 mass.compareTo(new MassQuantity(1, MassMeasure.GRAM))
 ```
 
@@ -143,8 +140,9 @@ mass.compareTo(new MassQuantity(1, MassMeasure.GRAM))
 1
 ```
 
-Конвертирование величины массы:
+#### Конвертирование величины массы
 ```java
+MassQuantity mass = new MassQuantity(1, MassMeasure.KILOGRAM);
 mass.convert(MassMeasure.GRAM);
 ```
 
@@ -153,7 +151,7 @@ mass.convert(MassMeasure.GRAM);
 1000
 ```
 
-Сравнение двух величин массы:
+#### Сравнение двух величин массы
 ```java
 MassQuantity.compare(
     new MassQuantity(1, MassMeasure.KILOGRAM),
@@ -167,7 +165,7 @@ MassQuantity.compare(
 ```
 
 #### Меры массы
-Получение наименьшей меры массы:
+#### Получение наименьшей меры массы
 ```java
 MassMeasure.getMin();
 ```
@@ -177,7 +175,7 @@ MassMeasure.getMin();
 YOCTOGRAM
 ```
 
-Получение наименьшей меры массы по стандарту:
+#### Получение наименьшей меры массы по стандарту
 ```java
 MassMeasure.getMin(Standard.SI);
 ```
@@ -187,7 +185,7 @@ MassMeasure.getMin(Standard.SI);
 YOCTOGRAM
 ```
 
-Получение наибольшей меры массы:
+#### Получение наибольшей меры массы
 ```java
 MassMeasure.getMax();
 ```
@@ -197,7 +195,7 @@ MassMeasure.getMax();
 YOTTAGRAM
 ```
 
-Получение наибольшей меры массы по стандарту:
+#### Получение наибольшей меры массы по стандарту
 ```java
 MassMeasure.getMax(Standard.SI);
 ```
