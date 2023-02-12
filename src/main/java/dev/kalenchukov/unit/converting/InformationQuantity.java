@@ -156,7 +156,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Quantitative#hashCode()
 	 */
 	@Override
 	public int hashCode()

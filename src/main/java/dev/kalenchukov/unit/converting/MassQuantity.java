@@ -156,7 +156,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Quantitative#hashCode()
 	 */
 	@Override
 	public int hashCode()

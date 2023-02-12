@@ -65,4 +65,9 @@ public interface Quantitative<M extends Measurable>
 	 * @see Object#equals(Object)
 	 */
 	boolean equals(@Nullable Object obj);
+
+	/**
+	 * @see Object#hashCode()
+	 */
+	int hashCode();
 }
