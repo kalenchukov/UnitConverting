@@ -158,7 +158,9 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	}
 
 	/**
-	 * @see Quantitative#getQuantity()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -168,7 +170,9 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	}
 
 	/**
-	 * @see Quantitative#getMeasure()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -178,7 +182,10 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	}
 
 	/**
-	 * @see Quantitative#convert(Measurable)
+	 * {@inheritDoc}
+	 *
+	 * @param measure {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override

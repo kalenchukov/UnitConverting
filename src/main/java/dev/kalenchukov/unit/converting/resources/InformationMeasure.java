@@ -406,7 +406,9 @@ public enum InformationMeasure implements Measurable
 	}
 
 	/**
-	 * @see Measurable#getStandard()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -416,7 +418,9 @@ public enum InformationMeasure implements Measurable
 	}
 
 	/**
-	 * @see Measurable#getCountMinUnit()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
