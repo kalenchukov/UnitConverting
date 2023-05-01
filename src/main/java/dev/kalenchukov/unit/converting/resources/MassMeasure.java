@@ -34,6 +34,8 @@ import java.util.Objects;
 
 /**
  * Перечисление мер измерения массы.
+ *
+ * @author Aleksey Kalenchukov
  */
 public enum MassMeasure implements Measurable
 {
