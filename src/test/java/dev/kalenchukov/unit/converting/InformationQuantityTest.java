@@ -31,6 +31,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки методов класса {@link InformationQuantity}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class InformationQuantityTest
 {

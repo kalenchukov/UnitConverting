@@ -33,6 +33,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки констант и методов перечисления {@link MassMeasure}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class MassMeasureTest
 {

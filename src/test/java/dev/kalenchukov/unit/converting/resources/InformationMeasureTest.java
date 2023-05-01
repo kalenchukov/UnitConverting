@@ -34,6 +34,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки констант и методов перечисления {@link InformationMeasure}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class InformationMeasureTest
 {

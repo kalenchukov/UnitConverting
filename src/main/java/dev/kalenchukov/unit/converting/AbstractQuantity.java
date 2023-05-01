@@ -37,6 +37,8 @@ import java.util.Objects;
  *
  * @param <Q> Тип объекта величины.
  * @param <M> Тип объекта меры измерения величины.
+ *
+ * @author Aleksey Kalenchukov
  */
 public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Measurable>
 	implements Comparable<Q>, Quantitative<M>
