@@ -60,15 +60,6 @@ public class MassMeasureTest
 	}
 
 	/**
-	 * Проверка метода {@link MassMeasure#getMin(Standard)}.
-	 */
-	@Test
-	public void testGetMinStandard()
-	{
-		assertEquals(MassMeasure.YOCTOGRAM, MassMeasure.getMin(Standard.SI));
-	}
-
-	/**
 	 * Проверка метода {@link MassMeasure#getMax(Standard)}.
 	 */
 	@Test

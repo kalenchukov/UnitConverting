@@ -316,36 +316,6 @@ public enum TimeMeasure implements Measurable
     }
 
     /**
-     * Возвращает наименьшую меру измерения по стандарту.
-     *
-     * @param standard стандарт меры измерения.
-     * @return наименьшая мера измерения, или {@code null} если меры измерения нет.
-     */
-    @Nullable
-    public static TimeMeasure getMin(@NotNull final Standard standard)
-    {
-        Objects.requireNonNull(standard);
-
-        TimeMeasure resultMeasure = null;
-
-        for (TimeMeasure measure : TimeMeasure.values())
-        {
-            if (measure.getStandard().contains(standard))
-            {
-                if (resultMeasure == null) {
-                    resultMeasure = measure;
-                }
-
-                if (measure.getCountMinUnit().compareTo(resultMeasure.getCountMinUnit()) < 0) {
-                    resultMeasure = measure;
-                }
-            }
-        }
-
-        return resultMeasure;
-    }
-
-    /**
      * Возвращает наибольшую меру измерения по стандарту.
      *
      * @param standard стандарт меры измерения.

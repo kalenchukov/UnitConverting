@@ -61,15 +61,6 @@ public class TimeMeasureTest
 	}
 
 	/**
-	 * Проверка метода {@link TimeMeasure#getMin(Standard)}.
-	 */
-	@Test
-	public void testGetMinStandard()
-	{
-		assertEquals(TimeMeasure.QUECTOSECOND, TimeMeasure.getMin(Standard.SI));
-	}
-
-	/**
 	 * Проверка метода {@link TimeMeasure#getMax(Standard)}.
 	 */
 	@Test

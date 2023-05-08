@@ -282,36 +282,6 @@ public enum MassMeasure implements Measurable
 	}
 
 	/**
-	 * Возвращает наименьшую меру измерения по стандарту.
-	 *
-	 * @param standard стандарт меры измерения.
-	 * @return наименьшая мера измерения, или {@code null} если меры измерения нет.
-	 */
-	@Nullable
-	public static MassMeasure getMin(@NotNull final Standard standard)
-	{
-		Objects.requireNonNull(standard);
-
-		MassMeasure resultMeasure = null;
-
-		for (MassMeasure measure : MassMeasure.values())
-		{
-			if (measure.getStandard().contains(standard))
-			{
-				if (resultMeasure == null) {
-					resultMeasure = measure;
-				}
-
-				if (measure.getCountMinUnit().compareTo(resultMeasure.getCountMinUnit()) < 0) {
-					resultMeasure = measure;
-				}
-			}
-		}
-
-		return resultMeasure;
-	}
-
-	/**
 	 * Возвращает наибольшую меру измерения по стандарту.
 	 *
 	 * @param standard стандарт меры измерения.

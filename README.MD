@@ -67,16 +67,6 @@ InformationQuantity.compare(
 ```
 
 #### Меры информации
-#### Получение наименьшей меры информации по стандарту
-```java
-InformationMeasure.getMin(Standard.IEC);
-```
-
-Результат выполнения:
-```
-BIT
-```
-
 #### Получение наибольшей меры информации по стандарту
 ```java
 InformationMeasure.getMax(Standard.SI);
@@ -146,16 +136,6 @@ MassQuantity.compare(
 ```
 
 #### Меры массы
-#### Получение наименьшей меры массы по стандарту
-```java
-MassMeasure.getMin(Standard.SI);
-```
-
-Результат выполнения:
-```
-YOCTOGRAM
-```
-
 #### Получение наибольшей меры массы по стандарту
 ```java
 MassMeasure.getMax(Standard.SI);
@@ -225,16 +205,6 @@ TimeQuantity.compare(
 ```
 
 #### Меры времени
-#### Получение наименьшей меры времени по стандарту
-```java
-TimeMeasure.getMin(Standard.SI);
-```
-
-Результат выполнения:
-```
-QUECTOSECOND
-```
-
 #### Получение наибольшей меры времени по стандарту
 ```java
 TimeMeasure.getMax(Standard.SI);
