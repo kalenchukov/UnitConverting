@@ -59,13 +59,4 @@ public class InformationMeasureTest
 	{
 		assertEquals(BigDecimal.valueOf(8), InformationMeasure.BYTE.getCountMinUnit());
 	}
-
-	/**
-	 * Проверка метода {@link InformationMeasure#getMax(Standard)}.
-	 */
-	@Test
-	public void testGetMaxStandard()
-	{
-		assertEquals(InformationMeasure.YOBIBYTE, InformationMeasure.getMax(Standard.IEC));
-	}
 }

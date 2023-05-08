@@ -14,7 +14,7 @@
 * Удалены методы *Measure.getMin().
 * Удалены методы *Measure.getMax().
 * Удалены методы *Measure.getMin(Standard).
-* 
+* Удалены методы *Measure.getMax(Standard).
 
 ## v1.3.0 - 12.02.2023
 ### Добавлено

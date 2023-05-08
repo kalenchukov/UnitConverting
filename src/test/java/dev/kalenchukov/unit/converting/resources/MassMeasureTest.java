@@ -58,13 +58,4 @@ public class MassMeasureTest
 	{
 		assertEquals(BigDecimal.valueOf(1000), MassMeasure.KILOGRAM.getCountMinUnit());
 	}
-
-	/**
-	 * Проверка метода {@link MassMeasure#getMax(Standard)}.
-	 */
-	@Test
-	public void testGetMaxStandard()
-	{
-		assertEquals(MassMeasure.YOTTAGRAM, MassMeasure.getMax(Standard.SI));
-	}
 }

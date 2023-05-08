@@ -59,13 +59,4 @@ public class TimeMeasureTest
 	{
 		assertEquals(BigDecimal.valueOf(1000), TimeMeasure.KILOSECOND.getCountMinUnit());
 	}
-
-	/**
-	 * Проверка метода {@link TimeMeasure#getMax(Standard)}.
-	 */
-	@Test
-	public void testGetMaxStandard()
-	{
-		assertEquals(TimeMeasure.QUETTASECOND, TimeMeasure.getMax(Standard.SI));
-	}
 }
