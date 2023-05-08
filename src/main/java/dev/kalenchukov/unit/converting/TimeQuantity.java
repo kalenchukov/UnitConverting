@@ -214,6 +214,6 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	@Override
 	public String toString()
 	{
-		return "TimeQuantity{" + "quantity=" + quantity + ", measure=" + measure + '}';
+		return "TimeQuantity{" + "quantity=" + this.getQuantity() + ", measure=" + this.getMeasure() + '}';
 	}
 }
