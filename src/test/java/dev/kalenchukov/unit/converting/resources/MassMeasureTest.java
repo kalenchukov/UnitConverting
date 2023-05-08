@@ -60,15 +60,6 @@ public class MassMeasureTest
 	}
 
 	/**
-	 * Проверка метода {@link MassMeasure#getMax()}.
-	 */
-	@Test
-	public void testGetMax()
-	{
-		assertEquals(MassMeasure.YOTTAGRAM, MassMeasure.getMax());
-	}
-
-	/**
 	 * Проверка метода {@link MassMeasure#getMin(Standard)}.
 	 */
 	@Test

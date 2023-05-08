@@ -61,15 +61,6 @@ public class InformationMeasureTest
 	}
 
 	/**
-	 * Проверка метода {@link InformationMeasure#getMax()}.
-	 */
-	@Test
-	public void testGetMax()
-	{
-		assertEquals(InformationMeasure.YOBIBYTE, InformationMeasure.getMax());
-	}
-
-	/**
 	 * Проверка метода {@link InformationMeasure#getMin(Standard)}.
 	 */
 	@Test

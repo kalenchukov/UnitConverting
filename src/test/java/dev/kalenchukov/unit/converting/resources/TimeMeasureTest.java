@@ -61,15 +61,6 @@ public class TimeMeasureTest
 	}
 
 	/**
-	 * Проверка метода {@link TimeMeasure#getMax()}.
-	 */
-	@Test
-	public void testGetMax()
-	{
-		assertEquals(TimeMeasure.QUETTASECOND, TimeMeasure.getMax());
-	}
-
-	/**
 	 * Проверка метода {@link TimeMeasure#getMin(Standard)}.
 	 */
 	@Test

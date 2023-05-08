@@ -432,26 +432,6 @@ public enum InformationMeasure implements Measurable
 	}
 
 	/**
-	 * Возвращает наибольшую меру измерения.
-	 *
-	 * @return наибольшая мера измерения.
-	 */
-	@NotNull
-	public static InformationMeasure getMax()
-	{
-		InformationMeasure resultMeasure = InformationMeasure.BYTE;
-
-		for (InformationMeasure measure : InformationMeasure.values())
-		{
-			if (measure.getCountMinUnit().compareTo(resultMeasure.getCountMinUnit()) > 0) {
-				resultMeasure = measure;
-			}
-		}
-
-		return resultMeasure;
-	}
-
-	/**
 	 * Возвращает наименьшую меру измерения по стандарту.
 	 *
 	 * @param standard стандарт меры измерения.

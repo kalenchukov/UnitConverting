@@ -77,16 +77,6 @@ InformationMeasure.getMin(Standard.IEC);
 BIT
 ```
 
-#### Получение наибольшей меры информации
-```java
-InformationMeasure.getMax();
-```
-
-Результат выполнения:
-```
-YOBIBYTE
-```
-
 #### Получение наибольшей меры информации по стандарту
 ```java
 InformationMeasure.getMax(Standard.SI);
@@ -166,16 +156,6 @@ MassMeasure.getMin(Standard.SI);
 YOCTOGRAM
 ```
 
-#### Получение наибольшей меры массы
-```java
-MassMeasure.getMax();
-```
-
-Результат выполнения:
-```
-YOTTAGRAM
-```
-
 #### Получение наибольшей меры массы по стандарту
 ```java
 MassMeasure.getMax(Standard.SI);
@@ -253,16 +233,6 @@ TimeMeasure.getMin(Standard.SI);
 Результат выполнения:
 ```
 QUECTOSECOND
-```
-
-#### Получение наибольшей меры времени
-```java
-TimeMeasure.getMax();
-```
-
-Результат выполнения:
-```
-QUETTASECOND
 ```
 
 #### Получение наибольшей меры времени по стандарту

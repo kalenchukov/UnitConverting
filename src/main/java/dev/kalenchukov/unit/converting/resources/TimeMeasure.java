@@ -316,26 +316,6 @@ public enum TimeMeasure implements Measurable
     }
 
     /**
-     * Возвращает наибольшую меру измерения.
-     *
-     * @return наибольшая мера измерения.
-     */
-    @NotNull
-    public static TimeMeasure getMax()
-    {
-        TimeMeasure resultMeasure = TimeMeasure.SECOND;
-
-        for (TimeMeasure measure : TimeMeasure.values())
-        {
-            if (measure.getCountMinUnit().compareTo(resultMeasure.getCountMinUnit()) > 0) {
-                resultMeasure = measure;
-            }
-        }
-
-        return resultMeasure;
-    }
-
-    /**
      * Возвращает наименьшую меру измерения по стандарту.
      *
      * @param standard стандарт меры измерения.
