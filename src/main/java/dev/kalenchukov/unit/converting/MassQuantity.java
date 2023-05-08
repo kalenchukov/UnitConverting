@@ -214,6 +214,6 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	@Override
 	public String toString()
 	{
-		return "MassQuantity{" + "quantity=" + quantity + ", measure=" + measure + '}';
+		return "MassQuantity{" + "quantity=" + this.getQuantity() + ", measure=" + this.getMeasure() + '}';
 	}
 }
