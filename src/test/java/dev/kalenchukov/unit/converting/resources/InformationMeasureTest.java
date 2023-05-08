@@ -61,15 +61,6 @@ public class InformationMeasureTest
 	}
 
 	/**
-	 * Проверка метода {@link InformationMeasure#getMin()}.
-	 */
-	@Test
-	public void testGetMin()
-	{
-		assertEquals(InformationMeasure.BIT, InformationMeasure.getMin());
-	}
-
-	/**
 	 * Проверка метода {@link InformationMeasure#getMax()}.
 	 */
 	@Test

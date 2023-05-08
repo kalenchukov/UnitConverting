@@ -282,26 +282,6 @@ public enum MassMeasure implements Measurable
 	}
 
 	/**
-	 * Возвращает наименьшую меру измерения.
-	 *
-	 * @return наименьшая мера измерения.
-	 */
-	@NotNull
-	public static MassMeasure getMin()
-	{
-		MassMeasure resultMeasure = MassMeasure.GRAM;
-
-		for (MassMeasure measure : MassMeasure.values())
-		{
-			if (measure.getCountMinUnit().compareTo(resultMeasure.getCountMinUnit()) < 0) {
-				resultMeasure = measure;
-			}
-		}
-
-		return resultMeasure;
-	}
-
-	/**
 	 * Возвращает наибольшую меру измерения.
 	 *
 	 * @return наибольшая мера измерения.
