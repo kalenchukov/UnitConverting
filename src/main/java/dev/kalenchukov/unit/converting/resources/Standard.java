@@ -25,7 +25,7 @@
 package dev.kalenchukov.unit.converting.resources;
 
 /**
- * перечисление стандартов мер измерения.
+ * Перечисление стандартов мер измерения.
  *
  * @author Aleksey Kalenchukov
  */
