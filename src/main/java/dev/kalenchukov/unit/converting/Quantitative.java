@@ -51,7 +51,8 @@ public interface Quantitative<M extends Measurable>
 	 *
 	 * @return мера измерения величины.
 	 */
-	@NotNull M getMeasure();
+	@NotNull
+	M getMeasure();
 
 	/**
 	 * Конвертирует величину в указанную меру измерения.
