@@ -214,6 +214,6 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	@Override
 	public String toString()
 	{
-		return "InformationQuantity{" + "quantity=" + quantity + ", measure=" + measure + '}';
+		return "InformationQuantity{" + "quantity=" + this.getQuantity() + ", measure=" + this.getMeasure() + '}';
 	}
 }
