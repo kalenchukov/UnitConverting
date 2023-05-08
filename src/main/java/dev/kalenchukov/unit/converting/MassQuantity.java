@@ -194,13 +194,13 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 			return false;
 		}
 
-		MassQuantity massQuantity = (MassQuantity) obj;
+		MassQuantity quantity = (MassQuantity) obj;
 
-		if (!Objects.equals(this.getQuantity(), massQuantity.getQuantity())) {
+		if (!Objects.equals(this.getQuantity(), quantity.getQuantity())) {
 			return false;
 		}
 
-		if (!Objects.equals(this.getMeasure(), massQuantity.getMeasure())) {
+		if (!Objects.equals(this.getMeasure(), quantity.getMeasure())) {
 			return false;
 		}
 

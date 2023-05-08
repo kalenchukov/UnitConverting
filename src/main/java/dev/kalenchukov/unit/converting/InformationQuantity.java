@@ -194,13 +194,13 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 			return false;
 		}
 
-		InformationQuantity informationQuantity = (InformationQuantity) obj;
+		InformationQuantity quantity = (InformationQuantity) obj;
 
-		if (!Objects.equals(this.getQuantity(), informationQuantity.getQuantity())) {
+		if (!Objects.equals(this.getQuantity(), quantity.getQuantity())) {
 			return false;
 		}
 
-		if (!Objects.equals(this.getMeasure(), informationQuantity.getMeasure())) {
+		if (!Objects.equals(this.getMeasure(), quantity.getMeasure())) {
 			return false;
 		}
 
