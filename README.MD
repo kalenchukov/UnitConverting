@@ -5,6 +5,7 @@
 ## Поддерживаемые меры измерения
 * Информации
 * Массы
+* Времени
 
 ## Использование
 ### Мера измерения информации
@@ -203,4 +204,103 @@ MassMeasure.getMax(Standard.SI);
 Результат выполнения:
 ```
 YOTTAGRAM
+```
+
+### Мера измерение времени
+#### Получение величины времени
+```java
+TimeQuantity time = new TimeQuantity(1, TimeMeasure.KILOSECOND);
+time.getQuantity();
+```
+
+Результат выполнения:
+```
+1
+```
+
+#### Получение меры времени
+```java
+TimeQuantity time = new TimeQuantity(1, TimeMeasure.KILOSECOND);
+time.getMeasure();
+```
+
+Результат выполнения:
+```
+KILOSECOND
+```
+
+#### Сравнение величины времени
+```java
+TimeQuantity time = new TimeQuantity(1, TimeMeasure.KILOSECOND);
+time.compareTo(new TimeQuantity(1, TimeMeasure.SECOND))
+```
+
+Результат выполнения:
+```
+1
+```
+
+#### Конвертирование величины времени
+```java
+TimeQuantity time = new TimeQuantity(1, TimeMeasure.KILOSECOND);
+time.convert(TimeMeasure.SECOND);
+```
+
+Результат выполнения:
+```
+1000
+```
+
+#### Сравнение двух величин времени
+```java
+TimeQuantity.compare(
+    new TimeQuantity(1, TimeMeasure.KILOSECOND),
+    new TimeQuantity(1, TimeMeasure.SECOND)
+);
+```
+
+Результат выполнения:
+```
+1
+```
+
+#### Меры времени
+#### Получение наименьшей меры времени
+```java
+TimeMeasure.getMin();
+```
+
+Результат выполнения:
+```
+QUECTOSECOND
+```
+
+#### Получение наименьшей меры времени по стандарту
+```java
+TimeMeasure.getMin(Standard.SI);
+```
+
+Результат выполнения:
+```
+QUECTOSECOND
+```
+
+#### Получение наибольшей меры времени
+```java
+TimeMeasure.getMax();
+```
+
+Результат выполнения:
+```
+QUETTASECOND
+```
+
+#### Получение наибольшей меры времени по стандарту
+```java
+TimeMeasure.getMax(Standard.SI);
+```
+
+Результат выполнения:
+```
+QUETTASECOND
 ```
