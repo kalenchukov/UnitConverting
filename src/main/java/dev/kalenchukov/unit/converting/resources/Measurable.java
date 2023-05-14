@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * Интерфейс для реализации перечисления мер измерения.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public interface Measurable
 {

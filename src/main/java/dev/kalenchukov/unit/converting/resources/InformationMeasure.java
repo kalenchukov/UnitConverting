@@ -34,7 +34,7 @@ import java.util.Objects;
 /**
  * Перечисление мер измерения информации.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public enum InformationMeasure implements Measurable
 {

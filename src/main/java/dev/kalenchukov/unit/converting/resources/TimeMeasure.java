@@ -35,7 +35,7 @@ import java.util.Objects;
 /**
  * Перечисление мер измерения времени.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public enum TimeMeasure implements Measurable
 {

@@ -35,7 +35,7 @@ import java.util.Objects;
 /**
  * Класс величины времени.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasure>
 {

@@ -35,7 +35,7 @@ import java.util.*;
 /**
  * Класс величины массы.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasure>
 {

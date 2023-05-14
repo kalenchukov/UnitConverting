@@ -35,7 +35,7 @@ import java.util.Objects;
 /**
  * Класс величины информации.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class InformationQuantity extends AbstractQuantity<InformationQuantity, InformationMeasure>
 {

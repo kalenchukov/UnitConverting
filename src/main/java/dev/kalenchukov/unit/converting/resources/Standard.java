@@ -27,7 +27,7 @@ package dev.kalenchukov.unit.converting.resources;
 /**
  * Перечисление стандартов мер измерения.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public enum Standard
 {
