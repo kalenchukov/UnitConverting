@@ -62,7 +62,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 * @param measure мера измерения величины.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public AbstractQuantity(@NotNull final Byte quantity, @NotNull final M measure)
+	protected AbstractQuantity(@NotNull final Byte quantity, @NotNull final M measure)
 	{
 		this(new BigDecimal(quantity), measure);
 	}
@@ -74,7 +74,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 * @param measure мера измерения величины.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public AbstractQuantity(@NotNull final Short quantity, @NotNull final M measure)
+	protected AbstractQuantity(@NotNull final Short quantity, @NotNull final M measure)
 	{
 		this(new BigDecimal(quantity), measure);
 	}
@@ -86,7 +86,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 * @param measure мера измерения величины.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public AbstractQuantity(@NotNull final Integer quantity, @NotNull final M measure)
+	protected AbstractQuantity(@NotNull final Integer quantity, @NotNull final M measure)
 	{
 		this(new BigDecimal(quantity), measure);
 	}
@@ -98,7 +98,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 * @param measure мера измерения величины.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public AbstractQuantity(@NotNull final Long quantity, @NotNull final M measure)
+	protected AbstractQuantity(@NotNull final Long quantity, @NotNull final M measure)
 	{
 		this(new BigDecimal(quantity), measure);
 	}
@@ -110,7 +110,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 * @param measure мера измерения величины.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public AbstractQuantity(@NotNull final Float quantity, @NotNull final M measure)
+	protected AbstractQuantity(@NotNull final Float quantity, @NotNull final M measure)
 	{
 		this(new BigDecimal(quantity), measure);
 	}
@@ -122,7 +122,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 * @param measure мера измерения величины.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public AbstractQuantity(@NotNull final Double quantity, @NotNull final M measure)
+	protected AbstractQuantity(@NotNull final Double quantity, @NotNull final M measure)
 	{
 		this(new BigDecimal(quantity), measure);
 	}
@@ -134,7 +134,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 * @param measure мера измерения величины.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public AbstractQuantity(@NotNull final BigInteger quantity, @NotNull final M measure)
+	protected AbstractQuantity(@NotNull final BigInteger quantity, @NotNull final M measure)
 	{
 		this(new BigDecimal(quantity), measure);
 	}
@@ -146,7 +146,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 * @param measure мера измерения величины.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public AbstractQuantity(@NotNull final BigDecimal quantity, @NotNull final M measure)
+	protected AbstractQuantity(@NotNull final BigDecimal quantity, @NotNull final M measure)
 	{
 		Objects.requireNonNull(quantity);
 		Objects.requireNonNull(measure);
