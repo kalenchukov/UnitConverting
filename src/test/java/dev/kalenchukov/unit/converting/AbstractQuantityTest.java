@@ -63,7 +63,7 @@ public class AbstractQuantityTest
 	 * Проверка метода {@link AbstractQuantity#convert(Measurable)}.
 	 */
 	@Test
-	public void testConvert()
+	public void convert()
 	{
 		assertEquals(
 			new BigDecimal(1000),
@@ -75,7 +75,7 @@ public class AbstractQuantityTest
 	 * Проверка метода {@link AbstractQuantity#convert(Measurable)} с нулевым значением.
 	 */
 	@Test()
-	public void testConvertZero()
+	public void convertZero()
 	{
 		assertEquals(
 			BigDecimal.ZERO,
@@ -88,7 +88,7 @@ public class AbstractQuantityTest
 	 * сравнением большего значения.
 	 */
 	@Test
-	public void testCompareToMore()
+	public void compareToMore()
 	{
 		int result = new MassQuantity(1, MassMeasure.YOTTAGRAM).compareTo(
 			new MassQuantity(1, MassMeasure.ZETTAGRAM)
@@ -102,7 +102,7 @@ public class AbstractQuantityTest
 	 * сравнением равного значения.
 	 */
 	@Test
-	public void testCompareToEqually()
+	public void compareToEqually()
 	{
 		int result = new MassQuantity(1, MassMeasure.KILOGRAM).compareTo(
 			new MassQuantity(1, MassMeasure.KILOGRAM)
@@ -116,7 +116,7 @@ public class AbstractQuantityTest
 	 * сравнением меньшего значения.
 	 */
 	@Test
-	public void testCompareToLess()
+	public void compareToLess()
 	{
 		int result = new MassQuantity(1, MassMeasure.ZETTAGRAM).compareTo(
 			new MassQuantity(1, MassMeasure.YOTTAGRAM)

@@ -40,7 +40,7 @@ public class InformationQuantityTest
 	 * Проверка создания объекта {@link InformationQuantity} с отрицательной величиной.
 	 */
 	@Test
-	public void testNegativeQuality()
+	public void negativeQuality()
 	{
 		assertThrows(IllegalArgumentException.class, () -> {
 			new InformationQuantity(-1, InformationMeasure.BYTE);
@@ -52,7 +52,7 @@ public class InformationQuantityTest
 	 * сравнением большего значения с меньшим.
 	 */
 	@Test
-	public void testCompareMore()
+	public void compareMore()
 	{
 		int result = InformationQuantity.compare(
 			new InformationQuantity(1, InformationMeasure.YOBIBIT),
@@ -67,7 +67,7 @@ public class InformationQuantityTest
 	 * сравнением равных значений.
 	 */
 	@Test
-	public void testCompareEqually()
+	public void compareEqually()
 	{
 		int result = InformationQuantity.compare(
 			new InformationQuantity(1, InformationMeasure.MEBIBIT),
@@ -82,7 +82,7 @@ public class InformationQuantityTest
 	 * сравнением меньшего значения с большим.
 	 */
 	@Test
-	public void testCompareLess()
+	public void compareLess()
 	{
 		int result = InformationQuantity.compare(
 			new InformationQuantity(1, InformationMeasure.ZEBIBIT),
@@ -108,7 +108,7 @@ public class InformationQuantityTest
 	 * Проверка метода {@link InformationQuantity#equals(Object)} с разными объектами.
 	 */
 	@Test
-	public void testEqualsNotCorrect()
+	public void equalsNotCorrect()
 	{
 		// Разница в мере измерения
 		assertNotEquals(

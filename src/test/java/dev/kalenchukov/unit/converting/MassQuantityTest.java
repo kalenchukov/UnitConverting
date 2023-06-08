@@ -40,7 +40,7 @@ public class MassQuantityTest
 	 * Проверка создания объекта {@link MassQuantity} с отрицательной величиной.
 	 */
 	@Test
-	public void testNegativeQuality()
+	public void negativeQuality()
 	{
 		assertThrows(IllegalArgumentException.class, () -> {
 			new MassQuantity(-1, MassMeasure.GRAM);
@@ -52,7 +52,7 @@ public class MassQuantityTest
 	 * сравнением большего значения с меньшим.
 	 */
 	@Test
-	public void testCompareMore()
+	public void compareMore()
 	{
 		int result = MassQuantity.compare(
 			new MassQuantity(1, MassMeasure.YOTTAGRAM),
@@ -67,7 +67,7 @@ public class MassQuantityTest
 	 * сравнением равных значений.
 	 */
 	@Test
-	public void testCompareEqually()
+	public void compareEqually()
 	{
 		int result = MassQuantity.compare(
 			new MassQuantity(1, MassMeasure.KILOGRAM),
@@ -82,7 +82,7 @@ public class MassQuantityTest
 	 * сравнением меньшего значения с большим.
 	 */
 	@Test
-	public void testCompareLess()
+	public void compareLess()
 	{
 		int result = MassQuantity.compare(
 			new MassQuantity(1, MassMeasure.ZETTAGRAM),
@@ -108,7 +108,7 @@ public class MassQuantityTest
 	 * Проверка метода {@link MassQuantity#equals(Object)} с разными объектами.
 	 */
 	@Test
-	public void testEqualsNotCorrect()
+	public void equalsNotCorrect()
 	{
 		// Разница в мере измерения
 		assertNotEquals(

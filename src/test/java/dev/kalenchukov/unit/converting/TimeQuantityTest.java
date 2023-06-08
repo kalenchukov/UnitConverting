@@ -40,7 +40,7 @@ public class TimeQuantityTest
 	 * Проверка создания объекта {@link TimeQuantity} с отрицательной величиной.
 	 */
 	@Test
-	public void testNegativeQuality()
+	public void negativeQuality()
 	{
 		assertThrows(IllegalArgumentException.class, () -> {
 			new TimeQuantity(-1, TimeMeasure.SECOND);
@@ -52,7 +52,7 @@ public class TimeQuantityTest
 	 * сравнением большего значения с меньшим.
 	 */
 	@Test
-	public void testCompareMore()
+	public void compareMore()
 	{
 		int result = TimeQuantity.compare(
 			new TimeQuantity(1, TimeMeasure.QUETTASECOND),
@@ -67,7 +67,7 @@ public class TimeQuantityTest
 	 * сравнением равных значений.
 	 */
 	@Test
-	public void testCompareEqually()
+	public void compareEqually()
 	{
 		int result = TimeQuantity.compare(
 			new TimeQuantity(1, TimeMeasure.KILOSECOND),
@@ -82,7 +82,7 @@ public class TimeQuantityTest
 	 * сравнением меньшего значения с большим.
 	 */
 	@Test
-	public void testCompareLess()
+	public void compareLess()
 	{
 		int result = TimeQuantity.compare(
 			new TimeQuantity(1, TimeMeasure.RONNASECOND),
@@ -108,7 +108,7 @@ public class TimeQuantityTest
 	 * Проверка метода {@link TimeQuantity#equals(Object)} с разными объектами.
 	 */
 	@Test
-	public void testEqualsNotCorrect()
+	public void equalsNotCorrect()
 	{
 		// Разница в мере измерения
 		assertNotEquals(
