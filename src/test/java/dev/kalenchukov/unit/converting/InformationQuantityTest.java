@@ -54,12 +54,12 @@ public class InformationQuantityTest
 	@Test
 	public void compareMore()
 	{
-		int result = InformationQuantity.compare(
+		Integer actual = InformationQuantity.compare(
 			new InformationQuantity(1, InformationMeasure.YOBIBIT),
 			new InformationQuantity(1, InformationMeasure.ZEBIBIT)
 		);
 
-		assertEquals(1, result);
+		assertEquals(1, actual);
 	}
 
 	/**
@@ -69,12 +69,12 @@ public class InformationQuantityTest
 	@Test
 	public void compareEqually()
 	{
-		int result = InformationQuantity.compare(
+		Integer actual = InformationQuantity.compare(
 			new InformationQuantity(1, InformationMeasure.MEBIBIT),
 			new InformationQuantity(1, InformationMeasure.MEBIBIT)
 		);
 
-		assertEquals(0, result);
+		assertEquals(0, actual);
 	}
 
 	/**
@@ -84,12 +84,12 @@ public class InformationQuantityTest
 	@Test
 	public void compareLess()
 	{
-		int result = InformationQuantity.compare(
+		Integer actual = InformationQuantity.compare(
 			new InformationQuantity(1, InformationMeasure.ZEBIBIT),
 			new InformationQuantity(1, InformationMeasure.YOBIBIT)
 		);
 
-		assertEquals(-1, result);
+		assertEquals(-1, actual);
 	}
 
 	/**

@@ -54,12 +54,12 @@ public class TimeQuantityTest
 	@Test
 	public void compareMore()
 	{
-		int result = TimeQuantity.compare(
+		Integer actual = TimeQuantity.compare(
 			new TimeQuantity(1, TimeMeasure.QUETTASECOND),
 			new TimeQuantity(1, TimeMeasure.RONNASECOND)
 		);
 
-		assertEquals(1, result);
+		assertEquals(1, actual);
 	}
 
 	/**
@@ -69,12 +69,12 @@ public class TimeQuantityTest
 	@Test
 	public void compareEqually()
 	{
-		int result = TimeQuantity.compare(
+		Integer actual = TimeQuantity.compare(
 			new TimeQuantity(1, TimeMeasure.KILOSECOND),
 			new TimeQuantity(1, TimeMeasure.KILOSECOND)
 		);
 
-		assertEquals(0, result);
+		assertEquals(0, actual);
 	}
 
 	/**
@@ -84,12 +84,12 @@ public class TimeQuantityTest
 	@Test
 	public void compareLess()
 	{
-		int result = TimeQuantity.compare(
+		Integer actual = TimeQuantity.compare(
 			new TimeQuantity(1, TimeMeasure.RONNASECOND),
 			new TimeQuantity(1, TimeMeasure.QUETTASECOND)
 		);
 
-		assertEquals(-1, result);
+		assertEquals(-1, actual);
 	}
 
 	/**

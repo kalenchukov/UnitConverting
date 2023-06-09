@@ -34,17 +34,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AbstractQuantityTest
 {
-
 	/**
 	 * Проверка метода {@link AbstractQuantity#getQuantity()}.
 	 */
 	@Test
 	public void getQuantity()
 	{
-		assertEquals(
-			new BigDecimal(1),
-			new MassQuantity(1, MassMeasure.GRAM).getQuantity()
-		);
+		BigDecimal actual = new MassQuantity(1, MassMeasure.GRAM).getQuantity();
+
+		assertEquals(new BigDecimal(1), actual);
 	}
 
 	/**
@@ -53,10 +51,9 @@ public class AbstractQuantityTest
 	@Test
 	public void getMeasure()
 	{
-		assertEquals(
-			MassMeasure.GRAM,
-			new MassQuantity(1, MassMeasure.GRAM).getMeasure()
-		);
+		MassMeasure actual = new MassQuantity(1, MassMeasure.GRAM).getMeasure();
+
+		assertEquals(MassMeasure.GRAM, actual);
 	}
 
 	/**
@@ -65,10 +62,9 @@ public class AbstractQuantityTest
 	@Test
 	public void convert()
 	{
-		assertEquals(
-			new BigDecimal(1000),
-			new MassQuantity(1, MassMeasure.KILOGRAM).convert(MassMeasure.GRAM)
-		);
+		BigDecimal actual = new MassQuantity(1, MassMeasure.KILOGRAM).convert(MassMeasure.GRAM);
+
+		assertEquals(new BigDecimal(1000), actual);
 	}
 
 	/**
@@ -77,10 +73,9 @@ public class AbstractQuantityTest
 	@Test()
 	public void convertZero()
 	{
-		assertEquals(
-			BigDecimal.ZERO,
-			new MassQuantity(0, MassMeasure.GRAM).convert(MassMeasure.KILOGRAM)
-		);
+		BigDecimal actual = new MassQuantity(0, MassMeasure.GRAM).convert(MassMeasure.KILOGRAM);
+
+		assertEquals(BigDecimal.ZERO, actual);
 	}
 
 	/**
@@ -90,11 +85,11 @@ public class AbstractQuantityTest
 	@Test
 	public void compareToMore()
 	{
-		int result = new MassQuantity(1, MassMeasure.YOTTAGRAM).compareTo(
+		Integer actual = new MassQuantity(1, MassMeasure.YOTTAGRAM).compareTo(
 			new MassQuantity(1, MassMeasure.ZETTAGRAM)
 		);
 
-		assertEquals(1, result);
+		assertEquals(1, actual);
 	}
 
 	/**
@@ -104,11 +99,11 @@ public class AbstractQuantityTest
 	@Test
 	public void compareToEqually()
 	{
-		int result = new MassQuantity(1, MassMeasure.KILOGRAM).compareTo(
+		Integer actual = new MassQuantity(1, MassMeasure.KILOGRAM).compareTo(
 			new MassQuantity(1, MassMeasure.KILOGRAM)
 		);
 
-		assertEquals(0, result);
+		assertEquals(0, actual);
 	}
 
 	/**
@@ -118,10 +113,10 @@ public class AbstractQuantityTest
 	@Test
 	public void compareToLess()
 	{
-		int result = new MassQuantity(1, MassMeasure.ZETTAGRAM).compareTo(
+		Integer actual = new MassQuantity(1, MassMeasure.ZETTAGRAM).compareTo(
 			new MassQuantity(1, MassMeasure.YOTTAGRAM)
 		);
 
-		assertEquals(-1, result);
+		assertEquals(-1, actual);
 	}
 }

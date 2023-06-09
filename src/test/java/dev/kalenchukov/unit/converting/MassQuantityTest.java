@@ -54,12 +54,12 @@ public class MassQuantityTest
 	@Test
 	public void compareMore()
 	{
-		int result = MassQuantity.compare(
+		Integer actual = MassQuantity.compare(
 			new MassQuantity(1, MassMeasure.YOTTAGRAM),
 			new MassQuantity(1, MassMeasure.ZETTAGRAM)
 		);
 
-		assertEquals(1, result);
+		assertEquals(1, actual);
 	}
 
 	/**
@@ -69,12 +69,12 @@ public class MassQuantityTest
 	@Test
 	public void compareEqually()
 	{
-		int result = MassQuantity.compare(
+		Integer actual = MassQuantity.compare(
 			new MassQuantity(1, MassMeasure.KILOGRAM),
 			new MassQuantity(1, MassMeasure.KILOGRAM)
 		);
 
-		assertEquals(0, result);
+		assertEquals(0, actual);
 	}
 
 	/**
@@ -84,12 +84,12 @@ public class MassQuantityTest
 	@Test
 	public void compareLess()
 	{
-		int result = MassQuantity.compare(
+		Integer actual = MassQuantity.compare(
 			new MassQuantity(1, MassMeasure.ZETTAGRAM),
 			new MassQuantity(1, MassMeasure.YOTTAGRAM)
 		);
 
-		assertEquals(-1, result);
+		assertEquals(-1, actual);
 	}
 
 	/**
