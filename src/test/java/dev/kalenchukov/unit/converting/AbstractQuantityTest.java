@@ -30,7 +30,7 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AbstractQuantityTest
 {
@@ -44,7 +44,7 @@ public class AbstractQuantityTest
 
 		BigDecimal actualQuantity = massQuantity.getQuantity();
 
-		assertEquals(new BigDecimal(1), actualQuantity);
+		assertThat(actualQuantity).isEqualTo(new BigDecimal(1));
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class AbstractQuantityTest
 
 		MassMeasure actualMeasure = massQuantity.getMeasure();
 
-		assertEquals(MassMeasure.GRAM, actualMeasure);
+		assertThat(actualMeasure).isEqualTo(MassMeasure.GRAM);
 	}
 
 	/**
@@ -68,9 +68,9 @@ public class AbstractQuantityTest
 	{
 		MassQuantity massQuantity = new MassQuantity(1, MassMeasure.KILOGRAM);
 
-		BigDecimal actualConvert = massQuantity.convert(MassMeasure.GRAM);
+		BigDecimal actualQuantity = massQuantity.convert(MassMeasure.GRAM);
 
-		assertEquals(new BigDecimal(1000), actualConvert);
+		assertThat(actualQuantity).isEqualTo(new BigDecimal(1000));
 	}
 
 	/**
@@ -81,9 +81,9 @@ public class AbstractQuantityTest
 	{
 		MassQuantity massQuantity = new MassQuantity(0, MassMeasure.GRAM);
 
-		BigDecimal actualConvert = massQuantity.convert(MassMeasure.KILOGRAM);
+		BigDecimal actualQuantity = massQuantity.convert(MassMeasure.KILOGRAM);
 
-		assertEquals(BigDecimal.ZERO, actualConvert);
+		assertThat(actualQuantity).isEqualTo(BigDecimal.ZERO);
 	}
 
 	/**
@@ -96,9 +96,9 @@ public class AbstractQuantityTest
 		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
 		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
 
-		Integer actualCompareTo = massQuantity1.compareTo(massQuantity2);
+		int actualCompare = massQuantity1.compareTo(massQuantity2);
 
-		assertEquals(1, actualCompareTo);
+		assertThat(actualCompare).isEqualTo(1);
 	}
 
 	/**
@@ -111,9 +111,9 @@ public class AbstractQuantityTest
 		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.KILOGRAM);
 		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
 
-		Integer actualCompareTo = massQuantity1.compareTo(massQuantity2);
+		int actualCompare = massQuantity1.compareTo(massQuantity2);
 
-		assertEquals(0, actualCompareTo);
+		assertThat(actualCompare).isEqualTo(0);
 	}
 
 	/**
@@ -126,8 +126,8 @@ public class AbstractQuantityTest
 		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
 		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
 
-		Integer actualCompareTo = massQuantity1.compareTo(massQuantity2);
+		int actualCompare = massQuantity1.compareTo(massQuantity2);
 
-		assertEquals(-1, actualCompareTo);
+		assertThat(actualCompare).isEqualTo(-1);
 	}
 }

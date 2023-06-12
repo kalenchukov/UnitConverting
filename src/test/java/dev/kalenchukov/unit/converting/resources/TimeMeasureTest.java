@@ -29,8 +29,7 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки констант и методов перечисления {@link TimeMeasure}.
@@ -50,7 +49,7 @@ public class TimeMeasureTest
 
 		List<Standard> actualList = timeMeasure.getStandard();
 
-		assertArrayEquals(expectedList.toArray(), actualList.toArray());
+		assertThat(actualList).containsSequence(expectedList);
 	}
 
 	/**
@@ -63,6 +62,6 @@ public class TimeMeasureTest
 
 		BigDecimal actualCountMinUnit = timeMeasure.getCountMinUnit();
 
-		assertEquals(BigDecimal.valueOf(1000), actualCountMinUnit);
+		assertThat(actualCountMinUnit).isEqualTo(BigDecimal.valueOf(1000));
 	}
 }

@@ -29,7 +29,7 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки констант и методов перечисления {@link InformationMeasure}.
@@ -49,7 +49,7 @@ public class InformationMeasureTest
 
 		List<Standard> actualList = informationMeasure.getStandard();
 
-		assertArrayEquals(expectedList.toArray(), actualList.toArray());
+		assertThat(actualList).containsSequence(expectedList);
 	}
 
 	/**
@@ -62,6 +62,6 @@ public class InformationMeasureTest
 
 		BigDecimal actualCountMinUnit = informationMeasure.getCountMinUnit();
 
-		assertEquals(BigDecimal.valueOf(8), actualCountMinUnit);
+		assertThat(actualCountMinUnit).isEqualTo(BigDecimal.valueOf(8));
 	}
 }

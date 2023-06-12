@@ -27,7 +27,8 @@ package dev.kalenchukov.unit.converting;
 import dev.kalenchukov.unit.converting.resources.MassMeasure;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 /**
  * Класс проверки методов класса {@link MassQuantity}.
@@ -42,7 +43,7 @@ public class MassQuantityTest
 	@Test
 	public void negativeQuality()
 	{
-		assertThrows(IllegalArgumentException.class, () -> {
+		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
 			new MassQuantity(-1, MassMeasure.GRAM);
 		});
 	}
@@ -57,9 +58,9 @@ public class MassQuantityTest
 		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
 		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
 
-		Integer actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
+		int actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
 
-		assertEquals(1, actualCompare);
+		assertThat(actualCompare).isEqualTo(1);
 	}
 
 	/**
@@ -72,9 +73,9 @@ public class MassQuantityTest
 		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.KILOGRAM);
 		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
 
-		Integer actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
+		int actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
 
-		assertEquals(0, actualCompare);
+		assertThat(actualCompare).isEqualTo(0);
 	}
 
 	/**
@@ -87,9 +88,9 @@ public class MassQuantityTest
 		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
 		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
 
-		Integer actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
+		int actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
 
-		assertEquals(-1, actualCompare);
+		assertThat(actualCompare).isEqualTo(-1);
 	}
 
 	/**
@@ -103,7 +104,7 @@ public class MassQuantityTest
 
 		boolean actual = massQuantity1.equals(massQuantity2);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -117,7 +118,7 @@ public class MassQuantityTest
 
 		boolean actual = massQuantity1.equals(massQuantity2);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -131,7 +132,7 @@ public class MassQuantityTest
 
 		boolean actual = massQuantity1.equals(massQuantity2);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -143,10 +144,10 @@ public class MassQuantityTest
 		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
 		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.GRAM);
 
-		Integer expectedHashCode = massQuantity1.hashCode();
-		Integer actualHashCode = massQuantity2.hashCode();
+		int expectedHashCode = massQuantity1.hashCode();
+		int actualHashCode = massQuantity2.hashCode();
 
-		assertEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
 	}
 
 	/**
@@ -158,10 +159,10 @@ public class MassQuantityTest
 		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
 		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
 
-		Integer expectedHashCode = massQuantity1.hashCode();
-		Integer actualHashCode = massQuantity2.hashCode();
+		int expectedHashCode = massQuantity1.hashCode();
+		int actualHashCode = massQuantity2.hashCode();
 
-		assertNotEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
 	}
 
 	/**
@@ -173,9 +174,9 @@ public class MassQuantityTest
 		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
 		MassQuantity massQuantity2 = new MassQuantity(2, MassMeasure.GRAM);
 
-		Integer expectedHashCode = massQuantity1.hashCode();
-		Integer actualHashCode = massQuantity2.hashCode();
+		int expectedHashCode = massQuantity1.hashCode();
+		int actualHashCode = massQuantity2.hashCode();
 
-		assertNotEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
 	}
 }

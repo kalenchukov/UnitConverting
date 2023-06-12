@@ -29,7 +29,7 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки констант и методов перечисления {@link MassMeasure}.
@@ -49,7 +49,7 @@ public class MassMeasureTest
 
 		List<Standard> actualList = massMeasure.getStandard();
 
-		assertArrayEquals(expectedList.toArray(), actualList.toArray());
+		assertThat(actualList).containsSequence(expectedList);
 	}
 
 	/**
@@ -62,6 +62,6 @@ public class MassMeasureTest
 
 		BigDecimal actualCountMinUnit = massMeasure.getCountMinUnit();
 
-		assertEquals(BigDecimal.valueOf(1000), actualCountMinUnit);
+		assertThat(actualCountMinUnit).isEqualTo(BigDecimal.valueOf(1000));
 	}
 }

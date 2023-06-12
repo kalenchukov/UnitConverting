@@ -27,7 +27,8 @@ package dev.kalenchukov.unit.converting;
 import dev.kalenchukov.unit.converting.resources.TimeMeasure;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 /**
  * Класс проверки методов класса {@link TimeQuantity}.
@@ -42,7 +43,7 @@ public class TimeQuantityTest
 	@Test
 	public void negativeQuality()
 	{
-		assertThrows(IllegalArgumentException.class, () -> {
+		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
 			new TimeQuantity(-1, TimeMeasure.SECOND);
 		});
 	}
@@ -57,9 +58,9 @@ public class TimeQuantityTest
 		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.QUETTASECOND);
 		TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.RONNASECOND);
 
-		Integer actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
+		int actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
 
-		assertEquals(1, actualCompare);
+		assertThat(actualCompare).isEqualTo(1);
 	}
 
 	/**
@@ -72,9 +73,9 @@ public class TimeQuantityTest
 		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.KILOSECOND);
 		TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.KILOSECOND);
 
-		Integer actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
+		int actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
 
-		assertEquals(0, actualCompare);
+		assertThat(actualCompare).isEqualTo(0);
 	}
 
 	/**
@@ -87,9 +88,9 @@ public class TimeQuantityTest
 		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.RONNASECOND);
 		TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.QUETTASECOND);
 
-		Integer actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
+		int actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
 
-		assertEquals(-1, actualCompare);
+		assertThat(actualCompare).isEqualTo(-1);
 	}
 
 	/**
@@ -103,7 +104,7 @@ public class TimeQuantityTest
 
 		boolean actual = timeQuantity1.equals(timeQuantity2);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -117,7 +118,7 @@ public class TimeQuantityTest
 
 		boolean actual = timeQuantity1.equals(timeQuantity2);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -131,7 +132,7 @@ public class TimeQuantityTest
 
 		boolean actual = timeQuantity1.equals(timeQuantity2);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -143,10 +144,10 @@ public class TimeQuantityTest
 		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.SECOND);
 		TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.SECOND);
 
-		Integer expectedHashCode = timeQuantity1.hashCode();
-		Integer actualHashCode = timeQuantity2.hashCode();
+		int expectedHashCode = timeQuantity1.hashCode();
+		int actualHashCode = timeQuantity2.hashCode();
 
-		assertEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
 	}
 
 	/**
@@ -158,10 +159,10 @@ public class TimeQuantityTest
 		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.SECOND);
 		TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.KILOSECOND);
 
-		Integer expectedHashCode = timeQuantity1.hashCode();
-		Integer actualHashCode = timeQuantity2.hashCode();
+		int expectedHashCode = timeQuantity1.hashCode();
+		int actualHashCode = timeQuantity2.hashCode();
 
-		assertNotEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
 	}
 
 	/**
@@ -173,9 +174,9 @@ public class TimeQuantityTest
 		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.SECOND);
 		TimeQuantity timeQuantity2 = new TimeQuantity(2, TimeMeasure.SECOND);
 
-		Integer expectedHashCode = timeQuantity1.hashCode();
-		Integer actualHashCode = timeQuantity2.hashCode();
+		int expectedHashCode = timeQuantity1.hashCode();
+		int actualHashCode = timeQuantity2.hashCode();
 
-		assertNotEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
 	}
 }

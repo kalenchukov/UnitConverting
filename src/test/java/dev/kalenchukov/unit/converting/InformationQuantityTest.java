@@ -27,7 +27,8 @@ package dev.kalenchukov.unit.converting;
 import dev.kalenchukov.unit.converting.resources.InformationMeasure;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 /**
  * Класс проверки методов класса {@link InformationQuantity}.
@@ -42,7 +43,7 @@ public class InformationQuantityTest
 	@Test
 	public void negativeQuality()
 	{
-		assertThrows(IllegalArgumentException.class, () -> {
+		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
 			new InformationQuantity(-1, InformationMeasure.BYTE);
 		});
 	}
@@ -57,9 +58,9 @@ public class InformationQuantityTest
 		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.YOBIBIT);
 		InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.ZEBIBIT);
 
-		Integer actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
+		int actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
 
-		assertEquals(1, actualCompare);
+		assertThat(actualCompare).isEqualTo(1);
 	}
 
 	/**
@@ -72,9 +73,9 @@ public class InformationQuantityTest
 		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.MEBIBIT);
 		InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.MEBIBIT);
 
-		Integer actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
+		int actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
 
-		assertEquals(0, actualCompare);
+		assertThat(actualCompare).isEqualTo(0);
 	}
 
 	/**
@@ -87,9 +88,9 @@ public class InformationQuantityTest
 		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.ZEBIBIT);
 		InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.YOBIBIT);
 
-		Integer actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
+		int actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
 
-		assertEquals(-1, actualCompare);
+		assertThat(actualCompare).isEqualTo(-1);
 	}
 
 	/**
@@ -103,7 +104,7 @@ public class InformationQuantityTest
 
 		boolean actual = informationQuantity1.equals(informationQuantity2);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -117,7 +118,7 @@ public class InformationQuantityTest
 
 		boolean actual = informationQuantity1.equals(informationQuantity2);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -131,7 +132,7 @@ public class InformationQuantityTest
 
 		boolean actual = informationQuantity1.equals(informationQuantity2);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -143,10 +144,10 @@ public class InformationQuantityTest
 		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.BYTE);
 		InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.BYTE);
 
-		Integer expectedHashCode = informationQuantity1.hashCode();
-		Integer actualHashCode = informationQuantity2.hashCode();
+		int expectedHashCode = informationQuantity1.hashCode();
+		int actualHashCode = informationQuantity2.hashCode();
 
-		assertEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
 	}
 
 	/**
@@ -158,10 +159,10 @@ public class InformationQuantityTest
 		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.BYTE);
 		InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.KILOBYTE);
 
-		Integer expectedHashCode = informationQuantity1.hashCode();
-		Integer actualHashCode = informationQuantity2.hashCode();
+		int expectedHashCode = informationQuantity1.hashCode();
+		int actualHashCode = informationQuantity2.hashCode();
 
-		assertNotEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
 	}
 
 	/**
@@ -173,9 +174,9 @@ public class InformationQuantityTest
 		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.BYTE);
 		InformationQuantity informationQuantity2 = new InformationQuantity(2, InformationMeasure.BYTE);
 
-		Integer expectedHashCode = informationQuantity1.hashCode();
-		Integer actualHashCode = informationQuantity2.hashCode();
+		int expectedHashCode = informationQuantity1.hashCode();
+		int actualHashCode = informationQuantity2.hashCode();
 
-		assertNotEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
 	}
 }
