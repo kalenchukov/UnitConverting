@@ -25,7 +25,6 @@
 package dev.kalenchukov.unit.converting.resources;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.math.BigDecimal;
 import java.math.MathContext;

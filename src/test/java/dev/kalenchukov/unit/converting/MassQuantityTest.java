@@ -54,12 +54,12 @@ public class MassQuantityTest
 	@Test
 	public void compareMore()
 	{
-		Integer actual = MassQuantity.compare(
-			new MassQuantity(1, MassMeasure.YOTTAGRAM),
-			new MassQuantity(1, MassMeasure.ZETTAGRAM)
-		);
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
+		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
 
-		assertEquals(1, actual);
+		Integer actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
+
+		assertEquals(1, actualCompare);
 	}
 
 	/**
@@ -69,12 +69,12 @@ public class MassQuantityTest
 	@Test
 	public void compareEqually()
 	{
-		Integer actual = MassQuantity.compare(
-			new MassQuantity(1, MassMeasure.KILOGRAM),
-			new MassQuantity(1, MassMeasure.KILOGRAM)
-		);
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.KILOGRAM);
+		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
 
-		assertEquals(0, actual);
+		Integer actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
+
+		assertEquals(0, actualCompare);
 	}
 
 	/**
@@ -84,12 +84,12 @@ public class MassQuantityTest
 	@Test
 	public void compareLess()
 	{
-		Integer actual = MassQuantity.compare(
-			new MassQuantity(1, MassMeasure.ZETTAGRAM),
-			new MassQuantity(1, MassMeasure.YOTTAGRAM)
-		);
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
+		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
 
-		assertEquals(-1, actual);
+		Integer actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
+
+		assertEquals(-1, actualCompare);
 	}
 
 	/**
@@ -98,34 +98,84 @@ public class MassQuantityTest
 	@Test
 	public void testEquals()
 	{
-		assertEquals(
-			new MassQuantity(1, MassMeasure.GRAM),
-			new MassQuantity(1, MassMeasure.GRAM)
-		);
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.GRAM);
+
+		boolean actual = massQuantity1.equals(massQuantity2);
+
+		assertTrue(actual);
 	}
 
 	/**
-	 * Проверка метода {@link MassQuantity#equals(Object)} с разными объектами.
+	 * Проверка метода {@link MassQuantity#equals(Object)} с разными мерами измерения.
 	 */
 	@Test
-	public void equalsNotCorrect()
+	public void testEqualsDifferentMeasure()
 	{
-		// Разница в мере измерения
-		assertNotEquals(
-			new MassQuantity(1, MassMeasure.GRAM),
-			new MassQuantity(1, MassMeasure.KILOGRAM)
-		);
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
 
-		// Разница в величине
-		assertNotEquals(
-			new MassQuantity(1, MassMeasure.GRAM),
-			new MassQuantity(2, MassMeasure.GRAM)
-		);
+		boolean actual = massQuantity1.equals(massQuantity2);
 
-		// Разница в мере измерения и величине
-		assertNotEquals(
-			new MassQuantity(1, MassMeasure.GRAM),
-			new MassQuantity(3, MassMeasure.KILOGRAM)
-		);
+		assertFalse(actual);
+	}
+
+	/**
+	 * Проверка метода {@link MassQuantity#equals(Object)} с разными величинами.
+	 */
+	@Test
+	public void testEqualsDifferentQuantity()
+	{
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		MassQuantity massQuantity2 = new MassQuantity(2, MassMeasure.GRAM);
+
+		boolean actual = massQuantity1.equals(massQuantity2);
+
+		assertFalse(actual);
+	}
+
+	/**
+	 * Проверка метода {@link MassQuantity#hashCode()}.
+	 */
+	@Test
+	public void testHashCode()
+	{
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.GRAM);
+
+		Integer expectedHashCode = massQuantity1.hashCode();
+		Integer actualHashCode = massQuantity2.hashCode();
+
+		assertEquals(expectedHashCode, actualHashCode);
+	}
+
+	/**
+	 * Проверка метода {@link MassQuantity#hashCode()} с разными мерами измерения.
+	 */
+	@Test
+	public void testHashCodeDifferentMeasure()
+	{
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
+
+		Integer expectedHashCode = massQuantity1.hashCode();
+		Integer actualHashCode = massQuantity2.hashCode();
+
+		assertNotEquals(expectedHashCode, actualHashCode);
+	}
+
+	/**
+	 * Проверка метода {@link MassQuantity#hashCode()} с разными величинами.
+	 */
+	@Test
+	public void testHashCodeDifferentQuantity()
+	{
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		MassQuantity massQuantity2 = new MassQuantity(2, MassMeasure.GRAM);
+
+		Integer expectedHashCode = massQuantity1.hashCode();
+		Integer actualHashCode = massQuantity2.hashCode();
+
+		assertNotEquals(expectedHashCode, actualHashCode);
 	}
 }

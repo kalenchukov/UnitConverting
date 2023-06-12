@@ -54,12 +54,12 @@ public class TimeQuantityTest
 	@Test
 	public void compareMore()
 	{
-		Integer actual = TimeQuantity.compare(
-			new TimeQuantity(1, TimeMeasure.QUETTASECOND),
-			new TimeQuantity(1, TimeMeasure.RONNASECOND)
-		);
+		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.QUETTASECOND);
+		TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.RONNASECOND);
 
-		assertEquals(1, actual);
+		Integer actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
+
+		assertEquals(1, actualCompare);
 	}
 
 	/**
@@ -69,12 +69,12 @@ public class TimeQuantityTest
 	@Test
 	public void compareEqually()
 	{
-		Integer actual = TimeQuantity.compare(
-			new TimeQuantity(1, TimeMeasure.KILOSECOND),
-			new TimeQuantity(1, TimeMeasure.KILOSECOND)
-		);
+		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.KILOSECOND);
+		TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.KILOSECOND);
 
-		assertEquals(0, actual);
+		Integer actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
+
+		assertEquals(0, actualCompare);
 	}
 
 	/**
@@ -84,12 +84,12 @@ public class TimeQuantityTest
 	@Test
 	public void compareLess()
 	{
-		Integer actual = TimeQuantity.compare(
-			new TimeQuantity(1, TimeMeasure.RONNASECOND),
-			new TimeQuantity(1, TimeMeasure.QUETTASECOND)
-		);
+		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.RONNASECOND);
+		TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.QUETTASECOND);
 
-		assertEquals(-1, actual);
+		Integer actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
+
+		assertEquals(-1, actualCompare);
 	}
 
 	/**
@@ -98,34 +98,84 @@ public class TimeQuantityTest
 	@Test
 	public void testEquals()
 	{
-		assertEquals(
-			new TimeQuantity(1, TimeMeasure.SECOND),
-			new TimeQuantity(1, TimeMeasure.SECOND)
-		);
+		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.SECOND);
+		TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.SECOND);
+
+		boolean actual = timeQuantity1.equals(timeQuantity2);
+
+		assertTrue(actual);
 	}
 
 	/**
-	 * Проверка метода {@link TimeQuantity#equals(Object)} с разными объектами.
+	 * Проверка метода {@link TimeQuantity#equals(Object)} с разными мерами измерения.
 	 */
 	@Test
-	public void equalsNotCorrect()
+	public void testEqualsDifferentMeasure()
 	{
-		// Разница в мере измерения
-		assertNotEquals(
-			new TimeQuantity(1, TimeMeasure.SECOND),
-			new TimeQuantity(1, TimeMeasure.KILOSECOND)
-		);
+		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.SECOND);
+		TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.KILOSECOND);
 
-		// Разница в величине
-		assertNotEquals(
-			new TimeQuantity(1, TimeMeasure.SECOND),
-			new TimeQuantity(2, TimeMeasure.SECOND)
-		);
+		boolean actual = timeQuantity1.equals(timeQuantity2);
 
-		// Разница в мере измерения и величине
-		assertNotEquals(
-			new TimeQuantity(1, TimeMeasure.SECOND),
-			new TimeQuantity(3, TimeMeasure.KILOSECOND)
-		);
+		assertFalse(actual);
+	}
+
+	/**
+	 * Проверка метода {@link TimeQuantity#equals(Object)} с разными величинами.
+	 */
+	@Test
+	public void testEqualsDifferentQuantity()
+	{
+		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.SECOND);
+		TimeQuantity timeQuantity2 = new TimeQuantity(2, TimeMeasure.SECOND);
+
+		boolean actual = timeQuantity1.equals(timeQuantity2);
+
+		assertFalse(actual);
+	}
+
+	/**
+	 * Проверка метода {@link TimeQuantity#hashCode()}.
+	 */
+	@Test
+	public void testHashCode()
+	{
+		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.SECOND);
+		TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.SECOND);
+
+		Integer expectedHashCode = timeQuantity1.hashCode();
+		Integer actualHashCode = timeQuantity2.hashCode();
+
+		assertEquals(expectedHashCode, actualHashCode);
+	}
+
+	/**
+	 * Проверка метода {@link TimeQuantity#hashCode()} с разными мерами измерения.
+	 */
+	@Test
+	public void testHashCodeDifferentMeasure()
+	{
+		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.SECOND);
+		TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.KILOSECOND);
+
+		Integer expectedHashCode = timeQuantity1.hashCode();
+		Integer actualHashCode = timeQuantity2.hashCode();
+
+		assertNotEquals(expectedHashCode, actualHashCode);
+	}
+
+	/**
+	 * Проверка метода {@link TimeQuantity#hashCode()} с разными величинами.
+	 */
+	@Test
+	public void testHashCodeDifferentQuantity()
+	{
+		TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.SECOND);
+		TimeQuantity timeQuantity2 = new TimeQuantity(2, TimeMeasure.SECOND);
+
+		Integer expectedHashCode = timeQuantity1.hashCode();
+		Integer actualHashCode = timeQuantity2.hashCode();
+
+		assertNotEquals(expectedHashCode, actualHashCode);
 	}
 }

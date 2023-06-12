@@ -44,9 +44,12 @@ public class MassMeasureTest
 	@Test
 	public void getStandard()
 	{
-		List<Standard> actual = MassMeasure.KILOGRAM.getStandard();
+		MassMeasure massMeasure = MassMeasure.KILOGRAM;
+		List<Standard> expectedList = List.of(Standard.SI);
 
-		assertArrayEquals(List.of(Standard.SI).toArray(), actual.toArray());
+		List<Standard> actualList = massMeasure.getStandard();
+
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -55,8 +58,10 @@ public class MassMeasureTest
 	@Test
 	public void getCountMinUnit()
 	{
-		BigDecimal actual = MassMeasure.KILOGRAM.getCountMinUnit();
+		MassMeasure massMeasure = MassMeasure.KILOGRAM;
 
-		assertEquals(BigDecimal.valueOf(1000), actual);
+		BigDecimal actualCountMinUnit = massMeasure.getCountMinUnit();
+
+		assertEquals(BigDecimal.valueOf(1000), actualCountMinUnit);
 	}
 }

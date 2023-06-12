@@ -44,9 +44,12 @@ public class InformationMeasureTest
 	@Test
 	public void getStandard()
 	{
-		List<Standard> actual = InformationMeasure.BYTE.getStandard();
+		InformationMeasure informationMeasure = InformationMeasure.BYTE;
+		List<Standard> expectedList = List.of(Standard.IEC, Standard.SI);
 
-		assertArrayEquals(List.of(Standard.IEC, Standard.SI).toArray(), actual.toArray());
+		List<Standard> actualList = informationMeasure.getStandard();
+
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -55,8 +58,10 @@ public class InformationMeasureTest
 	@Test
 	public void getCountMinUnit()
 	{
-		BigDecimal actual = InformationMeasure.BYTE.getCountMinUnit();
+		InformationMeasure informationMeasure = InformationMeasure.BYTE;
 
-		assertEquals(BigDecimal.valueOf(8), actual);
+		BigDecimal actualCountMinUnit = informationMeasure.getCountMinUnit();
+
+		assertEquals(BigDecimal.valueOf(8), actualCountMinUnit);
 	}
 }

@@ -54,12 +54,12 @@ public class InformationQuantityTest
 	@Test
 	public void compareMore()
 	{
-		Integer actual = InformationQuantity.compare(
-			new InformationQuantity(1, InformationMeasure.YOBIBIT),
-			new InformationQuantity(1, InformationMeasure.ZEBIBIT)
-		);
+		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.YOBIBIT);
+		InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.ZEBIBIT);
 
-		assertEquals(1, actual);
+		Integer actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
+
+		assertEquals(1, actualCompare);
 	}
 
 	/**
@@ -69,12 +69,12 @@ public class InformationQuantityTest
 	@Test
 	public void compareEqually()
 	{
-		Integer actual = InformationQuantity.compare(
-			new InformationQuantity(1, InformationMeasure.MEBIBIT),
-			new InformationQuantity(1, InformationMeasure.MEBIBIT)
-		);
+		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.MEBIBIT);
+		InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.MEBIBIT);
 
-		assertEquals(0, actual);
+		Integer actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
+
+		assertEquals(0, actualCompare);
 	}
 
 	/**
@@ -84,12 +84,12 @@ public class InformationQuantityTest
 	@Test
 	public void compareLess()
 	{
-		Integer actual = InformationQuantity.compare(
-			new InformationQuantity(1, InformationMeasure.ZEBIBIT),
-			new InformationQuantity(1, InformationMeasure.YOBIBIT)
-		);
+		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.ZEBIBIT);
+		InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.YOBIBIT);
 
-		assertEquals(-1, actual);
+		Integer actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
+
+		assertEquals(-1, actualCompare);
 	}
 
 	/**
@@ -98,34 +98,84 @@ public class InformationQuantityTest
 	@Test
 	public void testEquals()
 	{
-		assertEquals(
-			new InformationQuantity(1, InformationMeasure.BYTE),
-			new InformationQuantity(1, InformationMeasure.BYTE)
-		);
+		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.BYTE);
+		InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.BYTE);
+
+		boolean actual = informationQuantity1.equals(informationQuantity2);
+
+		assertTrue(actual);
 	}
 
 	/**
-	 * Проверка метода {@link InformationQuantity#equals(Object)} с разными объектами.
+	 * Проверка метода {@link InformationQuantity#equals(Object)} с разными мерами измерения.
 	 */
 	@Test
-	public void equalsNotCorrect()
+	public void testEqualsDifferentMeasure()
 	{
-		// Разница в мере измерения
-		assertNotEquals(
-			new InformationQuantity(1, InformationMeasure.BYTE),
-			new InformationQuantity(1, InformationMeasure.KILOBYTE)
-		);
+		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.BYTE);
+		InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.KILOBYTE);
 
-		// Разница в величине
-		assertNotEquals(
-			new InformationQuantity(1, InformationMeasure.BYTE),
-			new InformationQuantity(2, InformationMeasure.BYTE)
-		);
+		boolean actual = informationQuantity1.equals(informationQuantity2);
 
-		// Разница в мере измерения и величине
-		assertNotEquals(
-			new InformationQuantity(1, InformationMeasure.BYTE),
-			new InformationQuantity(3, InformationMeasure.KILOBYTE)
-		);
+		assertFalse(actual);
+	}
+
+	/**
+	 * Проверка метода {@link InformationQuantity#equals(Object)} с разными величинами.
+	 */
+	@Test
+	public void testEqualsDifferentQuantity()
+	{
+		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.BYTE);
+		InformationQuantity informationQuantity2 = new InformationQuantity(2, InformationMeasure.BYTE);
+
+		boolean actual = informationQuantity1.equals(informationQuantity2);
+
+		assertFalse(actual);
+	}
+
+	/**
+	 * Проверка метода {@link InformationQuantity#hashCode()}.
+	 */
+	@Test
+	public void testHashCode()
+	{
+		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.BYTE);
+		InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.BYTE);
+
+		Integer expectedHashCode = informationQuantity1.hashCode();
+		Integer actualHashCode = informationQuantity2.hashCode();
+
+		assertEquals(expectedHashCode, actualHashCode);
+	}
+
+	/**
+	 * Проверка метода {@link InformationQuantity#hashCode()} с разными мерами измерения.
+	 */
+	@Test
+	public void testHashCodeDifferentMeasure()
+	{
+		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.BYTE);
+		InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.KILOBYTE);
+
+		Integer expectedHashCode = informationQuantity1.hashCode();
+		Integer actualHashCode = informationQuantity2.hashCode();
+
+		assertNotEquals(expectedHashCode, actualHashCode);
+	}
+
+	/**
+	 * Проверка метода {@link InformationQuantity#hashCode()} с разными величинами.
+	 */
+	@Test
+	public void testHashCodeDifferentQuantity()
+	{
+		InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.BYTE);
+		InformationQuantity informationQuantity2 = new InformationQuantity(2, InformationMeasure.BYTE);
+
+		Integer expectedHashCode = informationQuantity1.hashCode();
+		Integer actualHashCode = informationQuantity2.hashCode();
+
+		assertNotEquals(expectedHashCode, actualHashCode);
 	}
 }

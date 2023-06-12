@@ -45,9 +45,12 @@ public class TimeMeasureTest
 	@Test
 	public void getStandard()
 	{
-		List<Standard> actual = TimeMeasure.SECOND.getStandard();
+		TimeMeasure timeMeasure = TimeMeasure.SECOND;
+		List<Standard> expectedList = List.of(Standard.SI);
 
-		assertArrayEquals(List.of(Standard.SI).toArray(), actual.toArray());
+		List<Standard> actualList = timeMeasure.getStandard();
+
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -56,8 +59,10 @@ public class TimeMeasureTest
 	@Test
 	public void getCountMinUnit()
 	{
-		BigDecimal actual = TimeMeasure.KILOSECOND.getCountMinUnit();
+		TimeMeasure timeMeasure = TimeMeasure.KILOSECOND;
 
-		assertEquals(BigDecimal.valueOf(1000), actual);
+		BigDecimal actualCountMinUnit = timeMeasure.getCountMinUnit();
+
+		assertEquals(BigDecimal.valueOf(1000), actualCountMinUnit);
 	}
 }
