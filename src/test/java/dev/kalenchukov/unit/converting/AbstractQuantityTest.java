@@ -130,4 +130,91 @@ public class AbstractQuantityTest
 
 		assertThat(actualCompare).isEqualTo(-1);
 	}
+
+	/**
+	 * Проверка метода {@link AbstractQuantity#equals(Object)}.
+	 */
+	@Test
+	public void testEquals()
+	{
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.GRAM);
+
+		boolean actual = massQuantity1.equals(massQuantity2);
+
+		assertThat(actual).isTrue();
+	}
+
+	/**
+	 * Проверка метода {@link AbstractQuantity#equals(Object)} с разными мерами измерения.
+	 */
+	@Test
+	public void testEqualsDifferentMeasure()
+	{
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
+
+		boolean actual = massQuantity1.equals(massQuantity2);
+
+		assertThat(actual).isFalse();
+	}
+
+	/**
+	 * Проверка метода {@link AbstractQuantity#equals(Object)} с разными величинами.
+	 */
+	@Test
+	public void testEqualsDifferentQuantity()
+	{
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		MassQuantity massQuantity2 = new MassQuantity(2, MassMeasure.GRAM);
+
+		boolean actual = massQuantity1.equals(massQuantity2);
+
+		assertThat(actual).isFalse();
+	}
+
+	/**
+	 * Проверка метода {@link AbstractQuantity#hashCode()}.
+	 */
+	@Test
+	public void testHashCode()
+	{
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.GRAM);
+
+		int expectedHashCode = massQuantity1.hashCode();
+		int actualHashCode = massQuantity2.hashCode();
+
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
+	}
+
+	/**
+	 * Проверка метода {@link AbstractQuantity#hashCode()} с разными мерами измерения.
+	 */
+	@Test
+	public void testHashCodeDifferentMeasure()
+	{
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
+
+		int expectedHashCode = massQuantity1.hashCode();
+		int actualHashCode = massQuantity2.hashCode();
+
+		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
+	}
+
+	/**
+	 * Проверка метода {@link AbstractQuantity#hashCode()} с разными величинами.
+	 */
+	@Test
+	public void testHashCodeDifferentQuantity()
+	{
+		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		MassQuantity massQuantity2 = new MassQuantity(2, MassMeasure.GRAM);
+
+		int expectedHashCode = massQuantity1.hashCode();
+		int actualHashCode = massQuantity2.hashCode();
+
+		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
+	}
 }

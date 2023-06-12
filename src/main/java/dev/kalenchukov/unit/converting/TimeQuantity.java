@@ -26,7 +26,6 @@ package dev.kalenchukov.unit.converting;
 
 import dev.kalenchukov.unit.converting.resources.TimeMeasure;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -153,56 +152,6 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 		Objects.requireNonNull(quantityY);
 
 		return quantityX.compareTo(quantityY);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public int hashCode()
-	{
-		int result = 0;
-
-		result = 31 * result + this.getQuantity().hashCode();
-		result = 31 * result + this.getMeasure().hashCode();
-
-		return result;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @param obj {@inheritDoc}
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public boolean equals(@Nullable final Object obj)
-	{
-		if (obj == null) {
-			return false;
-		}
-
-		if (this == obj) {
-			return true;
-		}
-
-		if (!this.getClass().equals(obj.getClass())) {
-			return false;
-		}
-
-		TimeQuantity quantity = (TimeQuantity) obj;
-
-		if (!Objects.equals(this.getQuantity(), quantity.getQuantity())) {
-			return false;
-		}
-
-		if (!Objects.equals(this.getMeasure(), quantity.getMeasure())) {
-			return false;
-		}
-
-		return true;
 	}
 
 	/**

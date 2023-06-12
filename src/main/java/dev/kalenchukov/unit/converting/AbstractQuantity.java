@@ -26,6 +26,7 @@ package dev.kalenchukov.unit.converting;
 
 import dev.kalenchukov.unit.converting.resources.Measurable;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -223,5 +224,51 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 											  .multiply(anotherQuantity.getMeasure().getCountMinUnit());
 
 		return quantityX.compareTo(quantityY);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
+	 */
+	@Override
+	public int hashCode()
+	{
+		int result = 0;
+
+		result = 31 * result + this.getQuantity().hashCode();
+		result = 31 * result + this.getMeasure().hashCode();
+
+		return result;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param obj {@inheritDoc}
+	 * @return {@inheritDoc}
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (this == obj) {
+			return true;
+		}
+
+		if (!(obj instanceof Quantitative)) {
+			return false;
+		}
+
+		final Quantitative<?> quantitative = (Quantitative<?>) obj;
+
+		if (!Objects.equals(this.getQuantity(), quantitative.getQuantity())) {
+			return false;
+		}
+
+		if (!Objects.equals(this.getMeasure(), quantitative.getMeasure())) {
+			return false;
+		}
+
+		return true;
 	}
 }
