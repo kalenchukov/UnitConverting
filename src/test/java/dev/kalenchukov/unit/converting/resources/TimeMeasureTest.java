@@ -44,7 +44,7 @@ public class TimeMeasureTest
 	@Test
 	public void getStandard()
 	{
-		TimeMeasure timeMeasure = TimeMeasure.SECOND;
+		Measurable timeMeasure = TimeMeasure.SECOND;
 		List<Standard> expectedList = List.of(Standard.SI);
 
 		List<Standard> actualList = timeMeasure.getStandard();
@@ -58,7 +58,7 @@ public class TimeMeasureTest
 	@Test
 	public void getCountMinUnit()
 	{
-		TimeMeasure timeMeasure = TimeMeasure.KILOSECOND;
+		Measurable timeMeasure = TimeMeasure.KILOSECOND;
 
 		BigDecimal actualCountMinUnit = timeMeasure.getCountMinUnit();
 

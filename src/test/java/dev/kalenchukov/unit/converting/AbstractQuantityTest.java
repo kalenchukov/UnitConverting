@@ -26,12 +26,18 @@ package dev.kalenchukov.unit.converting;
 
 import dev.kalenchukov.unit.converting.resources.MassMeasure;
 import dev.kalenchukov.unit.converting.resources.Measurable;
+import dev.kalenchukov.unit.converting.resources.TimeMeasure;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Класс проверки методов класса {@link AbstractQuantity}.
+ *
+ * @author Алексей Каленчуков
+ */
 public class AbstractQuantityTest
 {
 	/**
@@ -40,9 +46,9 @@ public class AbstractQuantityTest
 	@Test
 	public void getQuantity()
 	{
-		MassQuantity massQuantity = new MassQuantity(1, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity = new MassQuantity(1, MassMeasure.GRAM);
 
-		BigDecimal actualQuantity = massQuantity.getQuantity();
+		BigDecimal actualQuantity = quantity.getQuantity();
 
 		assertThat(actualQuantity).isEqualTo(new BigDecimal(1));
 	}
@@ -53,9 +59,9 @@ public class AbstractQuantityTest
 	@Test
 	public void getMeasure()
 	{
-		MassQuantity massQuantity = new MassQuantity(1, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity = new MassQuantity(1, MassMeasure.GRAM);
 
-		MassMeasure actualMeasure = massQuantity.getMeasure();
+		Measurable actualMeasure = quantity.getMeasure();
 
 		assertThat(actualMeasure).isEqualTo(MassMeasure.GRAM);
 	}
@@ -66,9 +72,9 @@ public class AbstractQuantityTest
 	@Test
 	public void convert()
 	{
-		MassQuantity massQuantity = new MassQuantity(1, MassMeasure.KILOGRAM);
+		Quantitative<MassMeasure> quantity = new MassQuantity(1, MassMeasure.KILOGRAM);
 
-		BigDecimal actualQuantity = massQuantity.convert(MassMeasure.GRAM);
+		BigDecimal actualQuantity = quantity.convert(MassMeasure.GRAM);
 
 		assertThat(actualQuantity).isEqualTo(new BigDecimal(1000));
 	}
@@ -79,9 +85,9 @@ public class AbstractQuantityTest
 	@Test()
 	public void convertZero()
 	{
-		MassQuantity massQuantity = new MassQuantity(0, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity = new MassQuantity(0, MassMeasure.GRAM);
 
-		BigDecimal actualQuantity = massQuantity.convert(MassMeasure.KILOGRAM);
+		BigDecimal actualQuantity = quantity.convert(MassMeasure.KILOGRAM);
 
 		assertThat(actualQuantity).isEqualTo(BigDecimal.ZERO);
 	}
@@ -137,12 +143,40 @@ public class AbstractQuantityTest
 	@Test
 	public void testEquals()
 	{
-		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.GRAM);
 
-		boolean actual = massQuantity1.equals(massQuantity2);
+		boolean actual = quantity1.equals(quantity2);
 
 		assertThat(actual).isTrue();
+	}
+
+	/**
+	 * Проверка метода {@link AbstractQuantity#equals(Object)} с {@code null}.
+	 */
+	@Test
+	public void testEqualsNull()
+	{
+		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity2 = null;
+
+		boolean actual = quantity1.equals(quantity2);
+
+		assertThat(actual).isFalse();
+	}
+
+	/**
+	 * Проверка метода {@link AbstractQuantity#equals(Object)} с разными классами.
+	 */
+	@Test
+	public void testEqualsDifferentClass()
+	{
+		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		Quantitative<TimeMeasure> quantity2 = new TimeQuantity(1, TimeMeasure.SECOND);
+
+		boolean actual = quantity1.equals(quantity2);
+
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -151,10 +185,10 @@ public class AbstractQuantityTest
 	@Test
 	public void testEqualsDifferentMeasure()
 	{
-		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
+		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
 
-		boolean actual = massQuantity1.equals(massQuantity2);
+		boolean actual = quantity1.equals(quantity2);
 
 		assertThat(actual).isFalse();
 	}
@@ -165,10 +199,10 @@ public class AbstractQuantityTest
 	@Test
 	public void testEqualsDifferentQuantity()
 	{
-		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		MassQuantity massQuantity2 = new MassQuantity(2, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity2 = new MassQuantity(2, MassMeasure.GRAM);
 
-		boolean actual = massQuantity1.equals(massQuantity2);
+		boolean actual = quantity1.equals(quantity2);
 
 		assertThat(actual).isFalse();
 	}
@@ -179,11 +213,11 @@ public class AbstractQuantityTest
 	@Test
 	public void testHashCode()
 	{
-		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.GRAM);
 
-		int expectedHashCode = massQuantity1.hashCode();
-		int actualHashCode = massQuantity2.hashCode();
+		int expectedHashCode = quantity1.hashCode();
+		int actualHashCode = quantity2.hashCode();
 
 		assertThat(actualHashCode).isEqualTo(expectedHashCode);
 	}
@@ -194,11 +228,11 @@ public class AbstractQuantityTest
 	@Test
 	public void testHashCodeDifferentMeasure()
 	{
-		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
+		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
 
-		int expectedHashCode = massQuantity1.hashCode();
-		int actualHashCode = massQuantity2.hashCode();
+		int expectedHashCode = quantity1.hashCode();
+		int actualHashCode = quantity2.hashCode();
 
 		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
 	}
@@ -209,11 +243,11 @@ public class AbstractQuantityTest
 	@Test
 	public void testHashCodeDifferentQuantity()
 	{
-		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		MassQuantity massQuantity2 = new MassQuantity(2, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+		Quantitative<MassMeasure> quantity2 = new MassQuantity(2, MassMeasure.GRAM);
 
-		int expectedHashCode = massQuantity1.hashCode();
-		int actualHashCode = massQuantity2.hashCode();
+		int expectedHashCode = quantity1.hashCode();
+		int actualHashCode = quantity2.hashCode();
 
 		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
 	}

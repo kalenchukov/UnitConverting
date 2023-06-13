@@ -44,7 +44,7 @@ public class InformationMeasureTest
 	@Test
 	public void getStandard()
 	{
-		InformationMeasure informationMeasure = InformationMeasure.BYTE;
+		Measurable informationMeasure = InformationMeasure.BYTE;
 		List<Standard> expectedList = List.of(Standard.IEC, Standard.SI);
 
 		List<Standard> actualList = informationMeasure.getStandard();
@@ -58,7 +58,7 @@ public class InformationMeasureTest
 	@Test
 	public void getCountMinUnit()
 	{
-		InformationMeasure informationMeasure = InformationMeasure.BYTE;
+		Measurable informationMeasure = InformationMeasure.BYTE;
 
 		BigDecimal actualCountMinUnit = informationMeasure.getCountMinUnit();
 

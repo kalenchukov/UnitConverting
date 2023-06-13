@@ -44,7 +44,7 @@ public class MassMeasureTest
 	@Test
 	public void getStandard()
 	{
-		MassMeasure massMeasure = MassMeasure.KILOGRAM;
+		Measurable massMeasure = MassMeasure.KILOGRAM;
 		List<Standard> expectedList = List.of(Standard.SI);
 
 		List<Standard> actualList = massMeasure.getStandard();
@@ -58,7 +58,7 @@ public class MassMeasureTest
 	@Test
 	public void getCountMinUnit()
 	{
-		MassMeasure massMeasure = MassMeasure.KILOGRAM;
+		Measurable massMeasure = MassMeasure.KILOGRAM;
 
 		BigDecimal actualCountMinUnit = massMeasure.getCountMinUnit();
 

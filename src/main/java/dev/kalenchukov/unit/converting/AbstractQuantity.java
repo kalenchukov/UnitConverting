@@ -259,13 +259,13 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 			return false;
 		}
 
-		final Quantitative<?> quantitative = (Quantitative<?>) obj;
+		final Quantitative<?> quantity = (Quantitative<?>) obj;
 
-		if (!Objects.equals(this.getQuantity(), quantitative.getQuantity())) {
+		if (!Objects.equals(this.getQuantity(), quantity.getQuantity())) {
 			return false;
 		}
 
-		if (!Objects.equals(this.getMeasure(), quantitative.getMeasure())) {
+		if (!Objects.equals(this.getMeasure(), quantity.getMeasure())) {
 			return false;
 		}
 
