@@ -271,4 +271,16 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 
 		return true;
 	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
+	 */
+	@NotNull
+	@Override
+	public String toString()
+	{
+		return this.getQuantity() + " " + this.getMeasure();
+	}
 }

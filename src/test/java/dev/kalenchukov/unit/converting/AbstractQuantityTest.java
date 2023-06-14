@@ -251,4 +251,17 @@ public class AbstractQuantityTest
 
 		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
 	}
+
+	/**
+	 * Проверка метода {@link AbstractQuantity#toString()}.
+	 */
+	@Test
+	public void testToString()
+	{
+		Quantitative<MassMeasure> quantity = new MassQuantity(1, MassMeasure.GRAM);
+
+		String actualString = quantity.toString();
+
+		assertThat(actualString).isEqualTo("1 GRAM");
+	}
 }

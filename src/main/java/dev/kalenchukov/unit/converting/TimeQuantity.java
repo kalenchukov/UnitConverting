@@ -153,16 +153,4 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 
 		return quantityX.compareTo(quantityY);
 	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @return {@inheritDoc}
-	 */
-	@NotNull
-	@Override
-	public String toString()
-	{
-		return "TimeQuantity{" + "quantity=" + this.getQuantity() + ", measure=" + this.getMeasure() + '}';
-	}
 }

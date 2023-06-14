@@ -153,16 +153,4 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 
 		return quantityX.compareTo(quantityY);
 	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @return {@inheritDoc}
-	 */
-	@NotNull
-	@Override
-	public String toString()
-	{
-		return "InformationQuantity{" + "quantity=" + this.getQuantity() + ", measure=" + this.getMeasure() + '}';
-	}
 }
