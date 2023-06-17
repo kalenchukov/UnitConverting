@@ -27,6 +27,7 @@ package dev.kalenchukov.unit.converting;
 import dev.kalenchukov.unit.converting.resources.MassMeasure;
 import dev.kalenchukov.unit.converting.resources.Measurable;
 import dev.kalenchukov.unit.converting.resources.TimeMeasure;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -67,192 +68,6 @@ public class AbstractQuantityTest
 	}
 
 	/**
-	 * Проверка метода {@link AbstractQuantity#convert(Measurable)}.
-	 */
-	@Test
-	public void convert()
-	{
-		Quantitative<MassMeasure> quantity = new MassQuantity(1, MassMeasure.KILOGRAM);
-
-		BigDecimal actualQuantity = quantity.convert(MassMeasure.GRAM);
-
-		assertThat(actualQuantity).isEqualTo(new BigDecimal(1000));
-	}
-
-	/**
-	 * Проверка метода {@link AbstractQuantity#convert(Measurable)} с нулевым значением.
-	 */
-	@Test()
-	public void convertZero()
-	{
-		Quantitative<MassMeasure> quantity = new MassQuantity(0, MassMeasure.GRAM);
-
-		BigDecimal actualQuantity = quantity.convert(MassMeasure.KILOGRAM);
-
-		assertThat(actualQuantity).isEqualTo(BigDecimal.ZERO);
-	}
-
-	/**
-	 * Проверка метода {@link AbstractQuantity#compareTo(Quantitative)} со
-	 * сравнением большего значения.
-	 */
-	@Test
-	public void compareToMore()
-	{
-		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
-		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
-
-		int actualCompare = massQuantity1.compareTo(massQuantity2);
-
-		assertThat(actualCompare).isEqualTo(1);
-	}
-
-	/**
-	 * Проверка метода {@link AbstractQuantity#compareTo(Quantitative)} со
-	 * сравнением равного значения.
-	 */
-	@Test
-	public void compareToEqually()
-	{
-		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.KILOGRAM);
-		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
-
-		int actualCompare = massQuantity1.compareTo(massQuantity2);
-
-		assertThat(actualCompare).isEqualTo(0);
-	}
-
-	/**
-	 * Проверка метода {@link AbstractQuantity#compareTo(Quantitative)} со
-	 * сравнением меньшего значения.
-	 */
-	@Test
-	public void compareToLess()
-	{
-		MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
-		MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
-
-		int actualCompare = massQuantity1.compareTo(massQuantity2);
-
-		assertThat(actualCompare).isEqualTo(-1);
-	}
-
-	/**
-	 * Проверка метода {@link AbstractQuantity#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.GRAM);
-
-		boolean actual = quantity1.equals(quantity2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link AbstractQuantity#equals(Object)} с {@code null}.
-	 */
-	@Test
-	public void testEqualsNull()
-	{
-		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		Quantitative<MassMeasure> quantity2 = null;
-
-		boolean actual = quantity1.equals(quantity2);
-
-		assertThat(actual).isFalse();
-	}
-
-	/**
-	 * Проверка метода {@link AbstractQuantity#equals(Object)} с разными классами.
-	 */
-	@Test
-	public void testEqualsDifferentClass()
-	{
-		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		Quantitative<TimeMeasure> quantity2 = new TimeQuantity(1, TimeMeasure.SECOND);
-
-		boolean actual = quantity1.equals(quantity2);
-
-		assertThat(actual).isFalse();
-	}
-
-	/**
-	 * Проверка метода {@link AbstractQuantity#equals(Object)} с разными мерами измерения.
-	 */
-	@Test
-	public void testEqualsDifferentMeasure()
-	{
-		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
-
-		boolean actual = quantity1.equals(quantity2);
-
-		assertThat(actual).isFalse();
-	}
-
-	/**
-	 * Проверка метода {@link AbstractQuantity#equals(Object)} с разными величинами.
-	 */
-	@Test
-	public void testEqualsDifferentQuantity()
-	{
-		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		Quantitative<MassMeasure> quantity2 = new MassQuantity(2, MassMeasure.GRAM);
-
-		boolean actual = quantity1.equals(quantity2);
-
-		assertThat(actual).isFalse();
-	}
-
-	/**
-	 * Проверка метода {@link AbstractQuantity#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.GRAM);
-
-		int expectedHashCode = quantity1.hashCode();
-		int actualHashCode = quantity2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
-
-	/**
-	 * Проверка метода {@link AbstractQuantity#hashCode()} с разными мерами измерения.
-	 */
-	@Test
-	public void testHashCodeDifferentMeasure()
-	{
-		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
-
-		int expectedHashCode = quantity1.hashCode();
-		int actualHashCode = quantity2.hashCode();
-
-		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
-	}
-
-	/**
-	 * Проверка метода {@link AbstractQuantity#hashCode()} с разными величинами.
-	 */
-	@Test
-	public void testHashCodeDifferentQuantity()
-	{
-		Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
-		Quantitative<MassMeasure> quantity2 = new MassQuantity(2, MassMeasure.GRAM);
-
-		int expectedHashCode = quantity1.hashCode();
-		int actualHashCode = quantity2.hashCode();
-
-		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
-	}
-
-	/**
 	 * Проверка метода {@link AbstractQuantity#toString()}.
 	 */
 	@Test
@@ -263,5 +78,227 @@ public class AbstractQuantityTest
 		String actualString = quantity.toString();
 
 		assertThat(actualString).isEqualTo("1 GRAM");
+	}
+
+	/**
+	 * Класс проверки метода {@link AbstractQuantity#convert(Measurable)}.
+	 *
+	 * @author Алексей Каленчуков
+	 */
+	@Nested
+	public class Convert
+	{
+		/**
+		 * Проверка метода {@link AbstractQuantity#convert(Measurable)}.
+		 */
+		@Test
+		public void convert()
+		{
+			Quantitative<MassMeasure> quantity = new MassQuantity(1, MassMeasure.KILOGRAM);
+
+			BigDecimal actualQuantity = quantity.convert(MassMeasure.GRAM);
+
+			assertThat(actualQuantity).isEqualTo(new BigDecimal(1000));
+		}
+
+		/**
+		 * Проверка метода {@link AbstractQuantity#convert(Measurable)} с нулевым значением.
+		 */
+		@Test()
+		public void convertZero()
+		{
+			Quantitative<MassMeasure> quantity = new MassQuantity(0, MassMeasure.GRAM);
+
+			BigDecimal actualQuantity = quantity.convert(MassMeasure.KILOGRAM);
+
+			assertThat(actualQuantity).isEqualTo(BigDecimal.ZERO);
+		}
+	}
+
+	/**
+	 * Класс проверки метода {@link AbstractQuantity#compareTo(Quantitative)}.
+	 *
+	 * @author Алексей Каленчуков
+	 */
+	@Nested
+	public class CompareTo
+	{
+		/**
+		 * Проверка метода {@link AbstractQuantity#compareTo(Quantitative)} со
+		 * сравнением равного значения.
+		 */
+		@Test
+		public void compareTo()
+		{
+			MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.KILOGRAM);
+			MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
+
+			int actualCompare = massQuantity1.compareTo(massQuantity2);
+
+			assertThat(actualCompare).isEqualTo(0);
+		}
+
+		/**
+		 * Проверка метода {@link AbstractQuantity#compareTo(Quantitative)} со
+		 * сравнением большего значения.
+		 */
+		@Test
+		public void compareToMore()
+		{
+			MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
+			MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
+
+			int actualCompare = massQuantity1.compareTo(massQuantity2);
+
+			assertThat(actualCompare).isEqualTo(1);
+		}
+
+		/**
+		 * Проверка метода {@link AbstractQuantity#compareTo(Quantitative)} со
+		 * сравнением меньшего значения.
+		 */
+		@Test
+		public void compareToLess()
+		{
+			MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
+			MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
+
+			int actualCompare = massQuantity1.compareTo(massQuantity2);
+
+			assertThat(actualCompare).isEqualTo(-1);
+		}
+	}
+
+	/**
+	 * Класс проверки метода {@link AbstractQuantity#equals(Object)}.
+	 *
+	 * @author Алексей Каленчуков
+	 */
+	@Nested
+	public class Equals
+	{
+		/**
+		 * Проверка метода {@link AbstractQuantity#equals(Object)}.
+		 */
+		@Test
+		public void testEquals()
+		{
+			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+			Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.GRAM);
+
+			boolean actual = quantity1.equals(quantity2);
+
+			assertThat(actual).isTrue();
+		}
+
+		/**
+		 * Проверка метода {@link AbstractQuantity#equals(Object)} с {@code null}.
+		 */
+		@Test
+		public void testEqualsNull()
+		{
+			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+			Quantitative<MassMeasure> quantity2 = null;
+
+			boolean actual = quantity1.equals(quantity2);
+
+			assertThat(actual).isFalse();
+		}
+
+		/**
+		 * Проверка метода {@link AbstractQuantity#equals(Object)} с разными классами.
+		 */
+		@Test
+		public void testEqualsDifferentClass()
+		{
+			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+			Quantitative<TimeMeasure> quantity2 = new TimeQuantity(1, TimeMeasure.SECOND);
+
+			boolean actual = quantity1.equals(quantity2);
+
+			assertThat(actual).isFalse();
+		}
+
+		/**
+		 * Проверка метода {@link AbstractQuantity#equals(Object)} с разными мерами измерения.
+		 */
+		@Test
+		public void testEqualsDifferentMeasure()
+		{
+			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+			Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
+
+			boolean actual = quantity1.equals(quantity2);
+
+			assertThat(actual).isFalse();
+		}
+
+		/**
+		 * Проверка метода {@link AbstractQuantity#equals(Object)} с разными величинами.
+		 */
+		@Test
+		public void testEqualsDifferentQuantity()
+		{
+			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+			Quantitative<MassMeasure> quantity2 = new MassQuantity(2, MassMeasure.GRAM);
+
+			boolean actual = quantity1.equals(quantity2);
+
+			assertThat(actual).isFalse();
+		}
+	}
+
+	/**
+	 * Класс проверки метода {@link AbstractQuantity#hashCode()}.
+	 *
+	 * @author Алексей Каленчуков
+	 */
+	@Nested
+	public class HashCode
+	{
+		/**
+		 * Проверка метода {@link AbstractQuantity#hashCode()}.
+		 */
+		@Test
+		public void testHashCode()
+		{
+			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+			Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.GRAM);
+
+			int expectedHashCode = quantity1.hashCode();
+			int actualHashCode = quantity2.hashCode();
+
+			assertThat(actualHashCode).isEqualTo(expectedHashCode);
+		}
+
+		/**
+		 * Проверка метода {@link AbstractQuantity#hashCode()} с разными мерами измерения.
+		 */
+		@Test
+		public void testHashCodeDifferentMeasure()
+		{
+			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+			Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
+
+			int expectedHashCode = quantity1.hashCode();
+			int actualHashCode = quantity2.hashCode();
+
+			assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
+		}
+
+		/**
+		 * Проверка метода {@link AbstractQuantity#hashCode()} с разными величинами.
+		 */
+		@Test
+		public void testHashCodeDifferentQuantity()
+		{
+			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
+			Quantitative<MassMeasure> quantity2 = new MassQuantity(2, MassMeasure.GRAM);
+
+			int expectedHashCode = quantity1.hashCode();
+			int actualHashCode = quantity2.hashCode();
+
+			assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
+		}
 	}
 }
