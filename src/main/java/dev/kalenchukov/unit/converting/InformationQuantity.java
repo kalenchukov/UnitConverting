@@ -45,9 +45,9 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 * @param measure мера измерения величины информации.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public InformationQuantity(@NotNull final Byte quantity, @NotNull final InformationMeasure measure)
+	public InformationQuantity(final byte quantity, @NotNull final InformationMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -57,9 +57,9 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 * @param measure мера измерения величины информации.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public InformationQuantity(@NotNull final Short quantity, @NotNull final InformationMeasure measure)
+	public InformationQuantity(final short quantity, @NotNull final InformationMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -69,9 +69,9 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 * @param measure мера измерения величины информации.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public InformationQuantity(@NotNull final Integer quantity, @NotNull final InformationMeasure measure)
+	public InformationQuantity(final int quantity, @NotNull final InformationMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -81,9 +81,9 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 * @param measure мера измерения величины информации.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public InformationQuantity(@NotNull final Long quantity, @NotNull final InformationMeasure measure)
+	public InformationQuantity(final long quantity, @NotNull final InformationMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -93,9 +93,9 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 * @param measure мера измерения величины информации.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public InformationQuantity(@NotNull final Float quantity, @NotNull final InformationMeasure measure)
+	public InformationQuantity(final float quantity, @NotNull final InformationMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -105,9 +105,9 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 * @param measure мера измерения величины информации.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public InformationQuantity(@NotNull final Double quantity, @NotNull final InformationMeasure measure)
+	public InformationQuantity(final double quantity, @NotNull final InformationMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**

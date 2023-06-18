@@ -45,9 +45,9 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 * @param measure мера измерения величины массы.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public MassQuantity(@NotNull final Byte quantity, @NotNull final MassMeasure measure)
+	public MassQuantity(final byte quantity, @NotNull final MassMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -57,9 +57,9 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 * @param measure мера измерения величины массы.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public MassQuantity(@NotNull final Short quantity, @NotNull final MassMeasure measure)
+	public MassQuantity(final short quantity, @NotNull final MassMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -69,9 +69,9 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 * @param measure мера измерения величины массы.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public MassQuantity(@NotNull final Integer quantity, @NotNull final MassMeasure measure)
+	public MassQuantity(final int quantity, @NotNull final MassMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -81,9 +81,9 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 * @param measure мера измерения величины массы.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public MassQuantity(@NotNull final Long quantity, @NotNull final MassMeasure measure)
+	public MassQuantity(final long quantity, @NotNull final MassMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -93,9 +93,9 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 * @param measure мера измерения величины массы.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public MassQuantity(@NotNull final Float quantity, @NotNull final MassMeasure measure)
+	public MassQuantity(final float quantity, @NotNull final MassMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -105,9 +105,9 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 * @param measure мера измерения величины массы.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public MassQuantity(@NotNull final Double quantity, @NotNull final MassMeasure measure)
+	public MassQuantity(final double quantity, @NotNull final MassMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**

@@ -45,9 +45,9 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 * @param measure мера измерения величины времени.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public TimeQuantity(@NotNull final Byte quantity, @NotNull final TimeMeasure measure)
+	public TimeQuantity(final byte quantity, @NotNull final TimeMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -57,9 +57,9 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 * @param measure мера измерения величины времени.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public TimeQuantity(@NotNull final Short quantity, @NotNull final TimeMeasure measure)
+	public TimeQuantity(final short quantity, @NotNull final TimeMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -69,9 +69,9 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 * @param measure мера измерения величины времени.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public TimeQuantity(@NotNull final Integer quantity, @NotNull final TimeMeasure measure)
+	public TimeQuantity(final int quantity, @NotNull final TimeMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -81,9 +81,9 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 * @param measure мера измерения величины времени.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public TimeQuantity(@NotNull final Long quantity, @NotNull final TimeMeasure measure)
+	public TimeQuantity(final long quantity, @NotNull final TimeMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -93,9 +93,9 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 * @param measure мера измерения величины времени.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public TimeQuantity(@NotNull final Float quantity, @NotNull final TimeMeasure measure)
+	public TimeQuantity(final float quantity, @NotNull final TimeMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
@@ -105,9 +105,9 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 * @param measure мера измерения величины времени.
 	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
 	 */
-	public TimeQuantity(@NotNull final Double quantity, @NotNull final TimeMeasure measure)
+	public TimeQuantity(final double quantity, @NotNull final TimeMeasure measure)
 	{
-		super(Objects.requireNonNull(quantity), Objects.requireNonNull(measure));
+		super(quantity, Objects.requireNonNull(measure));
 	}
 
 	/**
