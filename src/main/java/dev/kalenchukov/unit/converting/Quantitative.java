@@ -36,7 +36,7 @@ import java.math.BigDecimal;
  * @param <M> Тип объекта меры измерения величины.
  * @author Алексей Каленчуков
  */
-public interface Quantitative<M extends Measurable>
+public interface Quantitative<M extends Enum<M> & Measurable>
 {
 	/**
 	 * Возвращает величину.
