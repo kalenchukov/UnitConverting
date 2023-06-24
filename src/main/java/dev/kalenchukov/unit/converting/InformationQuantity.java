@@ -43,7 +43,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(final byte quantity, @NotNull final InformationMeasure measure)
 	{
@@ -55,7 +55,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(final short quantity, @NotNull final InformationMeasure measure)
 	{
@@ -67,7 +67,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(final int quantity, @NotNull final InformationMeasure measure)
 	{
@@ -79,7 +79,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(final long quantity, @NotNull final InformationMeasure measure)
 	{
@@ -91,7 +91,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(final float quantity, @NotNull final InformationMeasure measure)
 	{
@@ -103,7 +103,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(final double quantity, @NotNull final InformationMeasure measure)
 	{
@@ -115,7 +115,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(@NotNull final BigInteger quantity, @NotNull final InformationMeasure measure)
 	{
@@ -127,7 +127,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(@NotNull final BigDecimal quantity, @NotNull final InformationMeasure measure)
 	{
@@ -135,15 +135,15 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	}
 
 	/**
-	 * Сравнивает два объекта {@code Information}.
+	 * Сравнивает объекты.
 	 *
 	 * @param quantityX первый объект для сравнения.
 	 * @param quantityY второй объект для сравнения.
 	 * @return
 	 * <ul>
-	 *     <li><b>-1</b> - если объект {@code quantityX} меньше {@code quantityY}.</li>
-	 *     <li><b>0</b> - если объект {@code quantityX} равен {@code quantityY}.</li>
-	 *     <li><b>1</b> - если объект {@code quantityX} больше {@code quantityY}.</li>
+	 *     <li><b>-1</b> - если {@code quantityX} меньше {@code quantityY}.</li>
+	 *     <li><b>0</b> - если {@code quantityX} равен {@code quantityY}.</li>
+	 *     <li><b>1</b> - если {@code quantityX} больше {@code quantityY}.</li>
 	 * </ul>
 	 */
 	public static int compare(@NotNull final InformationQuantity quantityX, @NotNull final InformationQuantity quantityY)

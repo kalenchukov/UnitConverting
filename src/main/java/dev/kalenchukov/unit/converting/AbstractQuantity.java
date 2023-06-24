@@ -61,7 +61,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	protected AbstractQuantity(final byte quantity, @NotNull final M measure)
 	{
@@ -73,7 +73,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	protected AbstractQuantity(final short quantity, @NotNull final M measure)
 	{
@@ -85,7 +85,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	protected AbstractQuantity(final int quantity, @NotNull final M measure)
 	{
@@ -97,7 +97,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	protected AbstractQuantity(final long quantity, @NotNull final M measure)
 	{
@@ -109,7 +109,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	protected AbstractQuantity(final float quantity, @NotNull final M measure)
 	{
@@ -121,7 +121,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	protected AbstractQuantity(final double quantity, @NotNull final M measure)
 	{
@@ -133,7 +133,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	protected AbstractQuantity(@NotNull final BigInteger quantity, @NotNull final M measure)
 	{
@@ -145,7 +145,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	protected AbstractQuantity(@NotNull final BigDecimal quantity, @NotNull final M measure)
 	{
@@ -202,7 +202,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Meas
 	}
 
 	/**
-	 * Сравнивает данный объект с другим объектом {@code AbstractQuantity}.
+	 * Сравнивает объекты.
 	 *
 	 * @param anotherQuantity другой объект для сравнения.
 	 * @return

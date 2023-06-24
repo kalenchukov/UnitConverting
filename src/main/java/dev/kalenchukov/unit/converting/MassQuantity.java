@@ -43,7 +43,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(final byte quantity, @NotNull final MassMeasure measure)
 	{
@@ -55,7 +55,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(final short quantity, @NotNull final MassMeasure measure)
 	{
@@ -67,7 +67,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(final int quantity, @NotNull final MassMeasure measure)
 	{
@@ -79,7 +79,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(final long quantity, @NotNull final MassMeasure measure)
 	{
@@ -91,7 +91,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(final float quantity, @NotNull final MassMeasure measure)
 	{
@@ -103,7 +103,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(final double quantity, @NotNull final MassMeasure measure)
 	{
@@ -115,7 +115,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(@NotNull final BigInteger quantity, @NotNull final MassMeasure measure)
 	{
@@ -127,7 +127,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(@NotNull final BigDecimal quantity, @NotNull final MassMeasure measure)
 	{
@@ -135,15 +135,15 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	}
 
 	/**
-	 * Сравнивает два объекта {@code Mass}.
+	 * Сравнивает объекты.
 	 *
 	 * @param quantityX первый объект для сравнения.
 	 * @param quantityY второй объект для сравнения.
 	 * @return
 	 * <ul>
-	 *     <li><b>-1</b> - если объект {@code quantityX} меньше {@code quantityY}.</li>
-	 *     <li><b>0</b> - если объект {@code quantityX} равен {@code quantityY}.</li>
-	 *     <li><b>1</b> - если объект {@code quantityX} больше {@code quantityY}.</li>
+	 *     <li><b>-1</b> - если {@code quantityX} меньше {@code quantityY}.</li>
+	 *     <li><b>0</b> - если {@code quantityX} равен {@code quantityY}.</li>
+	 *     <li><b>1</b> - если {@code quantityX} больше {@code quantityY}.</li>
 	 * </ul>
 	 */
 	public static int compare(@NotNull final MassQuantity quantityX, @NotNull final MassQuantity quantityY)

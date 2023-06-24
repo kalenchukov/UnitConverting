@@ -43,7 +43,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(final byte quantity, @NotNull final TimeMeasure measure)
 	{
@@ -55,7 +55,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(final short quantity, @NotNull final TimeMeasure measure)
 	{
@@ -67,7 +67,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(final int quantity, @NotNull final TimeMeasure measure)
 	{
@@ -79,7 +79,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(final long quantity, @NotNull final TimeMeasure measure)
 	{
@@ -91,7 +91,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(final float quantity, @NotNull final TimeMeasure measure)
 	{
@@ -103,7 +103,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(final double quantity, @NotNull final TimeMeasure measure)
 	{
@@ -115,7 +115,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(@NotNull final BigInteger quantity, @NotNull final TimeMeasure measure)
 	{
@@ -127,7 +127,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
-	 * @throws IllegalArgumentException если величина аргумента {@code quantity} меньше 0.
+	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(@NotNull final BigDecimal quantity, @NotNull final TimeMeasure measure)
 	{
@@ -135,15 +135,15 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	}
 
 	/**
-	 * Сравнивает два объекта {@code Time}.
+	 * Сравнивает объекты.
 	 *
 	 * @param quantityX первый объект для сравнения.
 	 * @param quantityY второй объект для сравнения.
 	 * @return
 	 * <ul>
-	 *     <li><b>-1</b> - если объект {@code quantityX} меньше {@code quantityY}.</li>
-	 *     <li><b>0</b> - если объект {@code quantityX} равен {@code quantityY}.</li>
-	 *     <li><b>1</b> - если объект {@code quantityX} больше {@code quantityY}.</li>
+	 *     <li><b>-1</b> - если {@code quantityX} меньше {@code quantityY}.</li>
+	 *     <li><b>0</b> - если {@code quantityX} равен {@code quantityY}.</li>
+	 *     <li><b>1</b> - если {@code quantityX} больше {@code quantityY}.</li>
 	 * </ul>
 	 */
 	public static int compare(@NotNull final TimeQuantity quantityX, @NotNull final TimeQuantity quantityY)
