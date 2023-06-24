@@ -41,7 +41,7 @@ import java.util.Objects;
  *
  * @author Алексей Каленчуков
  */
-public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Measurable>
+public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Enum<M> & Measurable>
 	implements Comparable<Q>, Quantitative<M>
 {
 	/**
