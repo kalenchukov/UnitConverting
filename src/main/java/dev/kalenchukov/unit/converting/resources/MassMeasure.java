@@ -28,7 +28,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
-import java.util.List;
+import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -45,7 +45,7 @@ public enum MassMeasure implements Measurable
 	 * Наименьшая мера измерения массы.
 	 */
 	YOCTOGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(-24, new MathContext(32))
 	),
 
@@ -54,7 +54,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>-21</sup> грамма = 0.000 000 000 000 000 000 001.</p>
 	 */
 	ZEPTOGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(-21, new MathContext(32))
 	),
 
@@ -63,7 +63,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>-18</sup> грамма = 0.000 000 000 000 000 001.</p>
 	 */
 	ATTOGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(-18, new MathContext(32))
 	),
 
@@ -72,7 +72,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>-15</sup> грамма = 0.000 000 000 000 001.</p>
 	 */
 	FEMTOGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(-15, new MathContext(32))
 	),
 
@@ -81,7 +81,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>-12</sup> грамма = 0.000 000 000 001.</p>
 	 */
 	PICOGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(-12, new MathContext(32))
 	),
 
@@ -90,7 +90,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>-9</sup> грамма = 0.000 000 001.</p>
 	 */
 	NANOGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(-9, new MathContext(32))
 	),
 
@@ -99,7 +99,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>-6</sup> грамма = 0.000 001.</p>
 	 */
 	MICROGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(-6, new MathContext(32))
 	),
 
@@ -108,7 +108,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>-3</sup> грамма = 0.001.</p>
 	 */
 	MILLIGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(-3, new MathContext(32))
 	),
 
@@ -117,7 +117,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>-2</sup> грамма = 0.01.</p>
 	 */
 	CENTIGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(-2, new MathContext(32))
 	),
 
@@ -126,7 +126,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>-1</sup> грамма = 0.1.</p>
 	 */
 	DECIGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(-1, new MathContext(32))
 	),
 
@@ -135,7 +135,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>-0</sup> грамма = 1.</p>
 	 */
 	GRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(0)
 	),
 
@@ -144,7 +144,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>1</sup> грамма = 10.</p>
 	 */
 	DECAGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(1)
 	),
 
@@ -153,7 +153,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>2</sup> грамма = 100.</p>
 	 */
 	HECTOGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(2)
 	),
 
@@ -162,7 +162,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>3</sup> грамма = 1 000.</p>
 	 */
 	KILOGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(3)
 	),
 
@@ -171,7 +171,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>6</sup> грамма = 1 000 000.</p>
 	 */
 	MEGAGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(6)
 	),
 
@@ -180,7 +180,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>9</sup> грамма = 1 000 000 000.</p>
 	 */
 	GIGAGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(9)
 	),
 
@@ -189,7 +189,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>12</sup> грамма = 1 000 000 000 000.</p>
 	 */
 	TERAGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(12)
 	),
 
@@ -198,7 +198,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>15</sup> грамма = 1 000 000 000 000 000.</p>
 	 */
 	PETAGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(15)
 	),
 
@@ -207,7 +207,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>18</sup> грамма = 1 000 000 000 000 000 000.</p>
 	 */
 	EXAGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(18)
 	),
 
@@ -216,7 +216,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>21</sup> грамма = 1 000 000 000 000 000 000 000.</p>
 	 */
 	ZETTAGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(21)
 	),
 
@@ -225,7 +225,7 @@ public enum MassMeasure implements Measurable
 	 * <p>10<sup>24</sup> грамма = 1 000 000 000 000 000 000 000 000.</p>
 	 */
 	YOTTAGRAM(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(24)
 	);
 
@@ -233,7 +233,7 @@ public enum MassMeasure implements Measurable
 	 * Список стандартов меры измерения.
 	 */
 	@NotNull
-	private final List<@NotNull Standard> standard;
+	private final Set<@NotNull Standard> standard;
 
 	/**
 	 * Количество минимальных единиц меры.
@@ -247,7 +247,7 @@ public enum MassMeasure implements Measurable
 	 * @param standard список стандартов меры измерения.
 	 * @param countMinUnit количество минимальных единиц меры.
 	 */
-	MassMeasure(@NotNull final List<@NotNull Standard> standard, @NotNull final BigDecimal countMinUnit)
+	MassMeasure(@NotNull final Set<@NotNull Standard> standard, @NotNull final BigDecimal countMinUnit)
 	{
 		Objects.requireNonNull(standard);
 		Objects.requireNonNull(countMinUnit);
@@ -263,7 +263,7 @@ public enum MassMeasure implements Measurable
 	 */
 	@NotNull
 	@Override
-	public List<@NotNull Standard> getStandard()
+	public Set<@NotNull Standard> getStandard()
 	{
 		return this.standard;
 	}

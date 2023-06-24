@@ -28,7 +28,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
-import java.util.List;
+import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -43,7 +43,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>-30</sup> секунды = 0.000 000 000 000 000 000 000 000 000 001.</p>
      */
     QUECTOSECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(-30, new MathContext(32))
     ),
 
@@ -52,7 +52,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>-27</sup> секунды = 0.000 000 000 000 000 000 000 000 001.</p>
      */
     RONTOSECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(-27, new MathContext(32))
     ),
 
@@ -61,7 +61,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>-24</sup> секунды = 0.000 000 000 000 000 000 000 001.</p>
      */
     YOCTOSECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(-24, new MathContext(32))
     ),
 
@@ -70,7 +70,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>-21</sup> секунды = 0.000 000 000 000 000 000 001.</p>
      */
     ZEPTOSECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(-21, new MathContext(32))
     ),
 
@@ -79,7 +79,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>-18</sup> секунды = 0.000 000 000 000 000 001.</p>
      */
     ATTOSECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(-18, new MathContext(32))
     ),
 
@@ -88,7 +88,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>-15</sup> секунды = 0.000 000 000 000 001.</p>
      */
     FEMTOSECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(-15, new MathContext(32))
     ),
 
@@ -97,7 +97,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>-12</sup> секунды = 0.000 000 000 001.</p>
      */
     PICOSECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(-12, new MathContext(32))
     ),
 
@@ -106,7 +106,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>-9</sup> секунды = 0.000 000 001.</p>
      */
     NANOSECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(-9, new MathContext(32))
     ),
 
@@ -115,7 +115,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>-6</sup> секунды = 0.000 001.</p>
      */
     MICROSECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(-6, new MathContext(32))
     ),
 
@@ -124,7 +124,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>-3</sup> секунды = 0.001.</p>
      */
     MILLISECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(-3, new MathContext(32))
     ),
 
@@ -133,7 +133,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>-2</sup> секунды = 0.01.</p>
      */
     CENTISECOND (
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(-2, new MathContext(32))
     ),
 
@@ -142,7 +142,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>-1</sup> секунды = 0.1.</p>
      */
     DECISECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(-1, new MathContext(32))
     ),
 
@@ -151,7 +151,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>0</sup> секунды = 1.</p>
      */
     SECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(0)
     ),
 
@@ -160,7 +160,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>1</sup> секунды = 10.</p>
      */
     DECASECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(1)
     ),
 
@@ -169,7 +169,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>2</sup> секунды = 100.</p>
      */
     HECTOSECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(2)
     ),
 
@@ -178,7 +178,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>3</sup> секунды = 1 000.</p>
      */
     KILOSECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(3)
     ),
 
@@ -187,7 +187,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>6</sup> секунды = 1 000 000.</p>
      */
     MEGASECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(6)
     ),
 
@@ -196,7 +196,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>9</sup> секунды = 1 000 000 000.</p>
      */
     GIGASECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(9)
     ),
 
@@ -205,7 +205,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>12</sup> секунды = 1 000 000 000 000.</p>
      */
     TERASECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(12)
     ),
 
@@ -214,7 +214,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>15</sup> секунды = 1 000 000 000 000 000.</p>
      */
     PETASECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(15)
     ),
 
@@ -223,7 +223,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>18</sup> секунды = 1 000 000 000 000 000 000.</p>
      */
     EXASECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(18)
     ),
 
@@ -232,7 +232,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>21</sup> секунды = 1 000 000 000 000 000 000 000.</p>
      */
     ZETTASECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(21)
     ),
 
@@ -241,7 +241,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>24</sup> секунды = 1 000 000 000 000 000 000 000 000.</p>
      */
     YOTTASECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(24)
     ),
 
@@ -250,7 +250,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>27</sup> секунды = 1 000 000 000 000 000 000 000 000 000.</p>
      */
     RONNASECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(27)
     ),
 
@@ -259,7 +259,7 @@ public enum TimeMeasure implements Measurable
      * <p>10<sup>30</sup> секунды = 1 000 000 000 000 000 000 000 000 000 000.</p>
      */
     QUETTASECOND(
-        List.of(Standard.SI),
+        Set.of(Standard.SI),
         new BigDecimal(10).pow(30)
     );
 
@@ -267,7 +267,7 @@ public enum TimeMeasure implements Measurable
      * Список стандартов меры измерения.
      */
     @NotNull
-    private final List<@NotNull Standard> standard;
+    private final Set<@NotNull Standard> standard;
 
     /**
      * Количество минимальных единиц времени.
@@ -281,7 +281,7 @@ public enum TimeMeasure implements Measurable
      * @param standard список стандартов меры измерения.
      * @param countMinUnit количество минимальных единиц времени.
      */
-    TimeMeasure(@NotNull final List<@NotNull Standard> standard, @NotNull final BigDecimal countMinUnit)
+    TimeMeasure(@NotNull final Set<@NotNull Standard> standard, @NotNull final BigDecimal countMinUnit)
     {
         Objects.requireNonNull(standard);
         Objects.requireNonNull(countMinUnit);
@@ -297,7 +297,7 @@ public enum TimeMeasure implements Measurable
      */
     @NotNull
     @Override
-    public List<@NotNull Standard> getStandard()
+    public Set<@NotNull Standard> getStandard()
     {
         return this.standard;
     }

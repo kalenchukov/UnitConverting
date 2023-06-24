@@ -27,7 +27,7 @@ package dev.kalenchukov.unit.converting.resources;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
-import java.util.List;
+import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -45,11 +45,11 @@ public class TimeMeasureTest
 	public void getStandard()
 	{
 		Measurable timeMeasure = TimeMeasure.SECOND;
-		List<Standard> expectedList = List.of(Standard.SI);
+		Set<Standard> expectedSet = Set.of(Standard.SI);
 
-		List<Standard> actualList = timeMeasure.getStandard();
+		Set<Standard> actualSet = timeMeasure.getStandard();
 
-		assertThat(actualList).containsSequence(expectedList);
+		assertThat(actualSet).containsSequence(expectedSet);
 	}
 
 	/**

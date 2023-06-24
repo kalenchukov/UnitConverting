@@ -27,7 +27,7 @@ package dev.kalenchukov.unit.converting.resources;
 import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;
-import java.util.List;
+import java.util.Set;
 
 /**
  * Интерфейс для реализации перечисления мер измерения.
@@ -42,7 +42,7 @@ public interface Measurable
 	 * @return коллекцию стандартов.
 	 */
 	@NotNull
-	List<@NotNull Standard> getStandard();
+	Set<@NotNull Standard> getStandard();
 
 	/**
 	 * Возвращает количество минимальных единиц меры.

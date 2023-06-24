@@ -25,10 +25,9 @@
 package dev.kalenchukov.unit.converting.resources;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.math.BigDecimal;
-import java.util.List;
+import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -45,7 +44,7 @@ public enum InformationMeasure implements Measurable
 	 * Наименьшая мера измерения информации.
 	 */
 	BIT(
-		List.of(Standard.IEC, Standard.SI),
+		Set.of(Standard.IEC, Standard.SI),
 		new BigDecimal(1)
 	),
 
@@ -54,7 +53,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>2<sup>10</sup> бит = 1 024.</p>
 	 */
 	KIBIBIT(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(10)
 	),
 
@@ -63,7 +62,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>2<sup>20</sup> бит = 1 048 576.</p>
 	 */
 	MEBIBIT(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(20)
 	),
 
@@ -72,7 +71,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>2<sup>30</sup> бит = 1 073 741 824.</p>
 	 */
 	GIBIBIT(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(30)
 	),
 
@@ -81,7 +80,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>2<sup>40</sup> бит = 1 099 511 627 776.</p>
 	 */
 	TEBIBIT(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(40)
 	),
 
@@ -90,7 +89,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>2<sup>50</sup> бит = 1 125 899 906 842 624.</p>
 	 */
 	PEBIBIT(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(50)
 	),
 
@@ -99,7 +98,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>2<sup>60</sup> бит = 1 152 921 504 606 846 976.</p>
 	 */
 	EXBIBIT(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(60)
 	),
 
@@ -108,7 +107,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>2<sup>70</sup> бит = 1 180 591 620 717 411 303 424.</p>
 	 */
 	ZEBIBIT(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(70)
 	),
 
@@ -117,7 +116,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>2<sup>80</sup> бит = 1 208 925 819 614 629 174 706 176.</p>
 	 */
 	YOBIBIT(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(80)
 	),
 
@@ -126,7 +125,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>10<sup>3</sup> бит = 1 000.</p>
 	 */
 	KILOBIT(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(3)
 	),
 
@@ -135,7 +134,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>10<sup>6</sup> бит = 1 000 000.</p>
 	 */
 	MEGABIT(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(6)
 	),
 
@@ -144,7 +143,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>10<sup>9</sup> бит = 1 000 000 000.</p>
 	 */
 	GIGABIT(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(9)
 	),
 
@@ -153,7 +152,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>10<sup>12</sup> бит = 1 000 000 000 000.</p>
 	 */
 	TERABIT(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(12)
 	),
 
@@ -162,7 +161,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>10<sup>15</sup> бит = 1 000 000 000 000 000.</p>
 	 */
 	PETABIT(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(15)
 	),
 
@@ -171,7 +170,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>10<sup>18</sup> бит = 1 000 000 000 000 000 000.</p>
 	 */
 	EXABIT(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(18)
 	),
 
@@ -180,7 +179,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>10<sup>21</sup> бит = 1 000 000 000 000 000 000 000.</p>
 	 */
 	ZETTABIT(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(21)
 	),
 
@@ -189,7 +188,7 @@ public enum InformationMeasure implements Measurable
 	 * <p>10<sup>24</sup> бит = 1 000 000 000 000 000 000 000 000.</p>
 	 */
 	YOTTABIT(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(24)
 	),
 
@@ -200,7 +199,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	BYTE(
-		List.of(Standard.IEC, Standard.SI),
+		Set.of(Standard.IEC, Standard.SI),
 		new BigDecimal(1).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -211,7 +210,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	KIBIBYTE(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(10).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -222,7 +221,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	MEBIBYTE(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(20).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -233,7 +232,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	GIBIBYTE(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(30).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -244,7 +243,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	TEBIBYTE(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(40).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -255,7 +254,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	PEBIBYTE(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(50).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -266,7 +265,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	EXBIBYTE(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(60).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -277,7 +276,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	ZEBIBYTE(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(70).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -288,7 +287,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	YOBIBYTE(
-		List.of(Standard.IEC),
+		Set.of(Standard.IEC),
 		new BigDecimal(2).pow(80).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -299,7 +298,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	KILOBYTE(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(3).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -310,7 +309,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	MEGABYTE(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(6).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -321,7 +320,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	GIGABYTE(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(9).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -332,7 +331,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	TERABYTE(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(12).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -343,7 +342,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	PETABYTE(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(15).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -354,7 +353,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	EXABYTE(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(18).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -365,7 +364,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	ZETTABYTE(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(21).multiply(BigDecimal.valueOf(8))
 	),
 
@@ -376,7 +375,7 @@ public enum InformationMeasure implements Measurable
 	 * Данное значение умножается на 8 для конвертирования в наименьшую величину {@link InformationMeasure#BIT}.
 	 */
 	YOTTABYTE(
-		List.of(Standard.SI),
+		Set.of(Standard.SI),
 		new BigDecimal(10).pow(24).multiply(BigDecimal.valueOf(8))
 	);
 
@@ -384,7 +383,7 @@ public enum InformationMeasure implements Measurable
 	 * Список стандартов меры измерения.
 	 */
 	@NotNull
-	private final List<@NotNull Standard> standard;
+	private final Set<@NotNull Standard> standard;
 
 	/**
 	 * Количество минимальных единиц меры.
@@ -398,7 +397,7 @@ public enum InformationMeasure implements Measurable
 	 * @param standard список стандартов меры измерения.
 	 * @param countMinUnit количество минимальных единиц меры.
 	 */
-	InformationMeasure(@NotNull final List<@NotNull Standard> standard, @NotNull final BigDecimal countMinUnit)
+	InformationMeasure(@NotNull final Set<@NotNull Standard> standard, @NotNull final BigDecimal countMinUnit)
 	{
 		Objects.requireNonNull(standard);
 		Objects.requireNonNull(countMinUnit);
@@ -414,7 +413,7 @@ public enum InformationMeasure implements Measurable
 	 */
 	@NotNull
 	@Override
-	public List<@NotNull Standard> getStandard()
+	public Set<@NotNull Standard> getStandard()
 	{
 		return this.standard;
 	}

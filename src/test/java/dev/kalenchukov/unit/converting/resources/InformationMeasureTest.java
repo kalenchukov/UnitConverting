@@ -27,7 +27,7 @@ package dev.kalenchukov.unit.converting.resources;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
-import java.util.List;
+import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -45,11 +45,11 @@ public class InformationMeasureTest
 	public void getStandard()
 	{
 		Measurable informationMeasure = InformationMeasure.BYTE;
-		List<Standard> expectedList = List.of(Standard.IEC, Standard.SI);
+		Set<Standard> expectedSet = Set.of(Standard.IEC, Standard.SI);
 
-		List<Standard> actualList = informationMeasure.getStandard();
+		Set<Standard> actualSet = informationMeasure.getStandard();
 
-		assertThat(actualList).containsSequence(expectedList);
+		assertThat(actualSet).containsSequence(expectedSet);
 	}
 
 	/**

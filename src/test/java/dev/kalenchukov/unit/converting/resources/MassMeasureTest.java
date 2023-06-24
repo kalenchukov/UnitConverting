@@ -27,7 +27,7 @@ package dev.kalenchukov.unit.converting.resources;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
-import java.util.List;
+import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -45,11 +45,11 @@ public class MassMeasureTest
 	public void getStandard()
 	{
 		Measurable massMeasure = MassMeasure.KILOGRAM;
-		List<Standard> expectedList = List.of(Standard.SI);
+		Set<Standard> expectedSet = Set.of(Standard.SI);
 
-		List<Standard> actualList = massMeasure.getStandard();
+		Set<Standard> actualSet = massMeasure.getStandard();
 
-		assertThat(actualList).containsSequence(expectedList);
+		assertThat(actualSet).containsSequence(expectedSet);
 	}
 
 	/**
