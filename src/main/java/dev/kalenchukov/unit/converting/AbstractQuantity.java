@@ -36,9 +36,8 @@ import java.util.Objects;
 /**
  * Класс абстрактной величины.
  *
- * @param <Q> Тип объекта величины.
- * @param <M> Тип объекта меры измерения величины.
- *
+ * @param <Q> тип величины.
+ * @param <M> тип меры измерения величины.
  * @author Алексей Каленчуков
  */
 public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Enum<M> & Measurable>
