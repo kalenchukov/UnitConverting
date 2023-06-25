@@ -25,6 +25,7 @@
 package dev.kalenchukov.unit.converting.resources;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Unmodifiable;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -232,6 +233,7 @@ public enum MassMeasure implements Measurable
 	/**
 	 * Список стандартов меры измерения.
 	 */
+	@Unmodifiable
 	@NotNull
 	private final Set<@NotNull Standard> standard;
 
@@ -261,6 +263,7 @@ public enum MassMeasure implements Measurable
 	 *
 	 * @return {@inheritDoc}
 	 */
+	@Unmodifiable
 	@NotNull
 	@Override
 	public Set<@NotNull Standard> getStandard()
