@@ -33,7 +33,7 @@ import java.math.BigDecimal;
 /**
  * Интерфейс для реализации класса величин.
  *
- * @param <M> Тип объекта меры измерения величины.
+ * @param <M> тип меры измерения величины.
  * @author Алексей Каленчуков
  */
 public interface Quantitative<M extends Enum<M> & Measurable>
