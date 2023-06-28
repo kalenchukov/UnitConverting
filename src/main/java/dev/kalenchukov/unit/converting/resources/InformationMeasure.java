@@ -398,6 +398,8 @@ public enum InformationMeasure implements Measurable
 	 *
 	 * @param standard список стандартов меры измерения.
 	 * @param countMinUnit количество минимальных единиц меры.
+	 * @throws NullPointerException если в качестве {@code standard} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code countMinUnit} передан {@code null}.
 	 */
 	InformationMeasure(@NotNull final Set<@NotNull Standard> standard, @NotNull final BigDecimal countMinUnit)
 	{

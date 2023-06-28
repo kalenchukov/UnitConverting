@@ -43,6 +43,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(final byte quantity, @NotNull final InformationMeasure measure)
@@ -55,6 +56,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(final short quantity, @NotNull final InformationMeasure measure)
@@ -67,6 +69,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(final int quantity, @NotNull final InformationMeasure measure)
@@ -79,6 +82,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(final long quantity, @NotNull final InformationMeasure measure)
@@ -91,6 +95,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(final float quantity, @NotNull final InformationMeasure measure)
@@ -103,6 +108,7 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(final double quantity, @NotNull final InformationMeasure measure)
@@ -115,6 +121,8 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
+	 * @throws NullPointerException если в качестве {@code quantity} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(@NotNull final BigInteger quantity, @NotNull final InformationMeasure measure)
@@ -127,6 +135,8 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины информации.
+	 * @throws NullPointerException если в качестве {@code quantity} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public InformationQuantity(@NotNull final BigDecimal quantity, @NotNull final InformationMeasure measure)
@@ -145,8 +155,11 @@ public final class InformationQuantity extends AbstractQuantity<InformationQuant
 	 *     <li><b>0</b> - если {@code quantityX} равен {@code quantityY}.</li>
 	 *     <li><b>1</b> - если {@code quantityX} больше {@code quantityY}.</li>
 	 * </ul>
+	 * @throws NullPointerException если в качестве {@code quantityX} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code quantityY} передан {@code null}.
 	 */
-	public static int compare(@NotNull final InformationQuantity quantityX, @NotNull final InformationQuantity quantityY)
+	public static int compare(@NotNull final InformationQuantity quantityX,
+							  @NotNull final InformationQuantity quantityY)
 	{
 		Objects.requireNonNull(quantityX);
 		Objects.requireNonNull(quantityY);

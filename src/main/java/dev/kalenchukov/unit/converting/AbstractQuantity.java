@@ -144,6 +144,8 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Enum
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины.
+	 * @throws NullPointerException если в качестве {@code quantity} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	protected AbstractQuantity(@NotNull final BigDecimal quantity, @NotNull final M measure)
@@ -188,6 +190,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Enum
 	 *
 	 * @param measure {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 */
 	@NotNull
 	@Override
@@ -210,6 +213,7 @@ public abstract class AbstractQuantity<Q extends Quantitative<M>, M extends Enum
 	 *     <li><b>0</b> - если данный объект равен {@code anotherQuantity}.</li>
 	 *     <li><b>1</b> - если данный объект больше {@code anotherQuantity}.</li>
 	 * </ul>
+	 * @throws NullPointerException если в качестве {@code anotherQuantity} передан {@code null}.
 	 */
 	@Override
 	public int compareTo(@NotNull final Q anotherQuantity)

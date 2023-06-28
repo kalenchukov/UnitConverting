@@ -43,6 +43,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(final byte quantity, @NotNull final TimeMeasure measure)
@@ -55,6 +56,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(final short quantity, @NotNull final TimeMeasure measure)
@@ -67,6 +69,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(final int quantity, @NotNull final TimeMeasure measure)
@@ -79,6 +82,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(final long quantity, @NotNull final TimeMeasure measure)
@@ -91,6 +95,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(final float quantity, @NotNull final TimeMeasure measure)
@@ -103,6 +108,7 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(final double quantity, @NotNull final TimeMeasure measure)
@@ -115,6 +121,8 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
+	 * @throws NullPointerException если в качестве {@code quantity} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(@NotNull final BigInteger quantity, @NotNull final TimeMeasure measure)
@@ -127,6 +135,8 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины времени.
+	 * @throws NullPointerException если в качестве {@code quantity} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public TimeQuantity(@NotNull final BigDecimal quantity, @NotNull final TimeMeasure measure)
@@ -145,8 +155,11 @@ public final class TimeQuantity extends AbstractQuantity<TimeQuantity, TimeMeasu
 	 *     <li><b>0</b> - если {@code quantityX} равен {@code quantityY}.</li>
 	 *     <li><b>1</b> - если {@code quantityX} больше {@code quantityY}.</li>
 	 * </ul>
+	 * @throws NullPointerException если в качестве {@code quantityX} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code quantityY} передан {@code null}.
 	 */
-	public static int compare(@NotNull final TimeQuantity quantityX, @NotNull final TimeQuantity quantityY)
+	public static int compare(@NotNull final TimeQuantity quantityX,
+							  @NotNull final TimeQuantity quantityY)
 	{
 		Objects.requireNonNull(quantityX);
 		Objects.requireNonNull(quantityY);

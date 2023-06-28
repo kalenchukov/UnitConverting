@@ -43,6 +43,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(final byte quantity, @NotNull final MassMeasure measure)
@@ -55,6 +56,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(final short quantity, @NotNull final MassMeasure measure)
@@ -67,6 +69,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(final int quantity, @NotNull final MassMeasure measure)
@@ -79,6 +82,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(final long quantity, @NotNull final MassMeasure measure)
@@ -91,6 +95,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(final float quantity, @NotNull final MassMeasure measure)
@@ -103,6 +108,7 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(final double quantity, @NotNull final MassMeasure measure)
@@ -115,6 +121,8 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
+	 * @throws NullPointerException если в качестве {@code quantity} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(@NotNull final BigInteger quantity, @NotNull final MassMeasure measure)
@@ -127,6 +135,8 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *
 	 * @param quantity величина.
 	 * @param measure мера измерения величины массы.
+	 * @throws NullPointerException если в качестве {@code quantity} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code measure} передан {@code null}.
 	 * @throws IllegalArgumentException если {@code quantity} меньше 0.
 	 */
 	public MassQuantity(@NotNull final BigDecimal quantity, @NotNull final MassMeasure measure)
@@ -145,8 +155,11 @@ public final class MassQuantity extends AbstractQuantity<MassQuantity, MassMeasu
 	 *     <li><b>0</b> - если {@code quantityX} равен {@code quantityY}.</li>
 	 *     <li><b>1</b> - если {@code quantityX} больше {@code quantityY}.</li>
 	 * </ul>
+	 * @throws NullPointerException если в качестве {@code quantityX} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code quantityY} передан {@code null}.
 	 */
-	public static int compare(@NotNull final MassQuantity quantityX, @NotNull final MassQuantity quantityY)
+	public static int compare(@NotNull final MassQuantity quantityX,
+							  @NotNull final MassQuantity quantityY)
 	{
 		Objects.requireNonNull(quantityX);
 		Objects.requireNonNull(quantityY);

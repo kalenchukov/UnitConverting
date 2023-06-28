@@ -282,6 +282,8 @@ public enum TimeMeasure implements Measurable
      *
      * @param standard список стандартов меры измерения.
      * @param countMinUnit количество минимальных единиц времени.
+     * @throws NullPointerException если в качестве {@code standard} передан {@code null}.
+     * @throws NullPointerException если в качестве {@code countMinUnit} передан {@code null}.
      */
     TimeMeasure(@NotNull final Set<@NotNull Standard> standard, @NotNull final BigDecimal countMinUnit)
     {

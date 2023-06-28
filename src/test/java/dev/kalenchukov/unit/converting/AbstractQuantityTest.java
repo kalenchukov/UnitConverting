@@ -102,7 +102,7 @@ public class AbstractQuantityTest
 		}
 
 		/**
-		 * Проверка метода {@link AbstractQuantity#convert(Measurable)} с нулевым значением.
+		 * Проверка метода {@link AbstractQuantity#convert(Measurable)} с {@code null}.
 		 */
 		@Test()
 		public void convertZero()
@@ -155,7 +155,7 @@ public class AbstractQuantityTest
 
 		/**
 		 * Проверка метода {@link AbstractQuantity#compareTo(Quantitative)} со
-		 * сравнением меньшего значения.
+		 * сравнением меньшего значения с большим.
 		 */
 		@Test
 		public void compareToLess()
