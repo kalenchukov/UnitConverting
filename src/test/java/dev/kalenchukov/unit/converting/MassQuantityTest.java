@@ -38,56 +38,65 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class MassQuantityTest
 {
 	/**
-	 * Класс проверки метода {@link MassQuantity#compare(MassQuantity, MassQuantity)}.
+	 * Класс проверки статических методов.
 	 *
 	 * @author Алексей Каленчуков
 	 */
 	@Nested
-	public class Compare
+	public class Static
 	{
 		/**
-		 * Проверка метода {@link MassQuantity#compare(MassQuantity, MassQuantity)} со
-		 * сравнением большего значения с меньшим.
+		 * Класс проверки метода {@link MassQuantity#compare(MassQuantity, MassQuantity)}.
+		 *
+		 * @author Алексей Каленчуков
 		 */
-		@Test
-		public void compareMore()
+		@Nested
+		public class Compare
 		{
-			MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
-			MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
+			/**
+			 * Проверка метода {@link MassQuantity#compare(MassQuantity, MassQuantity)} со
+			 * сравнением большего значения с меньшим.
+			 */
+			@Test
+			public void compareMore()
+			{
+				MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
+				MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
 
-			int actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
+				int actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
 
-			assertThat(actualCompare).isEqualTo(1);
-		}
+				assertThat(actualCompare).isEqualTo(1);
+			}
 
-		/**
-		 * Проверка метода {@link MassQuantity#compare(MassQuantity, MassQuantity)} со
-		 * сравнением равных значений.
-		 */
-		@Test
-		public void compareEqually()
-		{
-			MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.KILOGRAM);
-			MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
+			/**
+			 * Проверка метода {@link MassQuantity#compare(MassQuantity, MassQuantity)} со
+			 * сравнением равных значений.
+			 */
+			@Test
+			public void compareEqually()
+			{
+				MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.KILOGRAM);
+				MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
 
-			int actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
+				int actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
 
-			assertThat(actualCompare).isEqualTo(0);
-		}
+				assertThat(actualCompare).isEqualTo(0);
+			}
 
-		/**
-		 * Проверка метода {@link MassQuantity#compare(MassQuantity, MassQuantity)} со
-		 * сравнением меньшего значения с большим.
-		 */
-		@Test
-		public void compareLess()
-		{
-			MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
-			MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
+			/**
+			 * Проверка метода {@link MassQuantity#compare(MassQuantity, MassQuantity)} со
+			 * сравнением меньшего значения с большим.
+			 */
+			@Test
+			public void compareLess()
+			{
+				MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
+				MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
 
-			int actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
+				int actualCompare = MassQuantity.compare(massQuantity1, massQuantity2);
 
-			assertThat(actualCompare).isEqualTo(-1);
+				assertThat(actualCompare).isEqualTo(-1);
+			}
 		}
 	}
 }

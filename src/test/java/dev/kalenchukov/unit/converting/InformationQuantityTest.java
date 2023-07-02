@@ -38,56 +38,65 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class InformationQuantityTest
 {
 	/**
-	 * Класс проверки метода {@link InformationQuantity#compare(InformationQuantity, InformationQuantity)}.
+	 * Класс проверки статических методов.
 	 *
 	 * @author Алексей Каленчуков
 	 */
 	@Nested
-	public class Compare
+	public class Static
 	{
 		/**
-		 * Проверка метода {@link InformationQuantity#compare(InformationQuantity, InformationQuantity)} со
-		 * сравнением равных значений.
+		 * Класс проверки метода {@link InformationQuantity#compare(InformationQuantity, InformationQuantity)}.
+		 *
+		 * @author Алексей Каленчуков
 		 */
-		@Test
-		public void compareEqually()
+		@Nested
+		public class Compare
 		{
-			InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.MEBIBIT);
-			InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.MEBIBIT);
+			/**
+			 * Проверка метода {@link InformationQuantity#compare(InformationQuantity, InformationQuantity)} со
+			 * сравнением равных значений.
+			 */
+			@Test
+			public void compareEqually()
+			{
+				InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.MEBIBIT);
+				InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.MEBIBIT);
 
-			int actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
+				int actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
 
-			assertThat(actualCompare).isEqualTo(0);
-		}
+				assertThat(actualCompare).isEqualTo(0);
+			}
 
-		/**
-		 * Проверка метода {@link InformationQuantity#compare(InformationQuantity, InformationQuantity)} со
-		 * сравнением большего значения с меньшим.
-		 */
-		@Test
-		public void compareMore()
-		{
-			InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.YOBIBIT);
-			InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.ZEBIBIT);
+			/**
+			 * Проверка метода {@link InformationQuantity#compare(InformationQuantity, InformationQuantity)} со
+			 * сравнением большего значения с меньшим.
+			 */
+			@Test
+			public void compareMore()
+			{
+				InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.YOBIBIT);
+				InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.ZEBIBIT);
 
-			int actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
+				int actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
 
-			assertThat(actualCompare).isEqualTo(1);
-		}
+				assertThat(actualCompare).isEqualTo(1);
+			}
 
-		/**
-		 * Проверка метода {@link InformationQuantity#compare(InformationQuantity, InformationQuantity)} со
-		 * сравнением меньшего значения с большим.
-		 */
-		@Test
-		public void compareLess()
-		{
-			InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.ZEBIBIT);
-			InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.YOBIBIT);
+			/**
+			 * Проверка метода {@link InformationQuantity#compare(InformationQuantity, InformationQuantity)} со
+			 * сравнением меньшего значения с большим.
+			 */
+			@Test
+			public void compareLess()
+			{
+				InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.ZEBIBIT);
+				InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.YOBIBIT);
 
-			int actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
+				int actualCompare = InformationQuantity.compare(informationQuantity1, informationQuantity2);
 
-			assertThat(actualCompare).isEqualTo(-1);
+				assertThat(actualCompare).isEqualTo(-1);
+			}
 		}
 	}
 }

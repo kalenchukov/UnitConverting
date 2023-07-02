@@ -38,56 +38,65 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class TimeQuantityTest
 {
 	/**
-	 * Класс проверки метода {@link TimeQuantity#compare(TimeQuantity, TimeQuantity)}.
+	 * Класс проверки статических методов.
 	 *
 	 * @author Алексей Каленчуков
 	 */
 	@Nested
-	public class Compare
+	public class Static
 	{
 		/**
-		 * Проверка метода {@link TimeQuantity#compare(TimeQuantity, TimeQuantity)} со
-		 * сравнением большего значения с меньшим.
+		 * Класс проверки метода {@link TimeQuantity#compare(TimeQuantity, TimeQuantity)}.
+		 *
+		 * @author Алексей Каленчуков
 		 */
-		@Test
-		public void compareMore()
+		@Nested
+		public class Compare
 		{
-			TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.QUETTASECOND);
-			TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.RONNASECOND);
+			/**
+			 * Проверка метода {@link TimeQuantity#compare(TimeQuantity, TimeQuantity)} со
+			 * сравнением большего значения с меньшим.
+			 */
+			@Test
+			public void compareMore()
+			{
+				TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.QUETTASECOND);
+				TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.RONNASECOND);
 
-			int actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
+				int actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
 
-			assertThat(actualCompare).isEqualTo(1);
-		}
+				assertThat(actualCompare).isEqualTo(1);
+			}
 
-		/**
-		 * Проверка метода {@link TimeQuantity#compare(TimeQuantity, TimeQuantity)} со
-		 * сравнением равных значений.
-		 */
-		@Test
-		public void compareEqually()
-		{
-			TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.KILOSECOND);
-			TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.KILOSECOND);
+			/**
+			 * Проверка метода {@link TimeQuantity#compare(TimeQuantity, TimeQuantity)} со
+			 * сравнением равных значений.
+			 */
+			@Test
+			public void compareEqually()
+			{
+				TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.KILOSECOND);
+				TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.KILOSECOND);
 
-			int actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
+				int actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
 
-			assertThat(actualCompare).isEqualTo(0);
-		}
+				assertThat(actualCompare).isEqualTo(0);
+			}
 
-		/**
-		 * Проверка метода {@link TimeQuantity#compare(TimeQuantity, TimeQuantity)} со
-		 * сравнением меньшего значения с большим.
-		 */
-		@Test
-		public void compareLess()
-		{
-			TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.RONNASECOND);
-			TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.QUETTASECOND);
+			/**
+			 * Проверка метода {@link TimeQuantity#compare(TimeQuantity, TimeQuantity)} со
+			 * сравнением меньшего значения с большим.
+			 */
+			@Test
+			public void compareLess()
+			{
+				TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.RONNASECOND);
+				TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.QUETTASECOND);
 
-			int actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
+				int actualCompare = TimeQuantity.compare(timeQuantity1, timeQuantity2);
 
-			assertThat(actualCompare).isEqualTo(-1);
+				assertThat(actualCompare).isEqualTo(-1);
+			}
 		}
 	}
 }
