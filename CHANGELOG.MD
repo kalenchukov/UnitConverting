@@ -6,6 +6,7 @@
 ### Изменено
 * Конструктор AbstractQuantity.AbstractQuantity(*, M) сделан protected.
 * Изменена версия требуемого модуля annotations до 24.0.1.
+* Изменена версия Java на 17.
 
 ### Исправлено
 *
