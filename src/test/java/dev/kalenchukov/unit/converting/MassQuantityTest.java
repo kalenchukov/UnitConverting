@@ -29,7 +29,6 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 /**
  * Класс проверки методов класса {@link MassQuantity}.
@@ -38,17 +37,6 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
  */
 public class MassQuantityTest
 {
-	/**
-	 * Проверка создания объекта {@link MassQuantity} с отрицательной величиной.
-	 */
-	@Test
-	public void negativeQuality()
-	{
-		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
-			new MassQuantity(-1, MassMeasure.GRAM);
-		});
-	}
-
 	/**
 	 * Класс проверки метода {@link MassQuantity#compare(MassQuantity, MassQuantity)}.
 	 *

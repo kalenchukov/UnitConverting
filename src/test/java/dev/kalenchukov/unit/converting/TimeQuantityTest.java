@@ -29,7 +29,6 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 /**
  * Класс проверки методов класса {@link TimeQuantity}.
@@ -38,17 +37,6 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
  */
 public class TimeQuantityTest
 {
-	/**
-	 * Проверка создания объекта {@link TimeQuantity} с отрицательной величиной.
-	 */
-	@Test
-	public void negativeQuality()
-	{
-		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
-			new TimeQuantity(-1, TimeMeasure.SECOND);
-		});
-	}
-
 	/**
 	 * Класс проверки метода {@link TimeQuantity#compare(TimeQuantity, TimeQuantity)}.
 	 *

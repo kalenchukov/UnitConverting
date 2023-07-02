@@ -33,6 +33,7 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 /**
  * Класс проверки методов класса {@link AbstractQuantity}.
@@ -41,6 +42,17 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class AbstractQuantityTest
 {
+	/**
+	 * Проверка метода {@link AbstractQuantity#AbstractQuantity(BigDecimal, Enum)} с отрицательной величиной.
+	 */
+	@Test
+	public void AbstractQuantityNegativeQuality()
+	{
+		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
+			new MassQuantity(-1, MassMeasure.GRAM);
+		});
+	}
+
 	/**
 	 * Проверка метода {@link AbstractQuantity#getQuantity()}.
 	 */

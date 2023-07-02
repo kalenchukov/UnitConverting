@@ -29,7 +29,6 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 /**
  * Класс проверки методов класса {@link InformationQuantity}.
@@ -38,17 +37,6 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
  */
 public class InformationQuantityTest
 {
-	/**
-	 * Проверка создания объекта {@link InformationQuantity} с отрицательной величиной.
-	 */
-	@Test
-	public void negativeQuality()
-	{
-		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
-			new InformationQuantity(-1, InformationMeasure.BYTE);
-		});
-	}
-
 	/**
 	 * Класс проверки метода {@link InformationQuantity#compare(InformationQuantity, InformationQuantity)}.
 	 *
