@@ -30,7 +30,7 @@
 
 	<groupId>dev.kalenchukov</groupId>
 	<artifactId>unit-converting</artifactId>
-	<version>1.4.0</version>
+	<version>1.5.0</version>
 
 	<name>UnitConverting</name>
 	<description>Конвертер величин</description>
