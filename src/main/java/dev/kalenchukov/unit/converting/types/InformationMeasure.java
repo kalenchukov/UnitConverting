@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package dev.kalenchukov.unit.converting.resources;
+package dev.kalenchukov.unit.converting.types;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Unmodifiable;

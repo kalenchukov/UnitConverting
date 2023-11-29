@@ -24,7 +24,7 @@
 
 package dev.kalenchukov.unit.converting;
 
-import dev.kalenchukov.unit.converting.resources.InformationMeasure;
+import dev.kalenchukov.unit.converting.types.InformationMeasure;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 

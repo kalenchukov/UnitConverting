@@ -1,5 +1,5 @@
 /*
- * Copyright © 2022-2023 Алексей Каленчуков
+ * Copyright © 2023 Алексей Каленчуков
  * GitHub: https://github.com/kalenchukov
  * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  *
@@ -22,22 +22,46 @@
  * SOFTWARE.
  */
 
-package dev.kalenchukov.unit.converting.resources;
+package dev.kalenchukov.unit.converting.types;
+
+import org.junit.jupiter.api.Test;
+
+import java.math.BigDecimal;
+import java.util.Set;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Перечисление стандартов мер измерения.
+ * Класс проверки констант и методов перечисления {@link TimeMeasure}.
  *
  * @author Алексей Каленчуков
  */
-public enum Standard
+public class TimeMeasureTest
 {
 	/**
-	 * Международная система единиц (SI).
+	 * Проверка метода {@link TimeMeasure#getStandard()}.
 	 */
-	SI,
+	@Test
+	public void getStandard()
+	{
+		Measurable timeMeasure = TimeMeasure.SECOND;
+		Set<Standard> expectedSet = Set.of(Standard.SI);
+
+		Set<Standard> actualSet = timeMeasure.getStandard();
+
+		assertThat(actualSet).containsSequence(expectedSet);
+	}
 
 	/**
-	 * Международная электротехническая комиссия (IEC).
+	 * Проверка метода {@link TimeMeasure#getCountMinUnit()}.
 	 */
-	IEC;
+	@Test
+	public void getCountMinUnit()
+	{
+		Measurable timeMeasure = TimeMeasure.KILOSECOND;
+
+		BigDecimal actualCountMinUnit = timeMeasure.getCountMinUnit();
+
+		assertThat(actualCountMinUnit).isEqualTo(BigDecimal.valueOf(1000));
+	}
 }

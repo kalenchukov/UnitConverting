@@ -24,7 +24,7 @@
 
 package dev.kalenchukov.unit.converting;
 
-import dev.kalenchukov.unit.converting.resources.MassMeasure;
+import dev.kalenchukov.unit.converting.types.MassMeasure;
 import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;

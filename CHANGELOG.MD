@@ -1,4 +1,8 @@
 # Журнал изменений
+## vX.X.X - XX.XX.XXXX
+### Изменено
+* Переименован пакет resources -> types.
+
 ## v1.5.0 - 08.07.2023
 ### Изменено
 * Конструктор AbstractQuantity.AbstractQuantity(*, M) сделан protected.

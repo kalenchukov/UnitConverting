@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package dev.kalenchukov.unit.converting.resources;
+package dev.kalenchukov.unit.converting.types;
 
 import org.junit.jupiter.api.Test;
 
@@ -32,36 +32,36 @@ import java.util.Set;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Класс проверки констант и методов перечисления {@link MassMeasure}.
+ * Класс проверки констант и методов перечисления {@link InformationMeasure}.
  *
  * @author Алексей Каленчуков
  */
-public class MassMeasureTest
+public class InformationMeasureTest
 {
 	/**
-	 * Проверка метода {@link MassMeasure#getStandard()}.
+	 * Проверка метода {@link InformationMeasure#getStandard()}.
 	 */
 	@Test
 	public void getStandard()
 	{
-		Measurable massMeasure = MassMeasure.KILOGRAM;
-		Set<Standard> expectedSet = Set.of(Standard.SI);
+		Measurable informationMeasure = InformationMeasure.BYTE;
+		Set<Standard> expectedSet = Set.of(Standard.IEC, Standard.SI);
 
-		Set<Standard> actualSet = massMeasure.getStandard();
+		Set<Standard> actualSet = informationMeasure.getStandard();
 
 		assertThat(actualSet).containsSequence(expectedSet);
 	}
 
 	/**
-	 * Проверка метода {@link MassMeasure#getCountMinUnit()}.
+	 * Проверка метода {@link InformationMeasure#getCountMinUnit()}.
 	 */
 	@Test
 	public void getCountMinUnit()
 	{
-		Measurable massMeasure = MassMeasure.KILOGRAM;
+		Measurable informationMeasure = InformationMeasure.BYTE;
 
-		BigDecimal actualCountMinUnit = massMeasure.getCountMinUnit();
+		BigDecimal actualCountMinUnit = informationMeasure.getCountMinUnit();
 
-		assertThat(actualCountMinUnit).isEqualTo(BigDecimal.valueOf(1000));
+		assertThat(actualCountMinUnit).isEqualTo(BigDecimal.valueOf(8));
 	}
 }

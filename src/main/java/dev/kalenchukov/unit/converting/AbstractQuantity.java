@@ -24,7 +24,7 @@
 
 package dev.kalenchukov.unit.converting;
 
-import dev.kalenchukov.unit.converting.resources.Measurable;
+import dev.kalenchukov.unit.converting.types.Measurable;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

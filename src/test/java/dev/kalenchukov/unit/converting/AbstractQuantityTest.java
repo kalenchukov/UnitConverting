@@ -24,9 +24,9 @@
 
 package dev.kalenchukov.unit.converting;
 
-import dev.kalenchukov.unit.converting.resources.MassMeasure;
-import dev.kalenchukov.unit.converting.resources.Measurable;
-import dev.kalenchukov.unit.converting.resources.TimeMeasure;
+import dev.kalenchukov.unit.converting.types.MassMeasure;
+import dev.kalenchukov.unit.converting.types.Measurable;
+import dev.kalenchukov.unit.converting.types.TimeMeasure;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 

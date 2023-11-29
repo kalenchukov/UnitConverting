@@ -25,4 +25,4 @@
 /**
  * Предоставляет перечисления, необходимые для определения типов.
  */
-package dev.kalenchukov.unit.converting.resources;
+package dev.kalenchukov.unit.converting.types;
