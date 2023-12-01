@@ -56,8 +56,8 @@ information.convert(InformationMeasure.BIT);
 #### Сравнение двух величин информации
 ```java
 InformationQuantity.compare(
-    new InformationQuantity(1, InformationMeasure.BYTE),
-    new InformationQuantity(1, InformationMeasure.BIT)
+	new InformationQuantity(1, InformationMeasure.BYTE),
+	new InformationQuantity(1, InformationMeasure.BIT)
 );
 ```
 
@@ -114,8 +114,8 @@ mass.convert(MassMeasure.GRAM);
 #### Сравнение двух величин массы
 ```java
 MassQuantity.compare(
-    new MassQuantity(1, MassMeasure.KILOGRAM),
-    new MassQuantity(1, MassMeasure.GRAM)
+	new MassQuantity(1, MassMeasure.KILOGRAM),
+	new MassQuantity(1, MassMeasure.GRAM)
 );
 ```
 
@@ -172,8 +172,8 @@ time.convert(TimeMeasure.SECOND);
 #### Сравнение двух величин времени
 ```java
 TimeQuantity.compare(
-    new TimeQuantity(1, TimeMeasure.KILOSECOND),
-    new TimeQuantity(1, TimeMeasure.SECOND)
+	new TimeQuantity(1, TimeMeasure.KILOSECOND),
+	new TimeQuantity(1, TimeMeasure.SECOND)
 );
 ```
 

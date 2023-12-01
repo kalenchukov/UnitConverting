@@ -49,7 +49,7 @@ public class InformationMeasureTest
 
 		Set<Standard> actualSet = informationMeasure.getStandard();
 
-		assertThat(actualSet).containsSequence(expectedSet);
+		assertThat(actualSet).containsExactlyElementsOf(expectedSet);
 	}
 
 	/**

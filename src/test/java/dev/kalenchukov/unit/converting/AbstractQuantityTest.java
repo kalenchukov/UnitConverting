@@ -43,14 +43,21 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 public class AbstractQuantityTest
 {
 	/**
-	 * Проверка метода {@link AbstractQuantity#AbstractQuantity(BigDecimal, Enum)} с отрицательной величиной.
+	 * Класс проверки метода {@link AbstractQuantity#AbstractQuantity(BigDecimal, Enum)}.
 	 */
-	@Test
-	public void AbstractQuantityNegativeQuality()
+	@Nested
+	public class AbstractQuantityWithBigDecimalAndEnum
 	{
-		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
-			new MassQuantity(-1, MassMeasure.GRAM);
-		});
+		/**
+		 * Проверка метода {@link AbstractQuantity#AbstractQuantity(BigDecimal, Enum)} с отрицательной величиной.
+		 */
+		@Test
+		public void AbstractQuantityNegativeQuality()
+		{
+			assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
+				new MassQuantity(-1, MassMeasure.GRAM);
+			});
+		}
 	}
 
 	/**
@@ -83,7 +90,7 @@ public class AbstractQuantityTest
 	 * Проверка метода {@link AbstractQuantity#toString()}.
 	 */
 	@Test
-	public void testToString()
+	public void toStringWithValid()
 	{
 		Quantitative<MassMeasure> quantity = new MassQuantity(1, MassMeasure.GRAM);
 
@@ -114,10 +121,10 @@ public class AbstractQuantityTest
 		}
 
 		/**
-		 * Проверка метода {@link AbstractQuantity#convert(Measurable)} с {@code null}.
+		 * Проверка метода {@link AbstractQuantity#convert(Measurable)} с значением в виде нуля.
 		 */
 		@Test()
-		public void convertZero()
+		public void convertWithZero()
 		{
 			Quantitative<MassMeasure> quantity = new MassQuantity(0, MassMeasure.GRAM);
 
@@ -140,7 +147,7 @@ public class AbstractQuantityTest
 		 * сравнением равного значения.
 		 */
 		@Test
-		public void compareTo()
+		public void compareToWithEquals()
 		{
 			MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.KILOGRAM);
 			MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
@@ -155,7 +162,7 @@ public class AbstractQuantityTest
 		 * сравнением большего значения.
 		 */
 		@Test
-		public void compareToMore()
+		public void compareToWithMore()
 		{
 			MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
 			MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
@@ -170,7 +177,7 @@ public class AbstractQuantityTest
 		 * сравнением меньшего значения с большим.
 		 */
 		@Test
-		public void compareToLess()
+		public void compareToWithLess()
 		{
 			MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
 			MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
@@ -190,10 +197,10 @@ public class AbstractQuantityTest
 	public class Equals
 	{
 		/**
-		 * Проверка метода {@link AbstractQuantity#equals(Object)}.
+		 * Проверка метода {@link AbstractQuantity#equals(Object)} с равными объектами.
 		 */
 		@Test
-		public void testEquals()
+		public void equalsWithEqualsValue()
 		{
 			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
 			Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.GRAM);
@@ -204,10 +211,10 @@ public class AbstractQuantityTest
 		}
 
 		/**
-		 * Проверка метода {@link AbstractQuantity#equals(Object)} с {@code null}.
+		 * Проверка метода {@link AbstractQuantity#equals(Object)} с значением в виде {@code null}.
 		 */
 		@Test
-		public void testEqualsNull()
+		public void equalsWithNull()
 		{
 			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
 			Quantitative<MassMeasure> quantity2 = null;
@@ -221,7 +228,7 @@ public class AbstractQuantityTest
 		 * Проверка метода {@link AbstractQuantity#equals(Object)} с разными классами.
 		 */
 		@Test
-		public void testEqualsDifferentClass()
+		public void equalsWithDifferentTypeClass()
 		{
 			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
 			Quantitative<TimeMeasure> quantity2 = new TimeQuantity(1, TimeMeasure.SECOND);
@@ -235,7 +242,7 @@ public class AbstractQuantityTest
 		 * Проверка метода {@link AbstractQuantity#equals(Object)} с разными мерами измерения.
 		 */
 		@Test
-		public void testEqualsDifferentMeasure()
+		public void equalsWithDifferentMeasure()
 		{
 			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
 			Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
@@ -249,7 +256,7 @@ public class AbstractQuantityTest
 		 * Проверка метода {@link AbstractQuantity#equals(Object)} с разными величинами.
 		 */
 		@Test
-		public void testEqualsDifferentQuantity()
+		public void equalsWithDifferentQuantity()
 		{
 			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
 			Quantitative<MassMeasure> quantity2 = new MassQuantity(2, MassMeasure.GRAM);
@@ -269,10 +276,10 @@ public class AbstractQuantityTest
 	public class HashCode
 	{
 		/**
-		 * Проверка метода {@link AbstractQuantity#hashCode()}.
+		 * Проверка метода {@link AbstractQuantity#hashCode()} с равными объектами.
 		 */
 		@Test
-		public void testHashCode()
+		public void hashCodeWithEqualsValue()
 		{
 			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
 			Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.GRAM);
@@ -287,7 +294,7 @@ public class AbstractQuantityTest
 		 * Проверка метода {@link AbstractQuantity#hashCode()} с разными мерами измерения.
 		 */
 		@Test
-		public void testHashCodeDifferentMeasure()
+		public void hashCodeWithDifferentMeasure()
 		{
 			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
 			Quantitative<MassMeasure> quantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
@@ -302,7 +309,7 @@ public class AbstractQuantityTest
 		 * Проверка метода {@link AbstractQuantity#hashCode()} с разными величинами.
 		 */
 		@Test
-		public void testHashCodeDifferentQuantity()
+		public void hashCodeWithDifferentQuantity()
 		{
 			Quantitative<MassMeasure> quantity1 = new MassQuantity(1, MassMeasure.GRAM);
 			Quantitative<MassMeasure> quantity2 = new MassQuantity(2, MassMeasure.GRAM);

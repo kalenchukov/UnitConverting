@@ -58,7 +58,7 @@ public class TimeQuantityTest
 			 * сравнением большего значения с меньшим.
 			 */
 			@Test
-			public void compareMore()
+			public void compareWithMore()
 			{
 				TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.QUETTASECOND);
 				TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.RONNASECOND);
@@ -73,7 +73,7 @@ public class TimeQuantityTest
 			 * сравнением равных значений.
 			 */
 			@Test
-			public void compareEqually()
+			public void compareWithEquals()
 			{
 				TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.KILOSECOND);
 				TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.KILOSECOND);
@@ -88,7 +88,7 @@ public class TimeQuantityTest
 			 * сравнением меньшего значения с большим.
 			 */
 			@Test
-			public void compareLess()
+			public void compareWithLess()
 			{
 				TimeQuantity timeQuantity1 = new TimeQuantity(1, TimeMeasure.RONNASECOND);
 				TimeQuantity timeQuantity2 = new TimeQuantity(1, TimeMeasure.QUETTASECOND);

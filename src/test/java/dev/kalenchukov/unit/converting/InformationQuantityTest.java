@@ -58,7 +58,7 @@ public class InformationQuantityTest
 			 * сравнением равных значений.
 			 */
 			@Test
-			public void compareEqually()
+			public void compareWithEquals()
 			{
 				InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.MEBIBIT);
 				InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.MEBIBIT);
@@ -73,7 +73,7 @@ public class InformationQuantityTest
 			 * сравнением большего значения с меньшим.
 			 */
 			@Test
-			public void compareMore()
+			public void compareWithMore()
 			{
 				InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.YOBIBIT);
 				InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.ZEBIBIT);
@@ -88,7 +88,7 @@ public class InformationQuantityTest
 			 * сравнением меньшего значения с большим.
 			 */
 			@Test
-			public void compareLess()
+			public void compareWithLess()
 			{
 				InformationQuantity informationQuantity1 = new InformationQuantity(1, InformationMeasure.ZEBIBIT);
 				InformationQuantity informationQuantity2 = new InformationQuantity(1, InformationMeasure.YOBIBIT);

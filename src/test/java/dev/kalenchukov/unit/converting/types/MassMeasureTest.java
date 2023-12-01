@@ -49,7 +49,7 @@ public class MassMeasureTest
 
 		Set<Standard> actualSet = massMeasure.getStandard();
 
-		assertThat(actualSet).containsSequence(expectedSet);
+		assertThat(actualSet).containsExactlyElementsOf(expectedSet);
 	}
 
 	/**

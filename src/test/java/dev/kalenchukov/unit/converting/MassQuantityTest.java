@@ -58,7 +58,7 @@ public class MassQuantityTest
 			 * сравнением большего значения с меньшим.
 			 */
 			@Test
-			public void compareMore()
+			public void compareWithMore()
 			{
 				MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.YOTTAGRAM);
 				MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
@@ -73,7 +73,7 @@ public class MassQuantityTest
 			 * сравнением равных значений.
 			 */
 			@Test
-			public void compareEqually()
+			public void compareWithEquals()
 			{
 				MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.KILOGRAM);
 				MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.KILOGRAM);
@@ -88,7 +88,7 @@ public class MassQuantityTest
 			 * сравнением меньшего значения с большим.
 			 */
 			@Test
-			public void compareLess()
+			public void compareWithLess()
 			{
 				MassQuantity massQuantity1 = new MassQuantity(1, MassMeasure.ZETTAGRAM);
 				MassQuantity massQuantity2 = new MassQuantity(1, MassMeasure.YOTTAGRAM);

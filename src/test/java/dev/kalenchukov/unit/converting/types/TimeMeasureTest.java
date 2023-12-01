@@ -49,7 +49,7 @@ public class TimeMeasureTest
 
 		Set<Standard> actualSet = timeMeasure.getStandard();
 
-		assertThat(actualSet).containsSequence(expectedSet);
+		assertThat(actualSet).containsExactlyElementsOf(expectedSet);
 	}
 
 	/**
